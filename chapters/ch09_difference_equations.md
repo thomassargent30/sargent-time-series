@@ -1878,7 +1878,35 @@ The presence of such cross-equation restrictions in models with foresight is the
 
 **1.** Verify that the presence of both *lagged* employment and *future* values of $w_t$ and $a_t$ on the right-hand side of the employment decision rule (55) (demand schedule) depends on having the adjustment cost parameter $d$ strictly positive. (Set $d = 0$ and rework the firm's optimum problem.)
 
+```{admonition} Solution to Exercise 1
+:class: dropdown
+
+Set $d=0$ in the present value {eq}`eq-9-49`. The adjustment-cost term $\frac{d}{2}(n_{t+j}-n_{t+j-1})^2$ vanishes, so nothing links employment across periods and the problem separates date by date:
+
+$$
+\max_{n_{t+j}} \; (f_0 + a_{t+j}) n_{t+j} - \tfrac{f_1}{2} n_{t+j}^2 - w_{t+j} n_{t+j}.
+$$
+
+The first-order condition $f_0 + a_{t+j} - w_{t+j} - f_1 n_{t+j} = 0$ gives
+
+$$
+n_{t+j} = \frac{f_0 + a_{t+j} - w_{t+j}}{f_1},
+$$
+
+which depends only on the *current* shock and wage — there is no lagged employment and no dependence on future $w$ or $a$. Both of those features of the decision rule {eq}`eq-9-55` are therefore artifacts of $d>0$. The limit confirms it: the stable root solves $\lambda_1 b + \lambda_1^{-1} = f_1/d + 1 + b$, so as $d\to 0$ the right side $\to\infty$, giving $\lambda_1 \approx d/f_1 \to 0$ and $\lambda_2 = 1/(b\lambda_1)\to\infty$. In {eq}`eq-9-55` the feedback coefficient $\lambda_1\to 0$ and the forward weights $\lambda_2^{-i}\to 0$ for $i\ge1$, leaving only $-(\lambda_1/d)(w_{t+j+1}-a_{t+j+1}-f_0)\to (f_0+a_{t+j+1}-w_{t+j+1})/f_1$ — the static rule again.
+```
+
 **2.** Determine the effect of an increase in $d$ on the speed of adjustment parameters $\lambda_1$ and $\lambda_2$. Does a firm facing a small $d$ adjust its labor force more or less quickly in response to current conditions than a firm facing a larger value of $d$? (*Hint:* use Figure 4.)
+
+```{admonition} Solution to Exercise 2
+:class: dropdown
+
+The stable root satisfies $\lambda_1 b + \lambda_1^{-1} = f_1/d + (1+b) = -\phi$ (see {eq}`eq-9-53` and Figure 4). On the branch $0<\lambda_1<1/\sqrt b$ the function $\lambda b + \lambda^{-1}$ is *decreasing*, so a smaller value of $-\phi$ corresponds to a larger $\lambda_1$.
+
+Increasing $d$ lowers $f_1/d$, hence lowers $-\phi$ toward its floor $1+b$; by that monotonicity it *raises* $\lambda_1$ toward $1$ (and lowers $\lambda_2$ toward $1/b$). In the feedback rule $n_{t+j+1}=\lambda_1 n_{t+j}+\cdots$ the number $\lambda_1$ is the coefficient on lagged employment, so the speed of adjustment toward the target is $1-\lambda_1$.
+
+Therefore a firm facing a **larger** $d$ has $\lambda_1$ closer to $1$ and adjusts **more slowly**, while a firm facing a **small** $d$ has $\lambda_1$ near $0$ and adjusts **quickly** (in the limit $d\to0$, $\lambda_1\to0$ and it jumps straight to the frictionless target of Exercise 1). Larger adjustment costs make it optimal to spread employment changes over more periods.
+```
 
 **3.** (*A Keynesian investment schedule*) A firm chooses a sequence of capital $\{k_{t+j}\}_{j=0}^{\infty}$ to maximize
 
@@ -1898,6 +1926,33 @@ $$
 
 where $0 < \lambda_1 < 1 < \lambda_2$, and $c_0$ and $c_1$ are constants. Find $c_0$ and $c_1$; show how to find $\lambda_1$ and $\lambda_2$; and prove that the $\lambda$'s obey the inequalities just stated.
 
+```{admonition} Solution to Exercise 3
+:class: dropdown
+
+**A.** $k_{t+j}$ enters the date-$(t+j)$ term directly and the date-$(t+j+1)$ adjustment terms through $k_{t+j+1}-k_{t+j}$. Differentiating $v_t$,
+
+$$
+a_0 - a_1 k_{t+j} - J_{t+j} - d(k_{t+j}-k_{t+j-1}) + b\big[J_{t+j+1} + d(k_{t+j+1}-k_{t+j})\big] = 0 ,
+$$
+
+which rearranges to the Euler equation
+
+$$
+b\,k_{t+j+1} + \phi\,k_{t+j} + k_{t+j-1} = \tfrac1d\big(J_{t+j} - bJ_{t+j+1} - a_0\big), \qquad \phi = -\Big(\tfrac{a_1}{d} + 1 + b\Big),
+$$
+
+with transversality condition $\lim_{T\to\infty} b^{T}\big[a_0 - a_1 k_{t+T} - J_{t+T} - d(k_{t+T}-k_{t+T-1})\big]k_{t+T}=0$, satisfied when $\{J\}$ and $\{k\}$ are of exponential order less than $1/\sqrt b$.
+
+**B.** Factor $b(1-\lambda_1 L)(1-\lambda_2 L)k_{t+j+1}=\tfrac1d(J_{t+j}-bJ_{t+j+1}-a_0)$ with $\lambda_1\lambda_2=1/b$ and $\lambda_1 b + \lambda_1^{-1} = a_1/d + 1 + b$. Since $a_1/d>0$, the right side exceeds $1+b$; the line at height $1+b$ meets $b\lambda+\lambda^{-1}$ exactly at $\lambda=1$ and $\lambda=1/b$ (as in Figure 4), so the roots straddle them: $0<\lambda_1<1<1/b<\lambda_2$. Solving the stable root backward and the unstable root forward (dropping the $\lambda_2^t$ term to meet transversality, and using $1/\lambda_2=b\lambda_1$),
+
+$$
+k_{t+j+1} = \lambda_1 k_{t+j} + c_0 + \frac{c_1}{1-\lambda_2^{-1}L^{-1}}\big(bJ_{t+j+2}-J_{t+j+1}\big),
+\qquad c_1=\frac{\lambda_1}{d}, \quad c_0=\frac{\lambda_1 a_0}{d\,(1-b\lambda_1)} .
+$$
+
+The constant $c_0$ places the rule's rest point at the frictionless target $\bar k=(a_0-(1-b)\bar J)/a_1$, where marginal product $a_0-a_1k$ equals the user cost of capital.
+```
+
 **4.** (*Keynesian stabilization policy*) The reduced form for GNP ($Y$) is
 
 $$
@@ -1915,6 +1970,38 @@ where $\{Y_t^*\}_{t=0}^{\infty}$ is a target sequence of GNPs that is of exponen
 &nbsp;&nbsp;&nbsp;&nbsp;**A.** Derive an optimal rule for setting $g_t$ under the assumption that $d = 0$.
 
 &nbsp;&nbsp;&nbsp;&nbsp;**B.** Derive the optimal rule for setting $g_t$ under the assumption that $d > 0$.
+
+```{admonition} Solution to Exercise 4
+:class: dropdown
+
+Substitute the reduced form $Y_t=\alpha+BS_t+cg_t$ into the loss.
+
+**A. ($d=0$).** The loss is $\sum_t b^t(\alpha+BS_t+cg_t-Y_t^*)^2$, minimized period by period by setting $Y_t=Y_t^*$:
+
+$$
+g_t = \frac{Y_t^* - \alpha - BS_t}{c}.
+$$
+
+**B. ($d>0$).** Differentiating $\sum_t b^t\{(\alpha+BS_t+cg_t-Y_t^*)^2+d(g_t-g_{t-1})^2\}$ with respect to $g_t$,
+
+$$
+c(\alpha+BS_t+cg_t-Y_t^*) + d(g_t-g_{t-1}) - db(g_{t+1}-g_t)=0,
+$$
+
+which is the Euler equation
+
+$$
+b\,g_{t+1} + \phi\,g_t + g_{t-1} = \frac{c}{d}\big(\alpha+BS_t-Y_t^*\big), \qquad \phi=-\Big(\tfrac{c^2}{d}+1+b\Big),
+$$
+
+of exactly the form {eq}`eq-9-53`. With stable root $0<\lambda_1<1<1/b<\lambda_2=1/(b\lambda_1)$ (where $\lambda_1 b+\lambda_1^{-1}=c^2/d+1+b$), solving stable-backward / unstable-forward gives
+
+$$
+g_t = \lambda_1 g_{t-1} + \frac{\lambda_1 c}{d}\sum_{i=0}^{\infty}\lambda_2^{-i}\big(Y_{t+i}^*-\alpha-BS_{t+i}\big).
+$$
+
+Government purchases partially adjust toward the part-A frictionless setting, responding to the *entire expected future* of the target $Y^*$ and exports $S$; the adjustment speed $1-\lambda_1$ falls as the cost $d$ of changing $g$ rises.
+```
 
 **5.** (*Cass-Koopmans optimum growth problem*) A planner wants to choose (consumption, capital) sequences that maximize
 
@@ -1937,8 +2024,8 @@ Interpret the steady-state value of $\bar{c}$.
 &nbsp;&nbsp;&nbsp;&nbsp;**C.** Show that the optimal feedback rule for setting $k$ is
 
 $$
-k_{t+1} = \frac{1}{f_0 \beta} k_t - \left( \frac{1}{f_0 - 1} \right) \left( \frac{u_0}{u_1} \left( \frac{1}{\beta f_0} - 1 \right) \right).
-$$ (*)
+k_{t+1} = \frac{1}{f_0 \beta} k_t - \left( \frac{1}{f_0 - 1} \right) \left( \frac{u_0}{u_1} \left( \frac{1}{\beta f_0} - 1 \right) \right). \tag{*}
+$$
 
 (*Hint:* Solve the Euler equation.) Does this solution satisfy the transversality condition? If you had solved the "other" root backward, rather than forward, would the transversality condition be satisfied?
 
@@ -1946,11 +2033,40 @@ $$ (*)
 
 &nbsp;&nbsp;&nbsp;&nbsp;**E.** Prove that consumption increases as capital increases toward its steady-state value.
 
+```{admonition} Solution to Exercise 5
+:class: dropdown
+
+**A.** Use $c_t=f_0k_t-k_{t+1}$ and differentiate $\sum_t\beta^t(u_0c_t-\tfrac{u_1}{2}c_t^2)$ with respect to $k_{t+1}$:
+
+$$
+-(u_0-u_1c_t) + \beta f_0 (u_0-u_1c_{t+1}) = 0
+\quad\Longleftrightarrow\quad
+u_0-u_1c_t = \beta f_0\,(u_0-u_1c_{t+1}).
+$$
+
+Marginal utility today equals $\beta$ times the gross return $f_0$ times marginal utility tomorrow. The transversality condition is $\lim_{t\to\infty}\beta^t(u_0-u_1c_t)k_{t+1}=0$: the discounted marginal value of terminal capital must vanish.
+
+**B.** In a steady state $(u_0-u_1\bar c)(1-\beta f_0)=0$; since $\beta f_0>1$ we need $u_0-u_1\bar c=0$, so $\bar c=u_0/u_1$ and, from $\bar c=(f_0-1)\bar k$, $\ \bar k=\tfrac{1}{f_0-1}\tfrac{u_0}{u_1}$. Thus $\bar c=u_0/u_1$ is the *bliss* (satiation) level, where marginal utility is zero.
+
+**C.** In terms of $k$ the Euler equation is $\beta f_0 k_{t+2}-(1+\beta f_0^2)k_{t+1}+f_0k_t=\tfrac{u_0}{u_1}(1-\beta f_0)$, whose characteristic roots multiply to $1/\beta$ and sum to $f_0+\tfrac{1}{\beta f_0}$; hence they are $f_0$ and $\tfrac{1}{\beta f_0}$. The stable root is $\tfrac{1}{\beta f_0}<1$. Solving it backward about $\bar k$,
+
+$$
+k_{t+1}=\frac{1}{\beta f_0}k_t + \bar k\Big(1-\frac{1}{\beta f_0}\Big)
+= \frac{1}{f_0\beta}k_t - \Big(\frac{1}{f_0-1}\Big)\frac{u_0}{u_1}\Big(\frac{1}{\beta f_0}-1\Big),
+$$
+
+which is (*). It satisfies transversality because $|1/(\beta f_0)|<1$ keeps $k_t$ bounded. Solving the *other* root $f_0>1$ backward would make $k_t$ grow like $f_0^{\,t}$, violating boundedness and transversality.
+
+**D.** From (*), $k_{t+1}-\bar k=\tfrac{1}{\beta f_0}(k_t-\bar k)$, so $k_{t+1}-\bar k=(\beta f_0)^{-(t+1)}(k_0-\bar k)\to 0$: $k_t\to\bar k$.
+
+**E.** $c_t=f_0k_t-k_{t+1}=\big(f_0-\tfrac{1}{\beta f_0}\big)k_t-\bar k\big(1-\tfrac{1}{\beta f_0}\big)$. The coefficient $f_0-\tfrac{1}{\beta f_0}>0$ (since $f_0>1>\tfrac{1}{\beta f_0}$), so consumption rises as $k$ rises toward $\bar k$.
+```
+
 **6.** A consumer is assumed to face the sequence of budget constraints
 
 $$
-A_{t+1} = (1 + r) A_t + (1 + r)(y_t - c_t), \qquad t = 0, 1, 2, \ldots,
-$$ (†)
+A_{t+1} = (1 + r) A_t + (1 + r)(y_t - c_t), \qquad t = 0, 1, 2, \ldots, \tag{$\dagger$}
+$$
 
 where $A_t$ is his asset holdings at the beginning of period $t$, $y_t$ is exogenous income, and $c_t$ is consumption at $t$. Here $r > 0$ is the real rate of return on assets, assumed constant over time. The consumer earns (pays) each period $1 + r$ times his initial assets plus $1 + r$ times the addition (subtraction) to his assets made by consuming less (more) than his income. Assume that both $c_t$ and $y_t$ are of exponential order less than $1 + r$.
 
@@ -1975,6 +2091,32 @@ A_t = \sum_{i=0}^{t-1} (1 + r)^{i+1}(y_{t-1-i} - c_{t-1-i}) + (1 + r)^t A_0.
 $$
 
 Interpret this result.
+
+```{admonition} Solution to Exercise 6
+:class: dropdown
+
+Rewrite (†) as $A_{t+1}=(1+r)(A_t+y_t-c_t)$, i.e. $A_t=c_t-y_t+\dfrac{A_{t+1}}{1+r}$. Iterating forward $T$ steps,
+
+$$
+A_t=\sum_{i=0}^{T-1}\frac{c_{t+i}-y_{t+i}}{(1+r)^i}+\frac{A_{t+T}}{(1+r)^T}.
+$$
+
+The boundary condition $\lim_{t\to\infty}(1+r)^{-t}A_t=0$ makes $\dfrac{A_{t+T}}{(1+r)^T}=(1+r)^t\dfrac{A_{t+T}}{(1+r)^{t+T}}\to0$, leaving
+
+$$
+A_t+\sum_{i=0}^{\infty}\frac{y_{t+i}}{(1+r)^i}=\sum_{i=0}^{\infty}\frac{c_{t+i}}{(1+r)^i}.
+$$
+
+*Interpretation:* the present value of consumption equals current assets plus the present value of income (human wealth) — the intertemporal budget constraint, ruling out Ponzi schemes.
+
+Iterating (†) **backward** from $A_0$: $A_1=(1+r)A_0+(1+r)(y_0-c_0)$, and by induction
+
+$$
+A_t=(1+r)^tA_0+\sum_{i=0}^{t-1}(1+r)^{\,i+1}(y_{t-1-i}-c_{t-1-i}).
+$$
+
+*Interpretation:* current assets equal the initial stock compounded at $1+r$, plus the compounded history of past saving (income minus consumption).
+```
 
 **7.** Suppose that portfolio equilibrium is described by Cagan's equation:
 
@@ -2014,6 +2156,31 @@ $$
 
 Compute the equilibrium values of $p_t$ for $t = 0, 1, 2, 3, 4, 5, 6$ assuming that $\lambda = 1.5$. How does this time path for $\{p_t\}$ compare with that computed in A(ii)? Graph the two paths.
 
+```{admonition} Solution to Exercise 7
+:class: dropdown
+
+With $p_{t+1}^e=p_{t+1}$ the equation is $m_t-p_t=-(p_{t+1}-p_t)$, i.e. $p_t=\tfrac12 m_t+\tfrac12 p_{t+1}$. Solving forward,
+
+$$
+p_t=\tfrac12\sum_{j=0}^{\infty}\Big(\tfrac12\Big)^{j}m_{t+j}.
+$$
+
+**A.** With $m_t=10\lambda^t$, $\ p_t=5\lambda^t\sum_{j\ge0}(\lambda/2)^j=\dfrac{10\lambda^t}{2-\lambda}$ whenever $\lambda<2$.
+
+- (i) $\lambda=1$: $p_t=10$ for all $t$, so $p_0=p_1=p_2=p_5=p_6=10$.
+- (ii) $\lambda=1.5$: $p_t=20(1.5)^t$, so $p_0=20,\ p_1=30,\ p_2=45,\ p_5=151.875,\ p_6=227.8125$.
+- (iii) $\lambda=2$: the geometric sum has ratio $\lambda/2=1$ and *diverges* — no finite (bounded present-value) rational-expectations price level exists. The value $\lambda=2=(1+\alpha)/\alpha$ (with $\alpha=1$) is the borderline money-growth rate beyond which the forward-looking equilibrium ceases to exist.
+
+**B.** Write $m_t=10\lambda^t+\mathbf 1\{t\ge5\}\,\lambda^t$ (an extra $+1\cdot\lambda^t$ from $t=5$ on), $\lambda=1.5$. By linearity $p_t=20(1.5)^t+E_t$ with $E_t=\tfrac12\sum_{j\ge\max(0,5-t)}(1/2)^j\lambda^{t+j}$: for $t\ge5$, $E_t=2(1.5)^t$; for $t\le4$, $E_t=2(1.5)^t(0.75)^{5-t}$. Hence
+
+| $t$ | 0 | 1 | 2 | 3 | 4 | 5 | 6 |
+|:--|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
+| $p_t$ (B) | 20.47 | 30.95 | 46.90 | 71.30 | 108.84 | 167.06 | 250.59 |
+| $p_t$ (A ii) | 20.00 | 30.00 | 45.00 | 67.50 | 101.25 | 151.88 | 227.81 |
+
+The anticipated future money increase raises the price level **immediately** (already $p_0=20.47>20$), with the gap widening as $t=5$ approaches and then settling at the constant ratio $11/10$ for $t\ge5$. Graphing the two paths, the (B) path lies just above (A ii) and pulls away up to the jump date — the signature of forward-looking rational expectations.
+```
+
 **8.** (Advertising) A monopolist faces the following demand curve for his product,
 
 $$
@@ -2023,8 +2190,8 @@ $$
 where $p_t$ is price, $Q_t$ is output, $a_t$ is advertising, $u_t$ is a sequence of shocks to demand, and $g(L) = g_0 + g_1 L + \cdots + g_m L^m$, where $g_j > 0$ for $j = 0, \ldots, m$. The firm maximizes
 
 $$
-\sum_{t=0}^{\infty} \beta^t \left\{ p_t Q_t - Q_t s_t - (1/2)[d(L) Q_t]^2 - \frac{\gamma}{2} a_t^2 - a_t w_t \right\}, \qquad 0 < \beta < 1,
-$$ (1)
+\sum_{t=0}^{\infty} \beta^t \left\{ p_t Q_t - Q_t s_t - (1/2)[d(L) Q_t]^2 - \frac{\gamma}{2} a_t^2 - a_t w_t \right\}, \qquad 0 < \beta < 1, \tag{1}
+$$
 
 where $d(L) = \sum_{j=0}^{n} d_j L^j$. In (1), $s_t$ is a shock to costs, $\frac{1}{2}[d(L) Q_t]^2$ represents costs of rapid adjustment, and the marginal costs of advertising at $t$ are $(w_t + \gamma a_t)$, where $w_t$ is a known sequence. We assume that $(u_t, s_t, w_t)$ are known sequences of exponential order less than $1/\sqrt{\beta}$. The criterion (1) is to be maximized over sequences for $\{Q_s, a_s, s \geq 0\}$ taking as given $\{Q_s, a_s, s < 0\}$.
 
@@ -2032,13 +2199,33 @@ where $d(L) = \sum_{j=0}^{n} d_j L^j$. In (1), $s_t$ is a shock to costs, $\frac
 
 &nbsp;&nbsp;&nbsp;&nbsp;**B.** Argue that the solution will be linear laws of motion for $(Q_t, a_t)$ in which each of $(Q_t, a_t)$ depends on lagged values of both $Q$ and $a$, and current and future values of all of $(u, s, w)$.
 
+```{admonition} Solution to Exercise 8
+:class: dropdown
+
+**A.** Substitute the demand curve, so the date-$t$ payoff is
+$A_0Q_t-A_1Q_t^2+(g(L)a_t)Q_t+u_tQ_t-Q_ts_t-\tfrac12[d(L)Q_t]^2-\tfrac{\gamma}{2}a_t^2-a_tw_t$.
+Differentiating the discounted sum with respect to $Q_t$ and to $a_t$ — using $\tfrac{\partial}{\partial Q_t}\sum_s\beta^s\tfrac12[d(L)Q_s]^2=\beta^t d(\beta L^{-1})d(L)Q_t$ and the analogous identity for the $g(L)a$ revenue term — gives the two Euler equations
+
+$$
+\big[\,2A_1+d(\beta L^{-1})d(L)\,\big]Q_t = A_0+u_t-s_t+g(L)a_t,
+$$
+
+$$
+\gamma\,a_t = g(\beta L^{-1})\,Q_t - w_t,
+$$
+
+where $d(\beta L^{-1})=\sum_j d_j\beta^jL^{-j}$ and $g(\beta L^{-1})=\sum_j g_j\beta^jL^{-j}$.
+
+**B.** Eliminating $a_t=\gamma^{-1}[g(\beta L^{-1})Q_t-w_t]$ from the first equation gives a single two-sided difference equation in $Q_t$ whose characteristic polynomial has the *reciprocal-pairs* property (zeros in pairs $z,\beta z^{-1}$). Factoring it as $c(\beta L^{-1})c(L)$ and solving the stable zeros backward and the unstable zeros forward — imposing the transversality conditions — writes $Q_t$ in terms of its own lags and of current and future $(u,s,w)$; then $a_t=\gamma^{-1}[g(\beta L^{-1})Q_t-w_t]$ inherits the same dependence. Because output and advertising interact through $g(L)$, each of $(Q_t,a_t)$ depends on lagged values of *both* and on the entire expected future of all three forcing sequences — the bivariate version of the solution method of Sections 8–10.
+```
+
 **9.** (Time to build with two processes)
 
 Consider a monopolist whose output satisfies
 
 $$
-Q_t = f(L) n_{1t} + g(L) n_{2t}
-$$ (1)
+Q_t = f(L) n_{1t} + g(L) n_{2t} \tag{1}
+$$
 
 where
 
@@ -2049,20 +2236,35 @@ $$
 for all $j$. In (1), $n_{1t}$ is the amount of labor at $t$ that is assigned to process 1, while $n_{2t}$ is the amount that is assigned to process 2. The idea is that output can be produced via two processes, with different timing characteristics, e.g., to represent the notion that the first process is fast but wasteful, while the other is efficient but time consuming, we might set $f(L) = L$, $g(L) = (\frac{1}{4})[L + L^2 + L^3 + L^4]$. The firm faces the demand curve
 
 $$
-p_t = A_0 - A_1 Q_t + u_t, \qquad A_0, A_1 > 0,
-$$ (2)
+p_t = A_0 - A_1 Q_t + u_t, \qquad A_0, A_1 > 0, \tag{2}
+$$
 
 where $u_t$ is a known sequence of exponential order less than $1/\sqrt{\beta}$. The firm hires labor at the wage rate $w_t$, where $w_t$ is a known sequence of exponential order less than $1/\sqrt{\beta}$. The firm's problem is to maximize
 
 $$
-\sum_{t=0}^{\infty} \beta^t \{ p_t Q_t - w_t(n_{1t} + n_{2t}) \}, \qquad 0 < \beta < 1,
-$$ (3)
+\sum_{t=0}^{\infty} \beta^t \{ p_t Q_t - w_t(n_{1t} + n_{2t}) \}, \qquad 0 < \beta < 1, \tag{3}
+$$
 
 subject to (1) and (2), with $\{n_{1s}, s = -1, \ldots, -m\}$, $\{n_{2s}, s = -1, \ldots, -r\}$ given.
 
 &nbsp;&nbsp;&nbsp;&nbsp;**A.** Find the Euler equations for this problem.
 
 &nbsp;&nbsp;&nbsp;&nbsp;**B.** Indicate the form of the optimum decision rules for $(n_{1t}, n_{2t})$.
+
+```{admonition} Solution to Exercise 9
+:class: dropdown
+
+**A.** With $Q_t=f(L)n_{1t}+g(L)n_{2t}$ and revenue $p_tQ_t=(A_0-A_1Q_t+u_t)Q_t$, differentiate $\sum_t\beta^t\{p_tQ_t-w_t(n_{1t}+n_{2t})\}$. Since $n_{1t}$ enters $Q_s$ for $s=t,\dots,t+m$ through $f(L)$, and $n_{2t}$ through $g(L)$,
+
+$$
+f(\beta L^{-1})\big[A_0+u_t-2A_1Q_t\big]=w_t, \qquad
+g(\beta L^{-1})\big[A_0+u_t-2A_1Q_t\big]=w_t,
+$$
+
+with $f(\beta L^{-1})=\sum_j f_j\beta^jL^{-j}$ and $g(\beta L^{-1})=\sum_j g_j\beta^jL^{-j}$. Each equation sets the discounted marginal revenue product of labor in that process equal to the wage.
+
+**B.** Substituting $Q_t=f(L)n_{1t}+g(L)n_{2t}$ turns the pair into a coupled two-sided system in $(n_{1t},n_{2t})$. Its characteristic matrix polynomial has zeros in reciprocal pairs $z,\beta z^{-1}$ and admits a factorization $C(\beta L^{-1})'C(L)$ with the zeros of $\det C(z)$ outside $\sqrt\beta$. Solving the stable factor backward and the unstable factor forward yields optimal rules in which each of $(n_{1t},n_{2t})$ is a linear function of lagged $n_1,n_2$ and of current and expected future $u$ and $w$. The different lag polynomials $f(L)$ (fast) and $g(L)$ (slow, "time to build") lead the firm to split labor between the two processes so as to deliver output when it is most valuable.
+```
 
 **10.** At time $t$, a farmer plants $A_t$ units of land from which he produces $y_{t+1} = f_1 A_t$ units of output available to be sold at time $(t + 1)$ at price $p_{t+1}$ where $f_1 > 0$. If $A_t$ units of land are planted, the farmer's costs at time $t$ are $c_0 A_t + (c_1/2) A_t^2 + c_2 A_t A_{t-1}$, where $c_0, c_1, c_2 > 0$. The term $c_2 A_t A_{t-1}$ reflects the wearing out of the land from two successive heavy plantings. The price of output $p_t$ obeys the first-order difference equation
 
@@ -2092,11 +2294,39 @@ where $L$ is a linear function. Compute actual numerical values for the linear c
 
 &nbsp;&nbsp;&nbsp;&nbsp;**D.** Use this example to illustrate the general observation that decision rules change whenever the economic environment changes.
 
+```{admonition} Solution to Exercise 10
+:class: dropdown
+
+**A.** $A_t$ enters revenue $\beta^{t+1}p_{t+1}f_1A_t$, its own cost $\beta^t[c_0A_t+\tfrac{c_1}{2}A_t^2+c_2A_tA_{t-1}]$, and next period's cost through $\beta^{t+1}c_2A_{t+1}A_t$. The first-order condition is
+
+$$
+\beta c_2 A_{t+1}+c_1A_t+c_2A_{t-1}=\beta f_1 p_{t+1}-c_0 .
+$$
+
+**B.** With $c_1=\tfrac52,\,c_2=1,\,\beta=1,\,f_1=10,\,c_0=1$ this is $A_{t+1}+\tfrac52A_t+A_{t-1}=10p_{t+1}-1$, i.e. $L^{-1}(1+\tfrac12L)(1+2L)A_t=10p_{t+1}-1$. The factors give a stable root $\lambda_1=-\tfrac12$ and an unstable root $\lambda_2=-2$ (note $\lambda_1\lambda_2=1$, the reciprocal pair with $\beta=1$). Multiplying by $L$ and solving the unstable root forward with $p_{t+i}=\alpha^ip_t$,
+
+$$
+A_t=-\tfrac12A_{t-1}+\frac{10\alpha}{2+\alpha}\,p_t-\tfrac13 .
+$$
+
+The coefficient on $p_t$ is $\dfrac{10\alpha}{2+\alpha}$:
+
+| $\alpha$ | on $A_{t-1}$ | on $p_t$ | constant |
+|:--:|:--:|:--:|:--:|
+| $0.5$ | $-\tfrac12$ | $2$ | $-\tfrac13$ |
+| $0$ | $-\tfrac12$ | $0$ | $-\tfrac13$ |
+| $-0.5$ | $-\tfrac12$ | $-\tfrac{10}{3}$ | $-\tfrac13$ |
+
+**C.** Next period's supply is $y_{t+1}=f_1A_t=10A_t$, so its response to $p_t$ is $\dfrac{100\alpha}{2+\alpha}$, whose sign is that of $\alpha$. Supply rises with $p_t$ when $\alpha>0$, is unresponsive when $\alpha=0$, and varies **inversely** with $p_t$ when $\alpha<0$: output is sold next period at $p_{t+1}=\alpha p_t$, so when $\alpha<0$ a high price today signals a *low* price at harvest, and the farmer plants less.
+
+**D.** The coefficients of the acreage rule depend on $\alpha$, a parameter of the *price process*, not of the farmer's technology or tastes. Change the environment (here $\alpha$) and the decision rule changes — an instance of the Lucas (1976) critique: reduced-form supply responses are not policy-invariant.
+```
+
 **11.** A social planner wants to maximize the criterion
 
 $$
-\sum_{t=0}^{\infty} b^t \{ u_1(c_t - a) - (\tfrac{1}{2}) u_2(c_t - a)^2 - u_3 n_t - (\tfrac{1}{2}) u_4 n_t^2 \},
-$$ (1)
+\sum_{t=0}^{\infty} b^t \{ u_1(c_t - a) - (\tfrac{1}{2}) u_2(c_t - a)^2 - u_3 n_t - (\tfrac{1}{2}) u_4 n_t^2 \}, \tag{1}
+$$
 
 $$
 0 < b < 1, \qquad u_1, u_2, u_3, u_4 > 0, \quad a > 0,
@@ -2109,8 +2339,8 @@ $$
 $$
 
 $$
-\text{(b)} \quad n_0 > 0, \quad \text{given}.
-$$ (2)
+\text{(b)} \quad n_0 > 0, \quad \text{given}. \tag{2}
+$$
 
 Here $c_t$ is consumption, $n_t$ is labor supplied, $g$ is government purchases, which are fixed and outside the control of the planner, and $a$ is a "bliss level" of consumption. (In the background in (1)–(2), it is understood that output at $t$ equals $f \min(k_t, n_t)$ where $k_t$ is capital at $t$. This fixed proportions technology makes it optimal to set $n_t = k_t$. We have substituted this into an original set of constraints to get (2).)
 
@@ -2121,8 +2351,8 @@ Here $c_t$ is consumption, $n_t$ is labor supplied, $g$ is government purchases,
 &nbsp;&nbsp;&nbsp;&nbsp;**C.** Stationary values of $n_t$ must satisfy (2a) with $n_{t+1} = n_t = n$:
 
 $$
-c + n + g = f n.
-$$ (3)
+c + n + g = f n. \tag{3}
+$$
 
 Consider the following "Golden rule" problem: to maximize
 
@@ -2133,6 +2363,40 @@ $$
 subject to (3), by choice of $c$ and $n$. (In words, find the utility maximizing sustainable levels of consumption and labor.) Solve this problem, finding an explicit formula for the "Golden rule" employment level, $n_g$.
 
 &nbsp;&nbsp;&nbsp;&nbsp;**D.** Does $n_g = \bar{n}$, in general? If not, describe special settings of the parameter values for which $n_g = \bar{n}$. Interpret these special settings.
+
+```{admonition} Solution to Exercise 11
+:class: dropdown
+
+Write $c_t=fn_t-n_{t+1}-g$ and let $MU_t\equiv u_1-u_2(c_t-a)$ be the marginal utility of consumption.
+
+**A.** Differentiating the criterion (1) with respect to $n_{t+1}$ (it enters $c_t$ with coefficient $-1$ and $c_{t+1}$ with coefficient $f$, besides the direct $n_{t+1}$ terms) gives the Euler equation
+
+$$
+-MU_t+bf\,MU_{t+1}-b(u_3+u_4n_{t+1})=0 .
+$$
+
+Substituting $c_t=fn_t-n_{t+1}-g$ makes this a linear second-order difference equation,
+
+$$
+bfu_2\,n_{t+2}-\big(u_2+bf^2u_2+bu_4\big)n_{t+1}+u_2 f\,n_t=\text{const},
+$$
+
+whose characteristic roots multiply to $1/b$ (the reciprocal-pair property). The stable root $\lambda_1$ ($|\lambda_1|<1$), solved backward, yields a convergent saddle path, so $n_t\to\bar n$.
+
+**B.** Setting $n_{t+2}=n_{t+1}=n_t=\bar n$ — equivalently using the steady-state Euler condition $(bf-1)MU=b(u_3+u_4\bar n)$ with $\bar c=(f-1)\bar n-g$ — gives
+
+$$
+\bar n=\frac{(bf-1)\big[u_1+u_2(g+a)\big]-b\,u_3}{b\,u_4+(bf-1)(f-1)u_2}.
+$$
+
+**C.** The Golden-rule problem maximizes sustained one-period utility subject to $c=(f-1)n-g$. Its first-order condition $(f-1)\big[u_1-u_2(c-a)\big]=u_3+u_4n$ gives
+
+$$
+n_g=\frac{(f-1)\big[u_1+u_2(g+a)\big]-u_3}{u_4+(f-1)^2u_2}.
+$$
+
+**D.** In general $\bar n\neq n_g$. Setting $b=1$ in the formula for $\bar n$ reproduces $n_g$ exactly, so the two coincide precisely when there is **no discounting**. With $b<1$ the planner weights the future less than the equal-weight Golden rule, so the stationary point of the discounted problem — the *modified* Golden rule $\bar n$ — differs from the Golden-rule level $n_g$.
+```
 
 ## References
 

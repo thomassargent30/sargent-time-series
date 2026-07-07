@@ -45,10 +45,13 @@ parts:
       - file: chapters/31_orthogonality_filtering
       - file: chapters/32_one_sided_projections
       - file: chapters/33_seasonal_adjustment
+      - file: chapters/33a_seasonality_approximation
       - file: chapters/34_aggregation
+      - file: chapters/34a_sims_expository_note
       - file: chapters/35_errors_variables
       - file: chapters/36_bubbles
       - file: chapters/36a_interpreting_vars
+      - file: chapters/36b_exact_linear_re
       - file: chapters/37_exercises
       - file: chapters/38_exercise_solutions
   - caption: "A Nonlinear Postscript"
@@ -58,3 +61,9 @@ parts:
   - caption: "Moving Spectra: Complex Demodulation"
     chapters:
       - file: chapters/41_comp_demod
+  - caption: "Chapter XIV: Investment Under Uncertainty"
+    chapters:
+      - file: chapters/ch14_investment_uncertainty
+  - caption: "Index"
+    chapters:
+      - file: chapters/42_index

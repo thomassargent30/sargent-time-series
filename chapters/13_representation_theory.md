@@ -8,7 +8,7 @@ $$
 
 In this section we reverse this procedure and start by assuming that we have a covariance stationary process $x_t$, with covariogram $c(\tau)$. We then show that associated with every such process $\{x_t\}$ is a white-noise process $\{\epsilon_t\}$ that is its fundamental building block. One purpose of this construction is to convey the sense in which the models we have been studying are quite general ones for covariance stationary processes.
 
-Suppose that we have a covariance stationary stochastic process \xt, with covariogram $c(\tau)$ and mean zero. We think of forming a sequence of linear least squares projections (the regressions of {doc}`Chapter X <ch10_regressions>`) of $x_t$, against a sequence of expanding sets of past $x$'s, $\{x_{t-1}, x_{t-2}, \ldots, x_{t-n}\}$:
+Suppose that we have a covariance stationary stochastic process $x_t$, with covariogram $c(\tau)$ and mean zero. We think of forming a sequence of linear least squares projections (the regressions of {doc}`Chapter X <ch10_regressions>`) of $x_t$, against a sequence of expanding sets of past $x$'s, $\{x_{t-1}, x_{t-2}, \ldots, x_{t-n}\}$:
 
 $$
 \hat{x}^n_t = \sum_{i=1}^n a_i^n x_{t-i} = P[x_t | x_{t-1}, \ldots , x_{t-n}] \qquad \text{or} \qquad x_t = \hat{x}_t^n + \epsilon_t^n
@@ -80,7 +80,7 @@ $$
 where, since the $\epsilon_{t-j}$ are mutually orthogonal, the $d_j$ are given by
 
 $$
-d_j = (E x_t \epsilon_{t-j})/\sigma^2, \qquad \sigma_t = E\epsilon_t^2
+d_j = (E x_t \epsilon_{t-j})/\sigma^2, \qquad \sigma^2 = E\epsilon_t^2
 $$
 
 Notice that since $\epsilon_t = x_t - P[x_t | x_{t-1}, x_{t-2}, \ldots]$ and since $E\epsilon_t x_{t-i} = 0$ for all $i \geq 1$, we have $E\epsilon_t^2 = Ex_t\epsilon_t$. Thus, we have $d_0 = Ex_t\epsilon_t/E\epsilon_t^2=1$. Since the $\epsilon$'s are orthogonal, the $d_j$ do not depend on $m$. Now calculate the variance of the prediction error, which is
@@ -118,35 +118,35 @@ $$
 
 In addition $E \eta_t \epsilon_s = 0$ for all $s > t$ because $\epsilon_s$ is orthogonal to all $x$'s dated earlier than $s$ and by construction $\eta_t$ is in the space spanned by $x$'s dated $t$ and earlier. Thus $\{\eta_t\}$ is orthogonal to $\{\epsilon_t\}$ at all lags and leads. That is, the entire $\{\epsilon\}$ process is orthogonal to the entire $\{\eta\}$ process.
 
-Because $\eta_t$ is orthogonal to $\epsilon_t$, $\eta_t$ must lie in the space spanned by $\{ x_{t-1}, x_{t-2}, \ldots \}$ since square summable[^fn-rep-6] linear combinations of $\{x_{t-1}, x_{t-2}, \ldots\}$ form the space of *all* random variables orthogonal to \epsilont.[^fn-rep-7] This implies that \etat can be predicted perfectly from lagged $x$'s. More precisely, project $\etat = \xt - \sum_{j=0}^{\infty} d_j \epsilon_{t-j}$ against $\{ x_{t-1}, x_{t-2}, \ldots \}$ to get
+Because $\eta_t$ is orthogonal to $\epsilon_t$, $\eta_t$ must lie in the space spanned by $\{ x_{t-1}, x_{t-2}, \ldots \}$ since square summable[^fn-rep-6] linear combinations of $\{x_{t-1}, x_{t-2}, \ldots\}$ form the space of *all* random variables orthogonal to $\epsilon_t$.[^fn-rep-7] This implies that $\eta_t$ can be predicted perfectly from lagged $x$'s. More precisely, project $\etat = \xt - \sum_{j=0}^{\infty} d_j \epsilon_{t-j}$ against $\{ x_{t-1}, x_{t-2}, \ldots \}$ to get
 
 $$
 P[\etat | x_{t-1}, x_{t-2}, \ldots] = P[x_t | x_{t-1}, x_{t-2}, \ldots] - \sum_{j=1}^{\infty} d_j \epsilon_{t-j}
 $$
 
-Since $P[\epsilont | x_{t-1}, x_{t-2}, \ldots] = 0$ and since $P[x_{t-k} | x_{t-1}, x_{t-2}, \ldots] = \epsilon_{t-k}$ for $k \geq 1$. Subtracting the above equation from the definition of \etat gives
+Since $P[\epsilont | x_{t-1}, x_{t-2}, \ldots] = 0$ and since $P[x_{t-k} | x_{t-1}, x_{t-2}, \ldots] = \epsilon_{t-k}$ for $k \geq 1$. Subtracting the above equation from the definition of $\eta_t$ gives
 
 $$
 \etat - P[\etat | x_{t-1}, x_{t-2}, \ldots] = (\xt - P[x_t | x_{t-1}, x_{t-2}, \ldots]) - d_0 \epsilont = 0
 $$
 
-since the one-step-ahead prediction error for \xt is $d_0\epsilon_t$. This, $\etat = P[\etat | x_{t-1}, \ldots]$, so that \etat can be predicted arbitrarily well (in the mean squared error sense) from past $x$'s alone. More generally, we have
+since the one-step-ahead prediction error for $x_t$ is $d_0\epsilon_t$. Thus, $\eta_t = P[\eta_t | x_{t-1}, \ldots]$, so that $\eta_t$ can be predicted arbitrarily well (in the mean squared error sense) from past $x$'s alone. More generally, we have
 
 $$
 P[\etat | x_{t-k}, x_{t-k-1}, \ldots] = P[x_t | x_{t-k}, \ldots] - \sum_{j=k}^{\infty} d_j \epsilon_{t-j}
 $$
 
-Subtracting this from the definition of \etat gives
+Subtracting this from the definition of $\eta_t$ gives
 
 $$
 \etat - P[\etat | x_{t-k}, \ldots] = (\xt - P[x_t | x_{t-k}, \ldots]) - \sum_{j=0}^{k - 1} d_j \epsilon_{t-j} = 0
 $$
 
-since $\sum_{j=0}^{k-1} d_j \epsilon_{t-j}$ is the $k$-step-ahead prediction error in predicting $x_t$, from its own past. Thus, we have proved that \etat, is (linearly) deterministic in the sense that it can be predicted arbitrarily well (in the mean squared error sense) arbitrarily far into the future from past $x$'s only. This completes the proof of Wold's theorem.
+since $\sum_{j=0}^{k-1} d_j \epsilon_{t-j}$ is the $k$-step-ahead prediction error in predicting $x_t$, from its own past. Thus, we have proved that $\eta_t$ is (linearly) deterministic in the sense that it can be predicted arbitrarily well (in the mean squared error sense) arbitrarily far into the future from past $x$'s only. This completes the proof of Wold's theorem.
 
-The \etat, process is termed the (linearly) deterministic part of $x$, while $\sum_{j=k}^{\infty} d_j \epsilon_{t-j}$. is termed the (linearly) indeterministic part. The reason for the adverb *linearly* is that the decomposition has been obtained by using linear projections.
+The $\eta_t$ process is termed the (linearly) deterministic part of $x$, while $\sum_{j=0}^{\infty} d_j \epsilon_{t-j}$ is termed the (linearly) indeterministic part. The reason for the adverb *linearly* is that the decomposition has been obtained by using linear projections.
 
-Wold's theorem is important for us because it provides an explanation of the sense in which stochastic difference equations provide a general model for the indeterministic part of any univariate stationary stochastic process, and also the sense in which there exists a white-noise process \epsilont, that is the building block for the indeterministic part of \xt. Not surprisingly, the construction of the theorem can be extended to multivariate stochastic processes for which a corresponding orthogonal decomposition exists in which the deterministic and indeterministic parts are vectors.
+Wold's theorem is important for us because it provides an explanation of the sense in which stochastic difference equations provide a general model for the indeterministic part of any univariate stationary stochastic process, and also the sense in which there exists a white-noise process $\epsilon_t$ that is the building block for the indeterministic part of $x_t$. Not surprisingly, the construction of the theorem can be extended to multivariate stochastic processes for which a corresponding orthogonal decomposition exists in which the deterministic and indeterministic parts are vectors.
 
 As a particular example of a process that conforms to the representation given in Wold's decomposition theorem, consider the process
 
@@ -154,7 +154,7 @@ $$
 \xt = \djepsilon + \sum_{i=1}^n(a_i \cos \lambda_i t + b_i \sin \lambda_i t)
 $$
 
-where \epsilont is a covariance stationary, serially uncorrelated process with mean zero and variance $\sigma_\epsilon^2$; $\djepsilon < \infty$; $a_i$ and $b_i$ are random variables orthogonal to the entire $\epsilon$ process and satisfying $E a_i = E b_i = E a_i b_j = 0$ for all $i,j, E a_i a_j = E b_i b_j =$ for all $i \neq j$, and $E a_i^2 = E b_i^2 = \sigma_i^2$; and the $\lambda_i$ are fixed numbers in the interval $[-\pi, \pi]$. The process $\sum_{i=1}^n(a_i \cos \lambda_i t + b_i \sin \lambda_i t)$ is deterministic, is orthogonal to the process \djepsilon at all lags, and is easily deduced[^fn-rep-8] to have covariogram given by $\sum_{i=1}^n \sigma_i^2 \cos \lambda_i \tau$. As we have seen, the covariogram of \djepsilon has generating function $\sigma_\epsilon^2 d(z) d(z^{-1})$. The spectral density of the deterministic part turns out to be not well defined as an ordinary function. This can be seen by noting that the ordinary Fourier transform of the covariogram $\sigma^2 \cos \lambda_i \tau$ is
+where $\epsilon_t$ is a covariance stationary, serially uncorrelated process with mean zero and variance $\sigma_\epsilon^2$; $\sum_{j=0}^\infty d_j^2 < \infty$; $a_i$ and $b_i$ are random variables orthogonal to the entire $\epsilon$ process and satisfying $E a_i = E b_i = E a_i b_j = 0$ for all $i,j$; $E a_i a_j = E b_i b_j = 0$ for all $i \neq j$, and $E a_i^2 = E b_i^2 = \sigma_i^2$; and the $\lambda_i$ are fixed numbers in the interval $[-\pi, \pi]$. The process $\sum_{i=1}^n(a_i \cos \lambda_i t + b_i \sin \lambda_i t)$ is deterministic, is orthogonal to the process $\sum_{j=0}^{\infty} d_j \epsilon_{t-j}$ at all lags, and is easily deduced[^fn-rep-8] to have covariogram given by $\sum_{i=1}^n \sigma_i^2 \cos \lambda_i \tau$. As we have seen, the covariogram of $\sum_{j=0}^{\infty} d_j \epsilon_{t-j}$ has generating function $\sigma_\epsilon^2 d(z) d(z^{-1})$. The spectral density of the deterministic part turns out to be not well defined as an ordinary function. This can be seen by noting that the ordinary Fourier transform of the covariogram $\sigma^2 \cos \lambda_i \tau$ is
 
 $$
 \begin{aligned}
@@ -362,4 +362,4 @@ transforms.
 
 [^fn-rep-8]: For example, let $x(t) = a \cos \lambda t + b \sin \lambda_t$ where $E a = E ab = E b = 0, \quad E a^2 = E b^2 = \sigma^2$. Then: $Ex(t_1)x(t_2) = E\{a^2 \cos \lambda t_1 \cos \lambda t_2 + a b (\sin \lambda t_2 \cos \lambda t_1 + \cos \lambda t_2 \sin \lambda t_1) + b^2 \sin \lambda t_1 \sin \lambda t_2 \} = \sigma^2\{\cos \lambda t_1 \cos \lambda t_2 + \sin \lambda t_1 \sin \lambda t_2\}$. Since $\cos(\alpha - \beta) = \cos \alpha \cos \beta + \sin \alpha \sin \beta$, we have $E x(t_1) x(t_2) = \sigma^2 \cos \lambda(t_1 - t_2)$ or $E x(t) x(t-T) = \sigma^2 \cos \lambda T$. These calculations can easily be extended to prove the assertion made in the text.
 
-[^fn-rep-9]: There are essentially two ways in which a process can be deterministic. One is if its spectral density consists entirely of a number of "spikes" or delta functions. A second way is if its spectral density, even though having no spikes, is zero on some interval of $\omega$'s of positive length, or is "too close" to zero over such an interval. Heuristically, this second possible way of being deterministic is suggested by the Kolmogorov formula for the one-step-ahead prediction error variance $\sigma_t^2 = \exp[(2 \pi)^{-1} \int_{-\pi}^{\pi} \ln g(e^{-i \omega})d\omega]$ where $g(e^{- i \omega)}$ is the spectral density. See Whittle(1983, p. 26).
+[^fn-rep-9]: There are essentially two ways in which a process can be deterministic. One is if its spectral density consists entirely of a number of "spikes" or delta functions. A second way is if its spectral density, even though having no spikes, is zero on some interval of $\omega$'s of positive length, or is "too close" to zero over such an interval. Heuristically, this second possible way of being deterministic is suggested by the Kolmogorov formula for the one-step-ahead prediction error variance $\sigma_t^2 = \exp[(2 \pi)^{-1} \int_{-\pi}^{\pi} \ln g(e^{-i \omega})d\omega]$ where $g(e^{-i\omega})$ is the spectral density. See Whittle(1983, p. 26).

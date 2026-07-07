@@ -32,7 +32,7 @@ $$
 
 Suppose that an agent observes $\{x_t, x_{t-1}, \ldots\}$ at $t$, and wishes to construct linear least squares forecasts of $x$'s on the basis of this information set. To construct the linear least squares forecast for $x_{t+k}$ given $\{x_t, x_{t-1}, \ldots\}$, one uses the Wiener-Kolmogorov formula {eq}`eq-62`, which requires that a Wold moving average representation $x_t = d(L)\epsilon_t$ be obtained for $x_t$.
 
-To obtain the Wold representation for $x_t$, we simply use the method of Section 16. In particular, the covariance generating function of $x_t$ is
+To obtain the Wold representation for $x_t$, we simply use the method of {doc}`Deriving the Moving Average Representation <16_deriving_ma>`. In particular, the covariance generating function of $x_t$ is
 
 $$
 g_x(z) = a(z) a(z^{-1})\sigma_u^2 + \sigma_\eta^2.
@@ -73,7 +73,7 @@ $$
 x_t = y_t + \eta_t
 $$
 
-where $E \eta_t u_{t-s} = 0$ for all $s$. Again we desire to find $P[x_{t+k}|x_t, x_{t-1}, \ldots]$, so we need to find a Wold representation for $x_t$. We use the method of Section 17.
+where $E \eta_t u_{t-s} = 0$ for all $s$. Again we desire to find $P[x_{t+k}|x_t, x_{t-1}, \ldots]$, so we need to find a Wold representation for $x_t$. We use the method of {doc}`Finding a Wold Representation <17_wold_ma>`.
 
 The covariance generating function of $x$ is
 

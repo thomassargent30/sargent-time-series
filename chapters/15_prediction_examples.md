@@ -1,6 +1,6 @@
 # Some Examples[^fn-ex-1]
 
-#### First-Order-Markov:
+## First-Order-Markov:
 
 Consider the first-order autoregressive process $(1-\lambda L)x_t = \epsilon_t$, $\epsilon_t$ white noise, $|\lambda| < 1$, $\epsilon_t = x_t - P[x_t|x_{t-1}, x_{t-2},\ldots]$; we can write $x_t = (1/(1-\lambda L))\epsilon_t$. We have
 
@@ -24,7 +24,7 @@ $$
 P^{t-k}x_{t+k} = \lambda^k x_t.
 $$
 
-#### First-Order Moving Average:
+## First-Order Moving Average:
 
 Suppose $x_t = (1 + \beta L)\epsilon_t$, $\epsilon_t$ white, $|\beta| < 1$, $\epsilon_t = x_t - P[x_t|x_{t-1}, x_{t-2},\ldots]$. Then we have
 
@@ -40,7 +40,7 @@ $$
 
 which can also be seen directly by projecting on $\{x_{t-k}, x_{t-k-1},\ldots\}$ both sides of $x_t = (1 + \beta L)\epsilon_t$.
 
-#### First-Order Moving Average, Autoregressive:
+## First-Order Moving Average, Autoregressive:
 
 Suppose we have
 

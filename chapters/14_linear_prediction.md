@@ -33,13 +33,13 @@ Since $d_0$ is unity, it turns out that $a_0$ is unity also. Equation {eq}`eq-60
 We now derive some formulas due to Wiener and Kolmogorov for linear least squares predictors. Let $P_{t-j}x_t$ be the linear least squares projection of $x_t$ on the space spanned by $\{ x_{t-j}, x_{t-j-1}, \ldots\}$ i.e.,
 
 $$
-P_{t-1}x_t \equiv P[x_t | x_{t-j}, x_{t-j-1}, \ldots ].
+P_{t-j}x_t \equiv P[x_t | x_{t-j}, x_{t-j-1}, \ldots ].
 $$
 
 Now project both sides of {eq}`eq-59` against $\{x_{t-1}, x_{t-2}, \ldots\}$ to get
 
 $$
-P_{t-j}x_t = \sum_{j=0}^\infty d_j P_{t-1} \epsilon_{t-j} = \sum_{j=1}^{\infty} d_j \epsilon_{t-j},
+P_{t-1}x_t = \sum_{j=0}^\infty d_j P_{t-1} \epsilon_{t-j} = \sum_{j=1}^{\infty} d_j \epsilon_{t-j},
 $$
 
 which follows since $P_{t-1}\epsilon_t = 0$, because $\epsilon_t$ is orthogonal to lagged $x$'s; and since $P_{t-1} \epsilon_{t-j} = \epsilon_{t-j}$ for all $j \geq 1$ because $\epsilon_{t-j}$ is in the space spanned by $\{x_{t-1}, x_{t-2}, \ldots\}$. We write the above equation as
@@ -57,7 +57,7 @@ P_{t-1}x_t = \left(\frac{d(L)}{L}\right)_{+} \frac{1}{d(L)} x_{t-1}
 
 which is a compact formula for the one-step-ahead linear least squares forecast of $x_t$ based on it own past.
 
-To get a formula for the general $k$-step-ahead linear least squares forecast, project both sides of {eq}`eq-50` against $\{ x_{t-k}, x_{t-k-1}, \ldots\}$ to get
+To get a formula for the general $k$-step-ahead linear least squares forecast, project both sides of {eq}`eq-59` against $\{ x_{t-k}, x_{t-k-1}, \ldots\}$ to get
 
 $$
 P_{t-k}x_t = \sum_{j=k}^\infty d_j \epsilon_{t-j} = \left(\frac{d(L)}{L^k}\right)_+ \epsilon_{t-k}

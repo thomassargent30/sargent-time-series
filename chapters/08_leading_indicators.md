@@ -90,10 +90,11 @@ $$
 
 which is *real* for all $\omega$. Therefore, the phase shift $\theta(\omega) = 0$, so
 that $y$ and $x$ are perfectly in phase at all frequencies. Despite this, by using a
-theorem due to Sims (see pp. 314–324 in original check now) it is possible to show that
+theorem due to Sims ({doc}`27_granger_causality`) it is possible to show that
 even given the past of $x$, past $y$ does help to predict present and future $x$'s.
 This is a consequence of the lag distribution of the $h_j$ being two-sided and of
-Sim's theorem 2, which we will describe in detail presently.
+Sims's theorem 2, which we describe in detail in
+{doc}`the section on Granger causality <27_granger_causality>`.
 
 Taken altogether, these two examples illustrate the fact that displaying a phase lead is
 neither a necessary nor a sufficient condition for one series to be of use in predicting

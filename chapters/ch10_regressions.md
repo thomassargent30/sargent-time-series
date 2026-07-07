@@ -571,6 +571,26 @@ $$
 
 by least squares, and testing whether $\alpha = 1$. In arbitrarily large samples, will this procedure lead him to conclude the truth, namely that $\alpha = 1$? If this procedure is flawed provide a better one and defend it.
 
+```{admonition} Solution to Exercise 1
+:class: dropdown
+
+**No.** The least squares slope of $m_t$ on $p_t$ converges in large samples to the population projection coefficient $\alpha=\operatorname{Cov}(m_t,p_t)/\operatorname{Var}(p_t)$. The catch is that the maintained orthogonality is $Eu_tm_t=0$ — the disturbance is orthogonal to $m_t$, **not** to the regressor $p_t$. Writing $p_t=m_t-ky-u_t$ gives $\operatorname{Cov}(u_t,p_t)=\operatorname{Cov}(u_t,m_t)-\operatorname{Var}(u_t)=-\sigma_u^2$, so $\operatorname{Cov}(m_t,p_t)=\operatorname{Var}(p_t)-\sigma_u^2$ and
+
+$$
+\alpha=1-\frac{\sigma_u^2}{\operatorname{Var}(p_t)}<1 .
+$$
+
+In arbitrarily large samples the researcher finds $\alpha<1$ and wrongly rejects the truth $\alpha=1$: because $p_t$ is correlated with $u_t$, the direct regression is biased downward (an errors-in-variables/simultaneity bias).
+
+**A better procedure: run the reverse regression.** Since $u_t\perp m_t$, project $p_t$ on $(1,m_t)$. From $p_t=m_t-ky-u_t$,
+
+$$
+\frac{\operatorname{Cov}(p_t,m_t)}{\operatorname{Var}(m_t)}=\frac{\operatorname{Var}(m_t)-\operatorname{Cov}(u_t,m_t)}{\operatorname{Var}(m_t)}=1 ,
+$$
+
+with intercept $-ky$. Because the regressor $m_t$ is orthogonal to the error $u_t$, OLS of $p_t$ on $m_t$ consistently estimates the structural coefficient; testing whether that slope equals $1$ correctly tests the absence of money illusion.
+```
+
 **2.** Suppose that the expectations theory of the term structure is correct and that
 
 $$
@@ -585,9 +605,45 @@ $$
 
 where $u_t$ is a least squares residual obeying $Eu_t = Eu_t R_{2t-1} = Eu_t R_{1t-1} = 0$.
 
+```{admonition} Solution to Exercise 2
+:class: dropdown
+
+Rewrite the dependent variable using the theory $R_{2t}=\tfrac12[R_{1t}+E_tR_{1t+1}]$, so that $E_tR_{1t+1}=2R_{2t}-R_{1t}$:
+
+$$
+R_{2t}-\tfrac12[R_{1t}+R_{1t+1}]=\tfrac12\big(2R_{2t}-R_{1t}\big)-\tfrac12R_{1t+1}=-\tfrac12\big(R_{1t+1}-E_tR_{1t+1}\big).
+$$
+
+The left-hand side is $-\tfrac12$ times the one-step-ahead forecast error of $R_{1t+1}$. Under the theory this error is orthogonal to *every* variable in the time-$t$ information set, which contains the constant and $R_{2t-1},R_{1t-1}$ (both dated $t-1<t$). Hence the least squares projection of the left-hand side on $(1,R_{2t-1},R_{1t-1})$ is identically zero, so the population values are
+
+$$
+\alpha=\beta=\lambda=0 .
+$$
+
+Equivalently, forecast revisions cannot be predicted from past information (the martingale property of Section 7); a nonzero $\alpha,\beta,$ or $\lambda$ would be evidence against the expectations theory.
+```
+
 Use the following information to solve problems 3–8. Let $Y$ and $X \equiv (x_0, x_1, \ldots, x_n)$ be random variables with known means and variances, with $x_0 \equiv 1$.
 
 **3.** Prove that if $Ex_1 x_2 = 0$, then $P[Y|x_1, x_2] = P[Y|x_1] + P[Y|x_2]$.
+
+```{admonition} Solution to Exercise 3
+:class: dropdown
+
+Write $P[Y|x_1,x_2]=a_1x_1+a_2x_2$. The normal equations $E(Y-a_1x_1-a_2x_2)x_j=0$, $j=1,2$, are
+
+$$
+EYx_1=a_1Ex_1^2+a_2Ex_1x_2,\qquad EYx_2=a_1Ex_1x_2+a_2Ex_2^2 .
+$$
+
+With $Ex_1x_2=0$ they **decouple**:
+
+$$
+a_1=\frac{EYx_1}{Ex_1^2},\qquad a_2=\frac{EYx_2}{Ex_2^2},
+$$
+
+which are exactly the coefficients of the univariate projections $P[Y|x_1]=\dfrac{EYx_1}{Ex_1^2}x_1$ and $P[Y|x_2]=\dfrac{EYx_2}{Ex_2^2}x_2$. Hence $P[Y|x_1,x_2]=P[Y|x_1]+P[Y|x_2]$: orthogonal regressors can be projected on one at a time and the results added.
+```
 
 **4.** Prove that if $E(x_1, x_2, \ldots, x_n) = (0, 0, \ldots, 0)$, then
 
@@ -595,9 +651,51 @@ $$
 P[Y|1, x_1, x_2, \ldots, x_n] = P[Y|1] + P[Y|x_1, x_2, \ldots, x_n].
 $$
 
+```{admonition} Solution to Exercise 4
+:class: dropdown
+
+Because $Ex_i=0$ for $i\ge1$, each $x_i$ is orthogonal to the constant $x_0\equiv1$, since $E(1\cdot x_i)=Ex_i=0$. So $\{1\}$ and $\{x_1,\dots,x_n\}$ are two orthogonal blocks of regressors and the argument of Exercise 3 applies blockwise.
+
+Write $P[Y|1,x_1,\dots,x_n]=a_0+\sum_{i\ge1}a_ix_i$. The normal equation from $x_0=1$ is $EY=a_0+\sum_i a_iEx_i=a_0$, so $a_0=EY=P[Y|1]$. The remaining equations
+
+$$
+EYx_j=a_0Ex_j+\sum_{i\ge1}a_iEx_ix_j=\sum_{i\ge1}a_iEx_ix_j,\qquad j\ge1,
+$$
+
+are precisely the normal equations for $P[Y|x_1,\dots,x_n]=\sum_{i\ge1}a_ix_i$. Hence
+
+$$
+P[Y|1,x_1,\dots,x_n]=P[Y|1]+P[Y|x_1,\dots,x_n].
+$$
+```
+
 **5.** Prove that if $Ex_1 x_2 = 0$, then $P[x_1|x_2] = 0$.
 
+```{admonition} Solution to Exercise 5
+:class: dropdown
+
+$P[x_1|x_2]=a x_2$, where the normal equation $E(x_1-ax_2)x_2=0$ gives
+
+$$
+a=\frac{Ex_1x_2}{Ex_2^2}=\frac{0}{Ex_2^2}=0 .
+$$
+
+Hence $P[x_1|x_2]=0$: the best linear predictor of $x_1$ from a variable $x_2$ orthogonal to it is zero.
+```
+
 **6.** Let $c$, $d$ be real numbers. Prove that $P[cY_1 + dY_2|X] = cP[Y_1|X] + dP[Y_2|X]$ where $Y_1$ and $Y_2$ are random variables.
+
+```{admonition} Solution to Exercise 6
+:class: dropdown
+
+Let $P[Y_1|X]=Xa$ and $P[Y_2|X]=Xb$, so by the orthogonality principle $E(Y_1-Xa)x_i=0$ and $E(Y_2-Xb)x_i=0$ for every $i$. Consider the candidate $X(ca+db)$. For each $i$,
+
+$$
+E\big[(cY_1+dY_2)-X(ca+db)\big]x_i=c\,E(Y_1-Xa)x_i+d\,E(Y_2-Xb)x_i=0 .
+$$
+
+Thus $X(ca+db)$ satisfies the orthogonality conditions that *uniquely* determine the projection of $cY_1+dY_2$ on $X$. Therefore $P[cY_1+dY_2|X]=cP[Y_1|X]+dP[Y_2|X]$.
+```
 
 **7.** Use 3, 5, and 6 to prove the Kalman filter (recursive projection) formula, {eq}`eq-10-15-prime`:
 
@@ -607,7 +705,49 @@ $$
 
 where $\Omega$ and $X$ are random variables.
 
+```{admonition} Solution to Exercise 7
+:class: dropdown
+
+Let $\tilde X=X-P[X|\Omega]$ be the part of $X$ orthogonal to $\Omega$. By the orthogonality principle each component of $\tilde X$ is orthogonal to $\Omega$, and $(\Omega,X)$ and $(\Omega,\tilde X)$ span the same linear space, so $P[Y|\Omega,X]=P[Y|\Omega,\tilde X]$.
+
+- Since $\Omega$ and $\tilde X$ are orthogonal blocks, **Exercise 3** (applied blockwise) gives $P[Y|\Omega,\tilde X]=P[Y|\Omega]+P[Y|\tilde X]$.
+- Split $Y=P[Y|\Omega]+(Y-P[Y|\Omega])$ and use **Exercise 6** (linearity): $P[Y|\tilde X]=P\big[P[Y|\Omega]\,\big|\,\tilde X\big]+P\big[Y-P[Y|\Omega]\,\big|\,\tilde X\big]$.
+- The first term vanishes: $P[Y|\Omega]$ is a linear combination of elements of $\Omega$, and $\tilde X\perp\Omega$, so $P[Y|\Omega]$ is orthogonal to $\tilde X$; by **Exercise 5**, $P\big[P[Y|\Omega]\,\big|\,\tilde X\big]=0$.
+
+Combining,
+
+$$
+P[Y|\Omega,X]=P[Y|\Omega]+P\big[(Y-P[Y|\Omega])\,\big|\,(X-P[X|\Omega])\big],
+$$
+
+which is {eq}`eq-10-15-prime`.
+```
+
 **8.** Interpret $Y$, $\Omega$, and $X$ as sets, and $P[Y|\Omega, X]$ as $Y (\Omega\ X)$. Derive the Kalman filter formula using Venn diagrams. (Interpret $Y - X$ as $Y \cap X^c$ where $X^c$ is the complement of $X$.)
+
+```{admonition} Solution to Exercise 8
+:class: dropdown
+
+Draw three overlapping circles $Y$, $\Omega$, $X$, and read a projection as "the part of the first set covered by the others":
+
+$$
+P[Y|\Omega,X]\ \leftrightarrow\ Y\cap(\Omega\cup X),\qquad P[Y|\Omega]\ \leftrightarrow\ Y\cap\Omega,
+$$
+
+with the innovation $X-P[X|\Omega]\ \leftrightarrow\ X\cap\Omega^{c}$ (the part of $X$ outside $\Omega$), so that
+
+$$
+P\big[(Y-P[Y|\Omega])\mid(X-P[X|\Omega])\big]\ \leftrightarrow\ (Y\cap\Omega^{c})\cap(X\cap\Omega^{c})=Y\cap X\cap\Omega^{c}.
+$$
+
+The identity to check is $Y\cap(\Omega\cup X)=(Y\cap\Omega)\cup(Y\cap X\cap\Omega^{c})$. Indeed $Y\cap(\Omega\cup X)=(Y\cap\Omega)\cup(Y\cap X)$, and splitting $Y\cap X=(Y\cap X\cap\Omega)\cup(Y\cap X\cap\Omega^{c})$ with $Y\cap X\cap\Omega\subseteq Y\cap\Omega$ yields the right-hand side. The two pieces are **disjoint**,
+
+$$
+(Y\cap\Omega)\cap(Y\cap X\cap\Omega^{c})=Y\cap X\cap\Omega\cap\Omega^{c}=\varnothing,
+$$
+
+the set-theoretic counterpart of the *orthogonality* of $P[Y|\Omega]$ and the update term. The Venn picture reproduces the Kalman recursion: the information in $X$ beyond $\Omega$ is the crescent $X\cap\Omega^{c}$, and it adds the disjoint sliver $Y\cap X\cap\Omega^{c}$ to the forecast $Y\cap\Omega$.
+```
 
 **9.** The labor supply schedule is given by
 
@@ -645,6 +785,31 @@ $$
 
 Is this a correct policy conclusion?
 
+```{admonition} Solution to Exercise 9
+:class: dropdown
+
+**A.** Workers estimate $p_t$ by the projection on what they see, $\hat Ep_t=P[p_t\mid1,w_t]=a_0+a_1w_t$. With $Ew_t=0$ and $Ep_t=k$,
+
+$$
+a_1=\frac{\operatorname{Cov}(p_t,w_t)}{\operatorname{Var}(w_t)}=\frac{\operatorname{Cov}(k+u_t,\,z_t+u_t)}{\operatorname{Var}(z_t+u_t)}=\frac{\sigma_u^2}{\sigma_z^2+\sigma_u^2},\qquad a_0=k .
+$$
+
+Hence $\hat Ep_t=k+\dfrac{\sigma_u^2}{\sigma_z^2+\sigma_u^2}\,w_t$, and
+
+$$
+N_t=\gamma(w_t-\hat Ep_t)=\underbrace{\frac{\gamma\,\sigma_z^2}{\sigma_z^2+\sigma_u^2}}_{\phi}\,w_t\ \underbrace{-\ \gamma k}_{h},
+\qquad \phi\in(0,\gamma),\ \ h=-\gamma k .
+$$
+
+**B. No — this is the Lucas critique.** The slope $\phi$ is not structural: it contains the signal-extraction weight $\sigma_z^2/(\sigma_z^2+\sigma_u^2)$, which depends on the variances generated by the *prevailing* policy regime. If the authority makes $w_t$ constant at $\bar w$, then $w$ has zero variance and conveys no information about $u_t$, so workers' optimal estimate becomes $\hat Ep_t=Ep_t=k$ and
+
+$$
+N_t=\gamma(\bar w-k),
+$$
+
+a constant with slope $\gamma$, **not** $\phi$. To hit a target $N^*$ one needs $\bar w=k+N^*/\gamma$, not the $w$ solving $N^*=\phi w+h$. The high-$R^2$ regression estimated under the old regime cannot predict behavior under the new one.
+```
+
 **10.** The consumption function is given by
 
 $$
@@ -672,6 +837,142 @@ where $v_t$ is a serially uncorrelated random variable with mean zero and varian
 **A.** Derive an operational consumption function of the form $C_t = \beta Y_t$ and give an explicit formula relating $\beta$ to the parameters $c$, $\sigma_v^2$, and $\sigma_T^2$.
 
 **B.** Suppose the Congress increases the volatility of taxes by an extraordinary amount. What happens to the consumption function?
+
+```{admonition} Solution to Exercise 10
+:class: dropdown
+
+**A.** Consumers form $T_t^*=P[T_t\mid Y_t]$. With mean-zero variables (projecting through the origin),
+
+$$
+T_t^*=\frac{E(T_tY_t)}{EY_t^2}Y_t=\frac{E\big(T_t(3T_t+v_t)\big)}{E(3T_t+v_t)^2}Y_t=\frac{3\sigma_T^2}{9\sigma_T^2+\sigma_v^2}Y_t .
+$$
+
+Then
+
+$$
+C_t=c(Y_t-T_t^*)=c\Big(1-\tfrac{3\sigma_T^2}{9\sigma_T^2+\sigma_v^2}\Big)Y_t=\underbrace{c\,\frac{6\sigma_T^2+\sigma_v^2}{9\sigma_T^2+\sigma_v^2}}_{\beta}\,Y_t .
+$$
+
+**B.** As Congress raises the volatility of taxes, $\sigma_T^2\to\infty$ and
+
+$$
+\beta\ \longrightarrow\ c\cdot\frac{6\sigma_T^2}{9\sigma_T^2}=\frac{2c}{3}.
+$$
+
+The marginal propensity to consume out of *measured* income falls (from near $c$ when taxes are stable toward $2c/3$). Intuitively, more volatile taxes make income a stronger signal of taxes — since $Y_t=3T_t+v_t$ is then dominated by $3T_t$ — so consumers attribute more of any income movement to perceived taxes and spend less of it. As in Exercise 9, the slope of the consumption function is not invariant to the policy regime.
+```
+
+**11.** *(Combining two noisy signals.)* Let $s,n_1,n_2$ be mutually orthogonal, mean-zero random variables with variances $\sigma_s^2,\sigma_1^2,\sigma_2^2$. An agent observes two noisy measurements of $s$,
+
+$$
+x_1=s+n_1,\qquad x_2=s+n_2 .
+$$
+
+&nbsp;&nbsp;&nbsp;&nbsp;**A.** Find the one-signal estimate $P[s\mid x_1]$ and its mean squared error.
+
+&nbsp;&nbsp;&nbsp;&nbsp;**B.** Find the two-signal estimate $P[s\mid x_1,x_2]$.
+
+&nbsp;&nbsp;&nbsp;&nbsp;**C.** Show that the mean squared error $\Sigma=E(s-P[s\mid x_1,x_2])^2$ satisfies $\dfrac{1}{\Sigma}=\dfrac{1}{\sigma_s^2}+\dfrac{1}{\sigma_1^2}+\dfrac{1}{\sigma_2^2}$ — that is, *precisions add*.
+
+```{admonition} Solution to Exercise 11
+:class: dropdown
+
+**A.** $P[s\mid x_1]=a x_1$ with $a=\dfrac{E(sx_1)}{Ex_1^2}=\dfrac{\sigma_s^2}{\sigma_s^2+\sigma_1^2}$, and error variance $E(s-ax_1)^2=\sigma_s^2-a\,E(sx_1)=\dfrac{\sigma_s^2\sigma_1^2}{\sigma_s^2+\sigma_1^2}$ (whose inverse is $1/\sigma_s^2+1/\sigma_1^2$).
+
+**B.** Write $P[s\mid x_1,x_2]=a_1x_1+a_2x_2$. Using $Ex_1^2=\sigma_s^2+\sigma_1^2$, $Ex_2^2=\sigma_s^2+\sigma_2^2$, $Ex_1x_2=\sigma_s^2$, and $Esx_i=\sigma_s^2$, the normal equations are
+
+$$
+\sigma_s^2=a_1(\sigma_s^2+\sigma_1^2)+a_2\sigma_s^2,\qquad \sigma_s^2=a_1\sigma_s^2+a_2(\sigma_s^2+\sigma_2^2).
+$$
+
+Subtracting gives $a_1\sigma_1^2=a_2\sigma_2^2$; solving,
+
+$$
+a_1=\frac{\sigma_s^2\sigma_2^2}{D},\qquad a_2=\frac{\sigma_s^2\sigma_1^2}{D},\qquad D=\sigma_s^2\sigma_1^2+\sigma_s^2\sigma_2^2+\sigma_1^2\sigma_2^2 .
+$$
+
+**C.** By orthogonality $\Sigma=Es^2-E(s\hat s)=\sigma_s^2(1-a_1-a_2)$, and $1-a_1-a_2=\dfrac{\sigma_1^2\sigma_2^2}{D}$, so
+
+$$
+\Sigma=\frac{\sigma_s^2\sigma_1^2\sigma_2^2}{D}\quad\Longrightarrow\quad \frac{1}{\Sigma}=\frac{D}{\sigma_s^2\sigma_1^2\sigma_2^2}=\frac{1}{\sigma_s^2}+\frac{1}{\sigma_1^2}+\frac{1}{\sigma_2^2}.
+$$
+
+Each independent source contributes additively to precision: the prior on $s$ (precision $1/\sigma_s^2$) and the two measurements ($1/\sigma_1^2$, $1/\sigma_2^2$). This is the static heart of the Kalman filter of Section 5.
+```
+
+**12.** *(Forecast revisions are orthogonal.)* Let $\Omega_{t-2}\subseteq\Omega_{t-1}\subseteq\Omega_t$ be nested information sets and let $Y$ have finite second moment. Define the one-period forecast revision
+
+$$
+r_t=P[Y\mid\Omega_t]-P[Y\mid\Omega_{t-1}].
+$$
+
+Using the law of iterated projections, show that $E\,r_t\,r_{t-1}=0$, and more generally that revisions made at different dates are mutually orthogonal. (Thus the sequence of forecasts $P[Y\mid\Omega_t]$ is a martingale with orthogonal increments — compare Section 7 and Exercise 2.)
+
+```{admonition} Solution to Exercise 12
+:class: dropdown
+
+First, each revision is orthogonal to the *earlier* information set. Project $r_t$ on $\Omega_{t-1}$ and use the law of iterated projections $P\big[P[Y\mid\Omega_t]\mid\Omega_{t-1}\big]=P[Y\mid\Omega_{t-1}]$ (valid because $\Omega_{t-1}\subseteq\Omega_t$):
+
+$$
+P[r_t\mid\Omega_{t-1}]=P\big[P[Y\mid\Omega_t]\mid\Omega_{t-1}\big]-P[Y\mid\Omega_{t-1}]=P[Y\mid\Omega_{t-1}]-P[Y\mid\Omega_{t-1}]=0 .
+$$
+
+So $r_t$ is orthogonal to every variable in $\Omega_{t-1}$. Now $r_{t-1}=P[Y\mid\Omega_{t-1}]-P[Y\mid\Omega_{t-2}]$ is a linear combination of variables in $\Omega_{t-1}$; therefore $r_t\perp r_{t-1}$, i.e. $E\,r_t\,r_{t-1}=0$. The same argument shows $r_t\perp r_s$ for every $s<t$, since each such $r_s\in\operatorname{span}(\Omega_{t-1})$.
+
+Consequently $P[Y\mid\Omega_t]=P[Y\mid\Omega_0]+\sum_{\tau\le t}r_\tau$ is a sum of orthogonal increments — the same (weak) martingale structure found for forward rates in Section 7. Uncorrelated revisions are a testable implication: news should move a forecast unpredictably.
+```
+
+**13.** *(Steady state of the scalar Kalman filter.)* Take the filter {eq}`eq-10-21`, {eq}`eq-10-23` with $c=1$, so $K_t=\dfrac{\rho\Sigma_t}{\Sigma_t+\sigma_u^2}$ and $\Sigma_{t+1}=(\rho-K_t)^2\Sigma_t+\sigma_\varepsilon^2+K_t^2\sigma_u^2$.
+
+&nbsp;&nbsp;&nbsp;&nbsp;**A.** Show that the stationary error variance $\Sigma=\lim_t\Sigma_t$ solves
+
+$$
+\Sigma^2+\big[\sigma_u^2(1-\rho^2)-\sigma_\varepsilon^2\big]\Sigma-\sigma_\varepsilon^2\sigma_u^2=0 ,
+$$
+
+and give $\Sigma$ (the positive root) and the stationary gain $K=\rho\Sigma/(\Sigma+\sigma_u^2)$.
+
+&nbsp;&nbsp;&nbsp;&nbsp;**B.** For Muth's case $\rho=1$, find $\Sigma$ and $K$, and show that {eq}`eq-10-25` reduces to the adaptive-expectations formula $\hat\theta_{t+1}=K\sum_{j=0}^\infty(1-K)^jz_{t-j}$. What is $K$ if in addition $\sigma_\varepsilon^2=\sigma_u^2$?
+
+```{admonition} Solution to Exercise 13
+:class: dropdown
+
+**A.** At a stationary point, using $K(\Sigma+\sigma_u^2)=\rho\Sigma$ simplifies the update:
+
+$$
+(\rho-K)^2\Sigma+K^2\sigma_u^2=\rho^2\Sigma-2\rho K\Sigma+K^2(\Sigma+\sigma_u^2)=\rho^2\Sigma-2\rho K\Sigma+\rho K\Sigma=\rho\Sigma(\rho-K),
+$$
+
+so the Riccati equation $\Sigma=(\rho-K)^2\Sigma+\sigma_\varepsilon^2+K^2\sigma_u^2$ becomes $\Sigma=\rho\Sigma(\rho-K)+\sigma_\varepsilon^2$. Substituting $\rho-K=\rho\sigma_u^2/(\Sigma+\sigma_u^2)$ and clearing the denominator,
+
+$$
+\Sigma^2+\big[\sigma_u^2(1-\rho^2)-\sigma_\varepsilon^2\big]\Sigma-\sigma_\varepsilon^2\sigma_u^2=0,
+\qquad
+\Sigma=\frac{\sigma_\varepsilon^2-\sigma_u^2(1-\rho^2)+\sqrt{\big[\sigma_u^2(1-\rho^2)-\sigma_\varepsilon^2\big]^2+4\sigma_\varepsilon^2\sigma_u^2}}{2}.
+$$
+
+The product of the roots is $-\sigma_\varepsilon^2\sigma_u^2<0$, so exactly one root is positive; then $K=\rho\Sigma/(\Sigma+\sigma_u^2)$.
+
+**B.** With $\rho=1$ the quadratic is $\Sigma^2-\sigma_\varepsilon^2\Sigma-\sigma_\varepsilon^2\sigma_u^2=0$, giving
+
+$$
+\Sigma=\frac{\sigma_\varepsilon^2+\sqrt{\sigma_\varepsilon^4+4\sigma_\varepsilon^2\sigma_u^2}}{2},\qquad K=\frac{\Sigma}{\Sigma+\sigma_u^2}\in(0,1).
+$$
+
+Then $\rho-Kc=1-K\in(0,1)$, so {eq}`eq-10-24` reads $\hat\theta_{t+1}=(1-K)\hat\theta_t+Kz_t$; iterating backward gives {eq}`eq-10-25` in the form
+
+$$
+\hat\theta_{t+1}=K\sum_{j=0}^{\infty}(1-K)^jz_{t-j},
+$$
+
+the geometric distributed lag of adaptive expectations used by Cagan and Friedman. If in addition $\sigma_\varepsilon^2=\sigma_u^2\equiv\sigma^2$, then $\Sigma=\tfrac{1+\sqrt5}{2}\,\sigma^2=\varphi\sigma^2$ (the golden ratio $\varphi$); since $\varphi+1=\varphi^2$,
+
+$$
+K=\frac{\varphi\sigma^2}{\varphi\sigma^2+\sigma^2}=\frac{\varphi}{\varphi+1}=\frac{1}{\varphi}=\varphi-1\approx0.618 ,
+$$
+
+the golden ratio reappearing just as in the Fibonacci/adjustment problems of Chapter IX.
+```
 
 ## References
 

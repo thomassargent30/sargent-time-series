@@ -15,7 +15,8 @@ chosen frequency $\omega_0$ and returns a slowly varying *amplitude* and *phase*
 band as functions of time. Time-averaging its squared modulus recovers the ordinary
 spectrum; letting the average run only over a moving window produces an evolutionary
 spectrum. The technique was put to work in economics by Godfrey (1965), as a step in
-estimating bispectra, and by Sargent (1968), to study the changing seasonal behavior of
+estimating bispectra (the nonlinear diagnostic of {doc}`39_nonlinear_representation`), and
+by Sargent (1968), to study the changing seasonal behavior of
 U.S. interest rates during the 1950s. This chapter develops the machinery in the notation
 of the preceding chapters and reproduces its logic with code.
 

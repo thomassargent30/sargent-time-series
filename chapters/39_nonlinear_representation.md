@@ -242,8 +242,11 @@ b_x(\omega_1,\omega_2)=
 ```
 
 a quantity in $[0,1]$ that plays, for quadratic coupling, the role the coherence
-of Section 7 played for linear cross-dependence.
-Both objects are computed and visualized in {doc}`40_nonlinear_lab`.
+of {doc}`the cross-spectrum section <07_cross_spectrum>` played for linear cross-dependence.
+Both objects are computed and visualized in {doc}`40_nonlinear_lab`. Historically the
+bispectrum was often estimated by **complex demodulation** — shifting each frequency band to
+the origin and low-pass filtering — the route taken by Godfrey (1965); see
+{doc}`Complex Demodulation <41_comp_demod>`.
 
 (nl-classes)=
 ## 5. Three Canonical Model Classes

@@ -59,7 +59,7 @@ $$
 y_t = \sum_{j=-\infty}^{\infty} b_j x_{t-j} + \epsilon_t
 $$
 
-where $E \epsilon_t x_{t-j} = 0$ for all $j$. Under what conditions will the lag distribution $\{ b_j \}$ be one-sided on the past and present, so that $b_j = 0$ for $j < 0$? From formula (45) we have that
+where $E \epsilon_t x_{t-j} = 0$ for all $j$. Under what conditions will the lag distribution $\{ b_j \}$ be one-sided on the past and present, so that $b_j = 0$ for $j < 0$? From formula {eq}`eq-45` we have that
 
 ```{math}
 :label: eq-121
@@ -98,7 +98,7 @@ where $a(z) = \sigma_{\eta}^2 b(z) d(z)$. Here $a(z)$ is one-sided in nonnegativ
 
 We now prove the following important theorem that is due to Sims:
 
-#### Theorem
+## Theorem
 
 $v(z) = 0$ if and only if $b(z)$ is one-sided in nonnegative powers of $z$.
 
@@ -159,7 +159,7 @@ Now, $n(z)$ is a polynomial in nonpositive powers of $z$. Therefore, for {eq}`eq
 
 In words, Sims's theorem asserts that the projection of $y$ on the entire $x$ process equals the projection of $y$ on current and past $x$'s if and only if $y$ *fails* to Granger cause $x$ (i.e., $y$ fails to help predict $x$).
 
-#### Example
+## Example
 
 Suppose that
 
