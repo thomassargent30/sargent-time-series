@@ -13,14 +13,16 @@ two preparatory chapters; all other links point to sections of Chapter XI and it
 - **approximation criterion (Kullback–Leibler / Whittle)** — [Seasonality & Approximation](33a_seasonality_approximation.md)
 - **autoregressive process** (first-, second-order) — [Preliminary Concepts](02_preliminary_concepts.md); [Spectrum](06_spectrum.md)
 - **autoregressive representation** — [Linear Prediction](14_linear_prediction.md); [Vector SDEs](23_vector_sde.md); [Multivariate Prediction](29_multivariate_prediction.md)
+- **averaged periodogram (Bartlett, Welch)** — [FFT Estimation](07a_fft_estimation.md)
 
 ## B
 
 - **Bartlett window** — [Complex Demodulation](41_comp_demod.md)
 - **Beveridge–Nelson decomposition** — [Exercises](37_exercises.md); [Solutions](38_exercise_solutions.md)
-- **bicoherence** — [Nonlinear Representations](39_nonlinear_representation.md)
+- **bicoherence** — [Nonlinear Representations](39_nonlinear_representation.md); [FFT Estimation](07a_fft_estimation.md)
 - **bilinear process** — [Nonlinear Representations](39_nonlinear_representation.md)
-- **bispectrum** — [Nonlinear Representations](39_nonlinear_representation.md); [Complex Demodulation](41_comp_demod.md)
+- **bispectrum (and its estimation)** — [Nonlinear Representations](39_nonlinear_representation.md); [FFT Estimation](07a_fft_estimation.md); [Complex Demodulation](41_comp_demod.md)
+- **Blackman–Tukey estimator** — [FFT Estimation](07a_fft_estimation.md)
 - **Blanchard, O., and Watson, M.** — [Bubbles](36_bubbles.md)
 - **Blaschke factor (root flipping)** — [Solutions](38_exercise_solutions.md); [Interpreting VARs](36a_interpreting_vars.md); [Exact Linear RE](36b_exact_linear_re.md)
 - **bubble, rational** — [Bubbles](36_bubbles.md)
@@ -35,7 +37,7 @@ two preparatory chapters; all other links point to sections of Chapter XI and it
 - **certainty equivalence (separation principle)** — [Investment Under Uncertainty](ch14_investment_uncertainty.md)
 - **chain rule of forecasting** — [Chain Rule](21_chain_rule.md)
 - **characteristic equation and roots** — [Ch. IX](ch09_difference_equations.md)
-- **coherence** — [Cross Spectrum](07_cross_spectrum.md); [Leading Indicators](08_leading_indicators.md); [Business Cycle Definitions](11_business_cycle_definitions.md); [Complex Demodulation](41_comp_demod.md)
+- **coherence (and its estimation)** — [Cross Spectrum](07_cross_spectrum.md); [FFT Estimation](07a_fft_estimation.md); [Leading Indicators](08_leading_indicators.md); [Business Cycle Definitions](11_business_cycle_definitions.md); [Complex Demodulation](41_comp_demod.md)
 - **companion form (compact notation)** — [Compact Notation](24_compact_notation.md)
 - **complex demodulation** — [Complex Demodulation](41_comp_demod.md)
 - **continuous-time process** — [Aggregation over Time](34_aggregation.md); [Sims's Formula](34a_sims_expository_note.md)
@@ -71,6 +73,8 @@ two preparatory chapters; all other links point to sections of Chapter XI and it
 
 ## F
 
+- **fast Fourier transform (FFT); periodogram estimation** — [FFT Estimation](07a_fft_estimation.md)
+- **Fejér kernel** — [FFT Estimation](07a_fft_estimation.md)
 - **Fibonacci sequence / golden ratio** — [Ch. IX](ch09_difference_equations.md); [Solutions](38_exercise_solutions.md)
 - **filter** — [Filter Kit](10_filter_kit.md); [Slutsky & Kuznets](09_slutsky_kuznets.md); [Spectrum](06_spectrum.md)
 - **filtering formula (fundamental)** — [Spectrum](06_spectrum.md); [Cross Spectrum](07_cross_spectrum.md)
@@ -102,10 +106,12 @@ two preparatory chapters; all other links point to sections of Chapter XI and it
 
 - **Hammerstein model** — [Nonlinear Representations](39_nonlinear_representation.md)
 - **Hannan's inefficient estimator** — [Cross Spectrum](07_cross_spectrum.md)
+- **Hanning (spectral smoothing)** — [FFT Estimation](07a_fft_estimation.md)
 - **Hansen–Sargent formula (geometric lead)** — [Geometric Leads](20_geometric_leads.md); [Seasonal Adjustment](33_seasonal_adjustment.md); [Solutions](38_exercise_solutions.md)
 - **Hayashi, F. (forward filtering)** — [Orthogonality & Filtering](31_orthogonality_filtering.md)
 - **Heisenberg bound** — [Uncertainty Principle](05a_uncertainty_principle.md)
 - **Hermite polynomials (Hermite chaos)** — [Nonlinear Representations](39_nonlinear_representation.md)
+- **Hinich, M. J., and Clay, C. S.** — [FFT Estimation](07a_fft_estimation.md)
 - **Howrey, E. P.** — [Slutsky & Kuznets](09_slutsky_kuznets.md); [Compact Notation](24_compact_notation.md)
 
 ## I
@@ -132,6 +138,7 @@ two preparatory chapters; all other links point to sections of Chapter XI and it
 - **lag operator** $L$ — [Ch. IX](ch09_difference_equations.md)
 - **Laurent expansion** — [Partial Fractions](18a_partial_fractions.md); [Inverse z-Transform](05_inverse_z_transform.md)
 - **law of iterated projections** — [Ch. X](ch10_regressions.md); [Chain Rule](21_chain_rule.md); [Money & Income](28_sims_money_income.md); [One-Sided Projections](32_one_sided_projections.md)
+- **leakage (spectral)** — [FFT Estimation](07a_fft_estimation.md)
 - **leading indicator** — [Leading Indicators](08_leading_indicators.md)
 - **leaning against the wind** — [Money & Income](28_sims_money_income.md)
 - **linear least squares projection** — [Ch. X](ch10_regressions.md); [Representation Theory](13_representation_theory.md); [Linear Prediction](14_linear_prediction.md)
@@ -176,6 +183,7 @@ two preparatory chapters; all other links point to sections of Chapter XI and it
 - **Parzen window** — [Complex Demodulation](41_comp_demod.md)
 - **Pascal (Solow) lag distribution** — [Ch. IX](ch09_difference_equations.md); [Exercises](37_exercises.md)
 - **periodic model** — [Seasonality & Approximation](33a_seasonality_approximation.md)
+- **periodogram (inconsistency; resolution–variance trade-off)** — [FFT Estimation](07a_fft_estimation.md)
 - **permanent income** — [Ch. X](ch10_regressions.md); [Prediction Examples](15_prediction_examples.md); [Signal Extraction](19_signal_extraction.md); [Optimal Filtering](26_optimal_filtering.md)
 - **phase** — [Cross Spectrum](07_cross_spectrum.md); [Filter Kit](10_filter_kit.md); [Leading Indicators](08_leading_indicators.md)
 - **phase lead** — [Leading Indicators](08_leading_indicators.md); [Complex Demodulation](41_comp_demod.md)
@@ -222,7 +230,8 @@ two preparatory chapters; all other links point to sections of Chapter XI and it
 - **social planning problem (and equilibrium–optimality)** — [Investment Under Uncertainty](ch14_investment_uncertainty.md)
 - **spectral factorization** — [Wold MA](17_wold_ma.md); [Representation Theory](13_representation_theory.md); [Errors in Variables](35_errors_variables.md)
 - **spectral peak** — [Spectrum](06_spectrum.md); [Business Cycle Definitions](11_business_cycle_definitions.md)
-- **spectrum (spectral density)** — [Spectrum](06_spectrum.md); [Business Cycle Definitions](11_business_cycle_definitions.md); [Representation Theory](13_representation_theory.md)
+- **spectral window (kernel)** — [FFT Estimation](07a_fft_estimation.md)
+- **spectrum (spectral density; estimation)** — [Spectrum](06_spectrum.md); [FFT Estimation](07a_fft_estimation.md); [Business Cycle Definitions](11_business_cycle_definitions.md); [Representation Theory](13_representation_theory.md)
 - **St. Louis (Andersen–Jordan) equation** — [Money & Income](28_sims_money_income.md)
 - **stable and unstable roots** — [Ch. IX](ch09_difference_equations.md); [Rational Expectations](22_rational_expectations.md); [Wold MA](17_wold_ma.md)
 - **state-space representation** — [Compact Notation](24_compact_notation.md); [Optimal Prediction](25_optimal_prediction.md)

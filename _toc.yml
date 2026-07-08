@@ -18,6 +18,7 @@ parts:
       - file: chapters/05a_uncertainty_principle
       - file: chapters/06_spectrum
       - file: chapters/07_cross_spectrum
+      - file: chapters/07a_fft_estimation
       - file: chapters/08_leading_indicators
       - file: chapters/09_slutsky_kuznets
       - file: chapters/10_filter_kit
