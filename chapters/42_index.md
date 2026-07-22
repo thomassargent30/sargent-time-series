@@ -31,7 +31,7 @@ two preparatory chapters; all other links point to sections of Chapter XI and it
 
 ## C
 
-- **Cagan model (hyperinflation, portfolio balance)** — [Rational Expectations](22_rational_expectations.md); [Optimal Prediction](25_optimal_prediction.md); [One-Sided Projections](32_one_sided_projections.md); [Ch. X](ch10_regressions.md); [Exercises](37_exercises.md)
+- **Cagan model (hyperinflation, portfolio balance)** — [Rational Expectations](22_rational_expectations.md); [Optimal Prediction](25_optimal_prediction.md); [One-Sided Projections](32_one_sided_projections.md); [Money Demand in Hyperinflations](36c_cagan_hyperinflation.md); [Ch. X](ch10_regressions.md); [Exercises](37_exercises.md)
 - **Cauchy–Schwarz inequality** — [Uncertainty Principle](05a_uncertainty_principle.md); [Preliminary Concepts](02_preliminary_concepts.md)
 - **cepstrum** — [Representation Theory](13_representation_theory.md)
 - **certainty equivalence (separation principle)** — [Investment Under Uncertainty](ch14_investment_uncertainty.md)
@@ -62,7 +62,7 @@ two preparatory chapters; all other links point to sections of Chapter XI and it
 ## E
 
 - **Eckstein, Z.** — [Investment Under Uncertainty](ch14_investment_uncertainty.md)
-- **econometric exogeneity** — [Granger Causality](27_granger_causality.md); [Vector SDEs](23_vector_sde.md)
+- **econometric exogeneity** — [Granger Causality](27_granger_causality.md); [Vector SDEs](23_vector_sde.md); [Money Demand in Hyperinflations](36c_cagan_hyperinflation.md)
 - **eigenvalue decomposition** — [Compact Notation](24_compact_notation.md)
 - **energy (of a sequence)** — [Uncertainty Principle](05a_uncertainty_principle.md)
 - **errors in variables** — [Errors in Variables](35_errors_variables.md)
@@ -99,7 +99,7 @@ two preparatory chapters; all other links point to sections of Chapter XI and it
 - **Godfrey (bispectrum)** — [Complex Demodulation](41_comp_demod.md)
 - **golden ratio** — [Ch. IX](ch09_difference_equations.md); [Solutions](38_exercise_solutions.md)
 - **Gordon and Hynes** — [Investment Under Uncertainty](ch14_investment_uncertainty.md)
-- **Granger causality (Wiener–Granger)** — [Granger Causality](27_granger_causality.md); [Leading Indicators](08_leading_indicators.md); [Money & Income](28_sims_money_income.md); [Filtering & Projections](30_filtering_projections.md); [Errors in Variables](35_errors_variables.md); [Exercises](37_exercises.md)
+- **Granger causality (Wiener–Granger)** — [Granger Causality](27_granger_causality.md); [Leading Indicators](08_leading_indicators.md); [Money & Income](28_sims_money_income.md); [Filtering & Projections](30_filtering_projections.md); [Errors in Variables](35_errors_variables.md); [Money Demand in Hyperinflations](36c_cagan_hyperinflation.md); [Exercises](37_exercises.md)
 - **Granger, C. W. J.; typical spectral shape** — [Business Cycle Definitions](11_business_cycle_definitions.md)
 
 ## H
@@ -156,7 +156,7 @@ two preparatory chapters; all other links point to sections of Chapter XI and it
 - **minimum phase condition** — [Deriving the MA](16_deriving_ma.md)
 - **moving average representation** — [Preliminary Concepts](02_preliminary_concepts.md); [Linear Prediction](14_linear_prediction.md); [Representation Theory](13_representation_theory.md)
 - **moving (evolutionary) spectrum and cross spectrum** — [Complex Demodulation](41_comp_demod.md)
-- **money–income causality; mongrel coefficients** — [Money & Income](28_sims_money_income.md)
+- **money–income causality; mongrel coefficients** — [Money & Income](28_sims_money_income.md); [Money Demand in Hyperinflations](36c_cagan_hyperinflation.md)
 - **Muth, John** — [Prediction Examples](15_prediction_examples.md); [Signal Extraction](19_signal_extraction.md); [Optimal Filtering](26_optimal_filtering.md); [Ch. X](ch10_regressions.md)
 
 ## N
@@ -221,10 +221,10 @@ two preparatory chapters; all other links point to sections of Chapter XI and it
 - **seasonal filter** — [Filter Kit](10_filter_kit.md); [Seasonal Adjustment](33_seasonal_adjustment.md)
 - **Shiller, Robert** — [Chain Rule](21_chain_rule.md); [One-Sided Projections](32_one_sided_projections.md)
 - **signal extraction** — [Ch. X](ch10_regressions.md); [Signal Extraction](19_signal_extraction.md); [Optimal Filtering](26_optimal_filtering.md); [Errors in Variables](35_errors_variables.md); [Exercises](37_exercises.md)
-- **Sims, Christopher A.** — [Granger Causality](27_granger_causality.md); [Money & Income](28_sims_money_income.md); [Leading Indicators](08_leading_indicators.md); [Aggregation over Time](34_aggregation.md); [Sims's Formula](34a_sims_expository_note.md); [Seasonality & Approximation](33a_seasonality_approximation.md); [Interpreting VARs](36a_interpreting_vars.md)
+- **Sims, Christopher A.** — [Granger Causality](27_granger_causality.md); [Money & Income](28_sims_money_income.md); [Leading Indicators](08_leading_indicators.md); [Aggregation over Time](34_aggregation.md); [Sims's Formula](34a_sims_expository_note.md); [Seasonality & Approximation](33a_seasonality_approximation.md); [Interpreting VARs](36a_interpreting_vars.md); [Money Demand in Hyperinflations](36c_cagan_hyperinflation.md)
 - **Sims's theorem (Granger causality ↔ one-sidedness)** — [Granger Causality](27_granger_causality.md); [Leading Indicators](08_leading_indicators.md)
 - **Sims's formula (discrete/continuous-time aggregation)** — [Aggregation over Time](34_aggregation.md); [Sims's Formula](34a_sims_expository_note.md)
-- **Sims's approximation-error formula** — [Exercises](37_exercises.md); [Solutions](38_exercise_solutions.md)
+- **Sims's approximation-error formula** — [Exercises](37_exercises.md); [Solutions](38_exercise_solutions.md); [Seasonality & Approximation](33a_seasonality_approximation.md); [Money Demand in Hyperinflations](36c_cagan_hyperinflation.md)
 - **Slutsky effect (spurious cycle)** — [Slutsky & Kuznets](09_slutsky_kuznets.md)
 - **Slutsky, Eugen** — [Introduction](01_introduction.md); [Slutsky & Kuznets](09_slutsky_kuznets.md)
 - **social planning problem (and equilibrium–optimality)** — [Investment Under Uncertainty](ch14_investment_uncertainty.md)

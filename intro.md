@@ -211,6 +211,15 @@ connect it to recent work:
   stable-roots-backward / unstable-roots-forward method of
   {doc}`Chapter IX <chapters/ch09_difference_equations>` (the counterpart, from the econometrician's
   side, to the equilibrium **constructed** in Chapter XIV).
+- {doc}`Money demand in hyperinflations <chapters/36c_cagan_hyperinflation>` — a capstone application,
+  following Sargent (1977), that reads Cagan's money-demand regression as a *misspecified distributed
+  lag* under rational expectations. It shows that the notorious inconsistency of Cagan's estimator is an
+  instance of **Sims's frequency-domain approximation-error formula** (Exercise 1 of Chapter XI, and
+  {doc}`§33a <chapters/33a_seasonality_approximation>`), and it ties together the
+  {doc}`rational-expectations Cagan model <chapters/22_rational_expectations>`,
+  {doc}`Granger causality <chapters/27_granger_causality>` versus mere *leading*
+  ({doc}`§08 <chapters/08_leading_indicators>`), and the regime-dependence at the heart of Lucas's
+  critique.
 - Two postscripts that move beyond the linear, stationary theory:
   {doc}`nonlinear (Volterra / Wiener–Itô) moving-average representations <chapters/39_nonlinear_representation>`,
   where a nonzero bispectrum is the fingerprint of nonlinearity a flat spectrum cannot see; and

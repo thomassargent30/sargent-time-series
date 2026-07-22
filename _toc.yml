@@ -53,6 +53,7 @@ parts:
       - file: chapters/36_bubbles
       - file: chapters/36a_interpreting_vars
       - file: chapters/36b_exact_linear_re
+      - file: chapters/36c_cagan_hyperinflation
       - file: chapters/37_exercises
       - file: chapters/38_exercise_solutions
   - caption: "A Nonlinear Postscript"
