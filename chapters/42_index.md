@@ -18,7 +18,7 @@ two preparatory chapters; all other links point to sections of Chapter XI and it
 ## B
 
 - **Bartlett window** — [Complex Demodulation](41_comp_demod.md)
-- **Beveridge–Nelson decomposition** — [Exercises](37_exercises.md); [Solutions](38_exercise_solutions.md)
+- **Beveridge–Nelson decomposition** — [Exercises](37_exercises.md); [Solutions](38_exercise_solutions.md); [Explosive Decomposition](36d_explosive_decomposition.md)
 - **bicoherence** — [Nonlinear Representations](39_nonlinear_representation.md); [FFT Estimation](07a_fft_estimation.md)
 - **bilinear process** — [Nonlinear Representations](39_nonlinear_representation.md)
 - **bispectrum (and its estimation)** — [Nonlinear Representations](39_nonlinear_representation.md); [FFT Estimation](07a_fft_estimation.md); [Complex Demodulation](41_comp_demod.md)
@@ -66,6 +66,7 @@ two preparatory chapters; all other links point to sections of Chapter XI and it
 - **eigenvalue decomposition** — [Compact Notation](24_compact_notation.md)
 - **energy (of a sequence)** — [Uncertainty Principle](05a_uncertainty_principle.md)
 - **errors in variables** — [Errors in Variables](35_errors_variables.md)
+- **explosive autoregression (decomposition; anticipative representation)** — [Explosive Decomposition](36d_explosive_decomposition.md); [Exercises](37_exercises.md); [Solutions](38_exercise_solutions.md); [Bubbles](36_bubbles.md)
 - **Euler equation (and stochastic Euler equation)** — [Ch. IX](ch09_difference_equations.md); [Deriving the MA](16_deriving_ma.md); [Rational Expectations](22_rational_expectations.md); [Investment Under Uncertainty](ch14_investment_uncertainty.md)
 - **externality (in dynamic equilibrium)** — [Investment Under Uncertainty](ch14_investment_uncertainty.md)
 - **exact linear rational expectations models** — [Exact Linear RE](36b_exact_linear_re.md)
@@ -233,7 +234,7 @@ two preparatory chapters; all other links point to sections of Chapter XI and it
 - **spectral window (kernel)** — [FFT Estimation](07a_fft_estimation.md)
 - **spectrum (spectral density; estimation)** — [Spectrum](06_spectrum.md); [FFT Estimation](07a_fft_estimation.md); [Business Cycle Definitions](11_business_cycle_definitions.md); [Representation Theory](13_representation_theory.md)
 - **St. Louis (Andersen–Jordan) equation** — [Money & Income](28_sims_money_income.md)
-- **stable and unstable roots** — [Ch. IX](ch09_difference_equations.md); [Rational Expectations](22_rational_expectations.md); [Wold MA](17_wold_ma.md)
+- **stable and unstable roots** — [Ch. IX](ch09_difference_equations.md); [Rational Expectations](22_rational_expectations.md); [Wold MA](17_wold_ma.md); [Explosive Decomposition](36d_explosive_decomposition.md)
 - **state-space representation** — [Compact Notation](24_compact_notation.md); [Optimal Prediction](25_optimal_prediction.md)
 - **stochastic Euler equation** — [Investment Under Uncertainty](ch14_investment_uncertainty.md)
 - **stochastic process** — [Introduction](01_introduction.md); [Preliminary Concepts](02_preliminary_concepts.md)

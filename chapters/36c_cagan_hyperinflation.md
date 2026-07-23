@@ -38,7 +38,7 @@ instance of Sims's approximation-error formula applied to a misspecified regress
 ## Cagan's model under rational expectations
 
 Cagan assumed adaptive expectations, $\pi_t=\dfrac{1-\lambda}{1-\lambda L}\,x_t$, where $x_t\equiv p_t-p_{t-1}$
-is inflation and $L$ the lag operator. {cite}`sargent1973rational` (Sargent and Wallace) observed that
+is inflation and $L$ the lag operator. Sargent and Wallace (1973) observed that
 under **rational expectations**, $\pi_t = E_t x_{t+1}$, and solving the resulting forward difference
 equation with $\lvert{-\alpha}/(1-\alpha)\rvert<1$ gives
 
@@ -206,7 +206,7 @@ Because inflation and money growth are determined *simultaneously*, recovering $
 system method. The bivariate model {eq}`eq-cg-ma` can be written as a vector ARMA(1,1) whose innovations
 $a_t=(a_{1t},a_{2t})'$ are the one-step-ahead forecast errors of $(x_t,\mu_t)$; crucially, $\alpha$ does
 **not** enter the innovation recursions, so a Gaussian full-information maximum-likelihood estimator
-({cite}`wilson1973estimation`) identifies $\lambda$ and the innovation covariance
+(Wilson 1973) identifies $\lambda$ and the innovation covariance
 $D_a=(\sigma_{11},\sigma_{12},\sigma_{22})$ by minimizing $\lvert\hat D_a(\lambda)\rvert$ over the single
 parameter $\lambda$. But the mapping from the four identified quantities
 $(\lambda,\sigma_{11},\sigma_{12},\sigma_{22})$ to the five structural parameters

@@ -1,0 +1,92 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{graphicx}
+\usepackage{hyperref}
+
+\title{Decomposition of Explosive AR(1) Processes}
+\author{}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+Consider the explosive first-order autoregressive process:
+\[
+x_{t+1} = a x_t + \varepsilon_{t+1}, \quad \varepsilon_t \sim \text{i.i.d.}(0, \sigma^2), \quad a > 1
+\]
+This note presents the decomposition of such processes into an explosive component and a stationary anticipative component.
+
+\section{Derivation}
+
+\subsection{Forward Solution}
+Given an initial condition \( x_0 \), the forward solution is:
+\[
+x_t = a^t x_0 + \sum_{j=0}^{t-1} a^{t-1-j} \varepsilon_{j+1}
+\]
+This representation explodes as \( t \to \infty \).
+
+\subsection{Time Reversal}
+Rewrite the AR(1) equation as:
+\[
+x_t = a^{-1} x_{t+1} - a^{-1} \varepsilon_{t+1}
+\]
+Iterating forward \( n \) times:
+\[
+x_t = a^{-n} x_{t+n} - \sum_{j=1}^{n} a^{-j} \varepsilon_{t+j}
+\]
+
+\subsection{Existence of a Stable Solution}
+Define \( y_t = a^{-t} x_t \). Then:
+\[
+y_t = a^{-t} x_t = a^{-t} [a x_{t-1} + \varepsilon_t] = y_{t-1} + a^{-t} \varepsilon_t
+\]
+Thus:
+\[
+y_t = y_0 + \sum_{j=1}^{t} a^{-j} \varepsilon_j
+\]
+
+\subsection{Limit Behavior}
+Since \( a > 1 \), the series \( \sum_{j=1}^{\infty} a^{-j} \varepsilon_j \) converges in \( L^2 \). Define:
+\[
+Z = \lim_{t \to \infty} y_t = y_0 + \sum_{j=1}^{\infty} a^{-j} \varepsilon_j
+\]
+Then:
+\[
+y_t = Z - \sum_{j=t+1}^{\infty} a^{-j} \varepsilon_j
+\]
+
+\subsection{Final Decomposition}
+Since \( x_t = a^t y_t \):
+\[
+x_t = a^t Z - a^t \sum_{j=t+1}^{\infty} a^{-j} \varepsilon_j
+\]
+Simplify the second term:
+\[
+a^t \sum_{j=t+1}^{\infty} a^{-j} \varepsilon_j = \sum_{j=t+1}^{\infty} a^{t-j} \varepsilon_j = \sum_{k=1}^{\infty} a^{-k} \varepsilon_{t+k}
+\]
+Thus, we obtain the decomposition:
+\begin{equation}
+\boxed{x_t = a^t Z - \sum_{k=1}^{\infty} a^{-k} \varepsilon_{t+k}}
+\end{equation}
+
+\subsection{Properties}
+\begin{enumerate}
+    \item \( Z \) is a time-invariant random variable: \( Z = \sum_{j=1}^{\infty} a^{-j} \varepsilon_j \)
+    \item The second term \( \tilde{x}_t = -\sum_{k=1}^{\infty} a^{-k} \varepsilon_{t+k} \) is stationary but anticipative (depends on future shocks)
+    \item The covariance function of \( \tilde{x}_t \) is:
+    \[
+    \text{Cov}(\tilde{x}_t, \tilde{x}_{t+h}) = \frac{a^{-h}}{a^2 - 1} \quad \text{for } h \geq 0
+    \]
+\end{enumerate}
+
+\section{Historical Context}
+This decomposition is related to work by:
+\begin{itemize}
+    \item Maurice Quenouille (1957) on time series analysis
+    \item Gregory Chow on econometric methods
+    \item The Beveridge-Nelson decomposition (1981) for unit root processes
+\end{itemize}
+
+\end{document}

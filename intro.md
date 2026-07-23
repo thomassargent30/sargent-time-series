@@ -220,6 +220,11 @@ connect it to recent work:
   {doc}`Granger causality <chapters/27_granger_causality>` versus mere *leading*
   ({doc}`§08 <chapters/08_leading_indicators>`), and the regime-dependence at the heart of Lucas's
   critique.
+- {doc}`Decomposing an explosive autoregression <chapters/36d_explosive_decomposition>` — a short note
+  that applies the chapter's "unstable roots forward" device to a scalar explosive AR(1), splitting it
+  into an explosive trend with a random amplitude plus a *stationary anticipative* component. It is the
+  explosive-root counterpart of the Beveridge–Nelson permanent/transitory decomposition and sets up
+  {ref}`Exercise 4 <ex-4>`.
 - Two postscripts that move beyond the linear, stationary theory:
   {doc}`nonlinear (Volterra / Wiener–Itô) moving-average representations <chapters/39_nonlinear_representation>`,
   where a nonzero bispectrum is the fingerprint of nonlinearity a flat spectrum cannot see; and
