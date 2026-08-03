@@ -79,7 +79,7 @@ E x_{t+\tau}x_t' = A^{\tau} E x_t x_t', \quad \tau \geq 1, \qquad \text{or} \qqu
 
 where $C_x(\tau) = E x(t + \tau)x(t)'$. As before, we have the result that the covariogram (this time the matrix covariogram) obeys the deterministic part of the difference equation with initial conditions given by the lagged covariances that are in $C_x(0)$.
 
-Using the compact notation {eq}`eq-104`, it is straightforward to show that the cross-spectral density matrix $\Omega(e^{i\omega})$ of the vector $x$ process is given by
+Using the compact notation {eq}`eq-104`, it is straightforward to show that the cross-spectral density matrix $\Omega(e^{-i\omega})$ of the vector $x$ process is given by
 
 ```{math}
 :label: eq-107
@@ -102,4 +102,4 @@ $$
 
 This expression shows how the eigenvalues of $A$ govern the behavior of the solution. It also illustrates how increasing the number of variables in the system or increasing the number of lags in any particular equation increases the order of the $A$ matrix, and thereby contributes to the potential for generating complicated covariograms. Reference to this point can be used to show, for example, that while a one variable, first order difference equation cannot deliver a covariogram with damped oscillations of period greater than two periods (the periodicity if the single root is negative), a multivariate, first-order (i.e., single-lag) system can have complex roots and may therefore generate oscillatory covariograms.
 
-Formula {eq}`eq-102` or {eq}`eq-107` has been used to summarize and analyze the stochastic properties of linear macroeconometric models. For interesting examples of such work, the reader is referred to articles by Chow and Levitan (1969) and by Howrey (1971).
+Formula {eq}`eq-102` or {eq}`eq-107` has been used to summarize and analyze the stochastic properties of linear macroeconometric models. For interesting examples of such work, the reader is referred to articles by {cite:t}`chowlevitan1969spectral` and by {cite:t}`howrey1971stochastic`.

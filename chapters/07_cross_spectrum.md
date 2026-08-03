@@ -120,9 +120,9 @@ c_{yx}(k) = \frac{1}{2\pi}\int_{-\pi}^{\pi}
   h(e^{-i\omega})\, g_x(e^{-i\omega})\, e^{i\omega k}\, d\omega.
 $$
 
-Further, notice that given $g_{yx}(e^{-i\omega})$ and $g_x(e^{-i\omega})$ are used in
-the above equation, the resulting estimator of the $h_k$ is known as Hannan's
-inefficient estimator.
+Further, notice that when *estimates* of $g_{yx}(e^{-i\omega})$ and $g_x(e^{-i\omega})$ are used
+in the above equation, the resulting estimator of the $h_k$ is known as Hannan's inefficient
+estimator.
 
 ## An Example
 
@@ -342,8 +342,8 @@ Therefore, the response of {eq}`eq-44` to an input in the form of a cosine wave 
 frequency $\omega$ is a cosine wave at the same frequency with amplitude multiplied by
 $s(\omega)$ and phase shifted by $\theta(\omega)$. The input cosine wave is at its peak
 at $t = 0$, while the output is at its peak at $\omega t + \theta(\omega) = 0$ or
-$t = -\theta(\omega)/\omega$ units of time. Thus, for $\theta(\omega) > 0$, the output
-*leads* the input by $-\theta(\omega)/\omega$ units of time (where we adopt the usual
+$t = -\theta(\omega)/\omega$ units of time. Thus, for $\theta(\omega) > 0$, the output peaks
+*before* the input, i.e. the output *leads* the input by $\theta(\omega)/\omega$ units of time (where we adopt the usual
 convention that $\theta(\omega)$ is constrained to be between $-\pi$ and $+\pi$, a
 convention needed to make the arctangent function single-valued).
 

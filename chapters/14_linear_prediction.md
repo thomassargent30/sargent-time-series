@@ -15,7 +15,7 @@ x_t = d(L)\epsilon_t, \qquad d(L) = \sum_{j=0}^\infty d_j L^j
 
 where $\{\epsilon_t \}$ is the sequence of one-step-ahead linear least squares forecasting errors (innovations) in predicting $x_t$ as a linear function of $\{x_{t-1}, x_{t-2}, \ldots\}$, i.e., $\epsilon_t = x_t - P[x_t | x_{t-1}, x_{t-2}, \ldots]$. (As we have seen, it is natural to normalize $d(L)$ so that $d_0 = 1$, in which case $\sigma^2 = E \epsilon_t^2$ is the variance of the one-step-ahead prediction error.)
 
-Now suppose that $d(L)$ has an inverse that is one-sided in nonnegative powers of $L$. Where $d(L) = \sum_{j=0}^{\infty} d_j L^j$, a necessary condition for $d(L)$ to have such a one-sided inverse is that the roots $\mu$ of $\sum_{j=0}^n d_j\mu^j = 0$ all like outside the unit circle, i.e., all have absolute values exceeding unity. An inverse $a(L) \equiv d(L)^{-1}$ of $d(L)$ satisfies $a(L)d(L) = d(L) a(L) = I$ where $I$ is the identity lag operator $I = 1 + 0L + 0L^2 + \ldots$. Operating on both sides of {eq}`eq-59` with $a(L) = d(L)^{-1}$ gives
+Now suppose that $d(L)$ has an inverse that is one-sided in nonnegative powers of $L$. Where $d(L) = \sum_{j=0}^{\infty} d_j L^j$, a necessary condition for $d(L)$ to have such a one-sided inverse is that the roots $\mu$ of $\sum_{j=0}^n d_j\mu^j = 0$ all lie outside the unit circle, i.e., all have absolute values exceeding unity. An inverse $a(L) \equiv d(L)^{-1}$ of $d(L)$ satisfies $a(L)d(L) = d(L) a(L) = I$ where $I$ is the identity lag operator $I = 1 + 0L + 0L^2 + \ldots$. Operating on both sides of {eq}`eq-59` with $a(L) = d(L)^{-1}$ gives
 
 ```{math}
 :label: eq-60
@@ -55,7 +55,7 @@ where $(\,)_{+}$ means "ignore negative powers of $L$," i.e., $\left(\sum_{j = -
 P_{t-1}x_t = \left(\frac{d(L)}{L}\right)_{+} \frac{1}{d(L)} x_{t-1}
 ```
 
-which is a compact formula for the one-step-ahead linear least squares forecast of $x_t$ based on it own past.
+which is a compact formula for the one-step-ahead linear least squares forecast of $x_t$ based on its own past.
 
 To get a formula for the general $k$-step-ahead linear least squares forecast, project both sides of {eq}`eq-59` against $\{ x_{t-k}, x_{t-k-1}, \ldots\}$ to get
 
@@ -70,11 +70,11 @@ P_{t-k}x_t = \left(\frac{d(L)}{L^k}\right)_{+} \frac{1}{d(L)}x_{t-k}
 
 which generalizes formula {eq}`eq-61`. Equation {eq}`eq-62` is the Wiener-Kolmogorov formula for $k$-step-ahead linear least squares predictions.
 
-[^fn-pred-1]: A key reference on the subject of this section is Whittle (1983).
+[^fn-pred-1]: A key reference on the subject of this section is {cite:t}`whittle1983prediction`.
 
 [^fn-pred-2]: For example, by suitable detrending and seasonal adjustment.
 
-[^fn-pred-3]: We remarked earlier in general the sequence of the $a_j^n$ in
+[^fn-pred-3]: We remarked earlier that in general the sequence of the $a_j^n$ in
 
     $$
     P[x_t | x_{t-1}, x_{t-2}, \ldots, x_{t-n}] = \sum_{j=1}^n a_j^n x_{t-j}

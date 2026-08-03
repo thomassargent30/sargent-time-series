@@ -8,7 +8,7 @@ parts:
   - caption: "Chapter X: Linear Least Squares Projections (Regressions)"
     chapters:
       - file: chapters/ch10_regressions
-  - caption: "Chapter XI: Linear Time Series"
+  - caption: "Linear Time Series (in the spirit of Chapter XI)"
     chapters:
       - file: chapters/01_introduction
       - file: chapters/02_preliminary_concepts
@@ -55,6 +55,7 @@ parts:
       - file: chapters/36b_exact_linear_re
       - file: chapters/36c_cagan_hyperinflation
       - file: chapters/36d_explosive_decomposition
+      - file: chapters/36e_lucas_whiteman_quantity_theory
       - file: chapters/37_exercises
       - file: chapters/38_exercise_solutions
   - caption: "A Nonlinear Postscript"
@@ -67,6 +68,9 @@ parts:
   - caption: "Chapter XIV: Investment Under Uncertainty"
     chapters:
       - file: chapters/ch14_investment_uncertainty
+  - caption: "Bibliography"
+    chapters:
+      - file: chapters/43_bibliography
   - caption: "Index"
     chapters:
       - file: chapters/42_index

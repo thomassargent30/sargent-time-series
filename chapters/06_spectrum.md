@@ -190,7 +190,7 @@ we use the inversion formula:
 :label: eq-36
 b_j = \frac{1}{2\pi}\int_{-\pi}^{\pi} B(e^{-i\omega})\, e^{+i\omega j}\, d\omega
 = \frac{1}{2\pi}\int_{a}^{b}(e^{i\omega j} + e^{-i\omega j})\, d\omega
-= \frac{1}{\pi}\left(\frac{\sin jb - \sin ja}{j}\right), \qquad j \in \mathbb{Z}.
+= \frac{1}{\pi}\left(\frac{\sin jb - \sin ja}{j}\right), \qquad j \neq 0,
 ```
 
 Note that $b_j = b_{-j}$. With the $b_j$ chosen in this way, the $y$ process defined by
@@ -349,8 +349,9 @@ $dt_2/dt_1 = (1-t_2)/(4+t_1)$, so that along {eq}`eq-42`,
 $dt_2/dt_1|_{t_1=t_2=0} = 1/4$ and $dt_2/dt_1|_{t_1=-2,t_2=-1} = 1$.
 
 Such calculations show that the boundaries of region {eq}`eq-40` are as depicted in
-Figure 2. To be in region {eq}`eq-40` with $t_2 < 1$ (a requirement of covariance
-stationarity) implies that the roots of the difference equation are complex. However,
+Figure 2. To be in region {eq}`eq-40` with $t_2 < 0$ (the case in which the stationary point
+is a spectral peak rather than a trough) implies that the roots of the difference equation are
+complex. However,
 complex roots do not imply that {eq}`eq-40` is satisfied. Consequently, the conditions
 for an oscillatory covariogram are not quite equivalent with those for a spectral peak.
 

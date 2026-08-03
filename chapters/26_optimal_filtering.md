@@ -75,6 +75,6 @@ so that in {eq}`eq-111` we have
 h(L) = \frac{1}{\sigma^2}\left(\frac{g_{y x}(L)}{d(L^{-1})}\right)_{+} \frac{1}{d(L)}.
 ```
 
-A classic application of this formula is due to Muth (1960). Suppose that income evolves according to $x_t = y_t + \epsilon_t$, where $y_t = \rho y_{t-1} + u_t$, $|\rho| < 1$, and where $u_t$ and $\epsilon_t$ are mutually orthogonal at all lags and serially uncorrelated. Here $x_t$ is measured income, while $y_t$ is "systematic" or permanent income. The consumer only "sees" $x_t, x_{t-1}, \ldots$ and desires to estimate systematic income $y_t$ by a linear function of $x_t, x_{t-1}, \ldots$. The consumer is assumed to know all the relevant moments. This problem can be solved quickly using formula {eq}`eq-115`, and the reader is invited to do so.
+A classic application of this formula is due to {cite:t}`muth1960optimal`. Suppose that income evolves according to $x_t = y_t + \epsilon_t$, where $y_t = \rho y_{t-1} + u_t$, $|\rho| < 1$, and where $u_t$ and $\epsilon_t$ are mutually orthogonal at all lags and serially uncorrelated. Here $x_t$ is measured income, while $y_t$ is "systematic" or permanent income. The consumer only "sees" $x_t, x_{t-1}, \ldots$ and desires to estimate systematic income $y_t$ by a linear function of $x_t, x_{t-1}, \ldots$. The consumer is assumed to know all the relevant moments. This problem can be solved quickly using formula {eq}`eq-115`, and the reader is invited to do so.
 
 [^fn-filt-1]: This is the method that Kolmogorov used to derive the formula we are after. See Whittle (1983, p. 42).

@@ -30,7 +30,7 @@ where $|\lambda|<1$. Projections of such geometric distributed leads occur in a 
 y_t = \lambda P_t y_{t+1} + x_t.
 ```
 
-That is, $y_t$ is the stationary solution of the difference equation {eq}`eq-84` as can be verified by repeated substitution in {eq}`eq-85`. We seek expressions for $y_t$ of the forms
+That is, $y_t$ is the stationary solution of the difference equation {eq}`eq-85`, as can be verified by repeated substitution in {eq}`eq-85`. We seek expressions for $y_t$ of the forms
 
 ```{math}
 :label: eq-86
@@ -83,14 +83,14 @@ an equation that we desire to solve for $d(L)$ as a function of $c(L)$. We deter
 d(L) = \frac{c(L) - \lambda c(\lambda) L^{-1}}{1 - \lambda L^{-1}}
 ```
 
-using $g(L) = d(L)c(L)^{-1}$ and $c(L)^{-1} = a(L)$, we get
+Using $g(L) = d(L)c(L)^{-1}$ and $c(L)^{-1} = a(L)$, we get
 
 ```{math}
 :label: eq-89
 g(L) = \frac{1 - \lambda a(\lambda)^{-1} a(L) L^{-1}}{1 - \lambda L^{-1}}.
 ```
 
-For the case in which $a(L)$ is an $r$th order polynomial $a(L) = 1 - \sum_{j=1}^r a_j L^j$, Hansen and Sargent (1980) show using polynomial long division that {eq}`eq-89` can be expressed
+For the case in which $a(L)$ is an $r$th order polynomial $a(L) = 1 - \sum_{j=1}^r a_j L^j$, {cite:t}`hansensargent1980formulating` show using polynomial long division that {eq}`eq-89` can be expressed
 
 ```{math}
 :label: eq-90
@@ -120,4 +120,4 @@ g_{j-1} &= \lambda g_j + \lambda g_0 a_j \quad j=r,r-1, \ldots, 2.
 \end{aligned}
 ```
 
-Various versions of formulas {eq}`eq-88`, {eq}`eq-89`, and {eq}`eq-90` were originally derived in papers by Saracoglu and Sargent (1978), Hansen and Sargent (1980), and Futia (1981).
+Various versions of formulas {eq}`eq-88`, {eq}`eq-89`, and {eq}`eq-90` were originally derived in papers by {cite:t}`saracoglusargent1978seasonality`, {cite:t}`hansensargent1980formulating`, and {cite:t}`futia1981rational`.

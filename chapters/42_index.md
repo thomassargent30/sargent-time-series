@@ -2,7 +2,7 @@
 
 An alphabetical index of the book's concepts, named results, and people. Each entry links to the
 section(s) where the term is defined or plays a central role. "Ch. IX" and "Ch. X" refer to the
-two preparatory chapters; all other links point to sections of Chapter XI and its postscripts.
+two preparatory chapters; all other links point to sections of the Linear Time Series part and its postscripts.
 
 ## A
 
@@ -56,6 +56,7 @@ two preparatory chapters; all other links point to sections of Chapter XI and it
 - **delta function (generalized function)** — [Representation Theory](13_representation_theory.md); [Fourier & z-Transforms](04_fourier_z_transforms.md)
 - **difference equation, linear** — [Ch. IX](ch09_difference_equations.md); [Introduction](01_introduction.md)
 - **Dirichlet kernel** — [Uncertainty Principle](05a_uncertainty_principle.md); [Complex Demodulation](41_comp_demod.md)
+- **distributed lag, sum of coefficients** $h(0)$ — [Lucas & Whiteman](36e_lucas_whiteman_quantity_theory.md); [Solutions](38_exercise_solutions.md)
 - **dynamic factor model** — *see* **index model**
 - **dynamic supply curve** — [Investment Under Uncertainty](ch14_investment_uncertainty.md)
 
@@ -66,11 +67,11 @@ two preparatory chapters; all other links point to sections of Chapter XI and it
 - **eigenvalue decomposition** — [Compact Notation](24_compact_notation.md)
 - **energy (of a sequence)** — [Uncertainty Principle](05a_uncertainty_principle.md)
 - **errors in variables** — [Errors in Variables](35_errors_variables.md)
-- **explosive autoregression (decomposition; anticipative representation)** — [Explosive Decomposition](36d_explosive_decomposition.md); [Exercises](37_exercises.md); [Solutions](38_exercise_solutions.md); [Bubbles](36_bubbles.md)
 - **Euler equation (and stochastic Euler equation)** — [Ch. IX](ch09_difference_equations.md); [Deriving the MA](16_deriving_ma.md); [Rational Expectations](22_rational_expectations.md); [Investment Under Uncertainty](ch14_investment_uncertainty.md)
 - **externality (in dynamic equilibrium)** — [Investment Under Uncertainty](ch14_investment_uncertainty.md)
 - **exact linear rational expectations models** — [Exact Linear RE](36b_exact_linear_re.md)
 - **expectations hypothesis (term structure)** — [Ch. X](ch10_regressions.md); [Multivariate Prediction](29_multivariate_prediction.md)
+- **explosive autoregression (decomposition; anticipative representation)** — [Explosive Decomposition](36d_explosive_decomposition.md); [Exercises](37_exercises.md); [Solutions](38_exercise_solutions.md); [Bubbles](36_bubbles.md)
 
 ## F
 
@@ -78,6 +79,7 @@ two preparatory chapters; all other links point to sections of Chapter XI and it
 - **Fejér kernel** — [FFT Estimation](07a_fft_estimation.md)
 - **Fibonacci sequence / golden ratio** — [Ch. IX](ch09_difference_equations.md); [Solutions](38_exercise_solutions.md)
 - **filter** — [Filter Kit](10_filter_kit.md); [Slutsky & Kuznets](09_slutsky_kuznets.md); [Spectrum](06_spectrum.md)
+- **filter, low-pass (Lucas's exponential filter)** — [Lucas & Whiteman](36e_lucas_whiteman_quantity_theory.md); [Filter Kit](10_filter_kit.md)
 - **filtering formula (fundamental)** — [Spectrum](06_spectrum.md); [Cross Spectrum](07_cross_spectrum.md)
 - **final form** — [Money & Income](28_sims_money_income.md)
 - **first-difference filter** $1-L$ — [Filter Kit](10_filter_kit.md); [Slutsky & Kuznets](09_slutsky_kuznets.md)
@@ -144,7 +146,8 @@ two preparatory chapters; all other links point to sections of Chapter XI and it
 - **leaning against the wind** — [Money & Income](28_sims_money_income.md)
 - **linear least squares projection** — [Ch. X](ch10_regressions.md); [Representation Theory](13_representation_theory.md); [Linear Prediction](14_linear_prediction.md)
 - **linearly deterministic / indeterministic process** — [Representation Theory](13_representation_theory.md); [Linear Prediction](14_linear_prediction.md)
-- **Lucas critique** — [Ch. X](ch10_regressions.md); [Ch. IX](ch09_difference_equations.md); [Lucas's Critique (Ch. XIV §3)](ch14_investment_uncertainty.md)
+- **Lucas critique** — [Ch. X](ch10_regressions.md); [Ch. IX](ch09_difference_equations.md); [Lucas's Critique (Ch. XIV §3)](ch14_investment_uncertainty.md); [Lucas & Whiteman](36e_lucas_whiteman_quantity_theory.md)
+- **Lucas's two illustrations of the quantity theory** — [Lucas & Whiteman](36e_lucas_whiteman_quantity_theory.md)
 - **Lucas aggregate supply curve** — [Exercises](37_exercises.md)
 - **Lucas–Prescott model** — [Investment Under Uncertainty](ch14_investment_uncertainty.md)
 
@@ -152,6 +155,7 @@ two preparatory chapters; all other links point to sections of Chapter XI and it
 
 - **martingale** — [Ch. X](ch10_regressions.md); [Bubbles](36_bubbles.md); [Exercises](37_exercises.md)
 - **mean lag** — [Cross Spectrum](07_cross_spectrum.md)
+- **Mundell–Tobin effect** — [Lucas & Whiteman](36e_lucas_whiteman_quantity_theory.md)
 - **measurement error** — [Errors in Variables](35_errors_variables.md)
 - **Meiselman error-learning model** — [Ch. X](ch10_regressions.md)
 - **minimum phase condition** — [Deriving the MA](16_deriving_ma.md)
@@ -199,6 +203,7 @@ two preparatory chapters; all other links point to sections of Chapter XI and it
 ## Q
 
 - **quadrature spectrum** — [Cross Spectrum](07_cross_spectrum.md)
+- **quantity theory of money** — [Lucas & Whiteman](36e_lucas_whiteman_quantity_theory.md); [Money Demand in Hyperinflations](36c_cagan_hyperinflation.md)
 
 ## R
 
@@ -216,8 +221,8 @@ two preparatory chapters; all other links point to sections of Chapter XI and it
 
 - **Samuelson multiplier–accelerator model** — [Ch. IX](ch09_difference_equations.md)
 - **Samuelson, Paul (properly anticipated prices)** — [Ch. X](ch10_regressions.md)
-- **Sargent (1968), interest-rate seasonal** — [Complex Demodulation](41_comp_demod.md)
-- **Sargent and Sims (1977)** — [Index Models](12_index_models.md)
+- **{cite:t}`sargent1968interest`, interest-rate seasonal** — [Complex Demodulation](41_comp_demod.md)
+- **{cite:t}`sargentsims1977business`** — [Index Models](12_index_models.md)
 - **seasonal adjustment** — [Seasonal Adjustment](33_seasonal_adjustment.md); [Seasonality & Approximation](33a_seasonality_approximation.md); [Business Cycle Definitions](11_business_cycle_definitions.md); [Complex Demodulation](41_comp_demod.md)
 - **seasonal filter** — [Filter Kit](10_filter_kit.md); [Seasonal Adjustment](33_seasonal_adjustment.md)
 - **Shiller, Robert** — [Chain Rule](21_chain_rule.md); [One-Sided Projections](32_one_sided_projections.md)
@@ -225,7 +230,7 @@ two preparatory chapters; all other links point to sections of Chapter XI and it
 - **Sims, Christopher A.** — [Granger Causality](27_granger_causality.md); [Money & Income](28_sims_money_income.md); [Leading Indicators](08_leading_indicators.md); [Aggregation over Time](34_aggregation.md); [Sims's Formula](34a_sims_expository_note.md); [Seasonality & Approximation](33a_seasonality_approximation.md); [Interpreting VARs](36a_interpreting_vars.md); [Money Demand in Hyperinflations](36c_cagan_hyperinflation.md)
 - **Sims's theorem (Granger causality ↔ one-sidedness)** — [Granger Causality](27_granger_causality.md); [Leading Indicators](08_leading_indicators.md)
 - **Sims's formula (discrete/continuous-time aggregation)** — [Aggregation over Time](34_aggregation.md); [Sims's Formula](34a_sims_expository_note.md)
-- **Sims's approximation-error formula** — [Exercises](37_exercises.md); [Solutions](38_exercise_solutions.md); [Seasonality & Approximation](33a_seasonality_approximation.md); [Money Demand in Hyperinflations](36c_cagan_hyperinflation.md)
+- **Sims's approximation-error formula** — [Exercises](37_exercises.md); [Solutions](38_exercise_solutions.md); [Seasonality & Approximation](33a_seasonality_approximation.md); [Money Demand in Hyperinflations](36c_cagan_hyperinflation.md); [Lucas & Whiteman](36e_lucas_whiteman_quantity_theory.md)
 - **Slutsky effect (spurious cycle)** — [Slutsky & Kuznets](09_slutsky_kuznets.md)
 - **Slutsky, Eugen** — [Introduction](01_introduction.md); [Slutsky & Kuznets](09_slutsky_kuznets.md)
 - **social planning problem (and equilibrium–optimality)** — [Investment Under Uncertainty](ch14_investment_uncertainty.md)
@@ -266,6 +271,7 @@ two preparatory chapters; all other links point to sections of Chapter XI and it
 ## W
 
 - **white noise** — [Preliminary Concepts](02_preliminary_concepts.md)
+- **Whiteman, Charles H.** — [Lucas & Whiteman](36e_lucas_whiteman_quantity_theory.md)
 - **Whittle, Peter; Whittle's spectral factorization** — [Representation Theory](13_representation_theory.md); [Linear Prediction](14_linear_prediction.md); [Optimal Filtering](26_optimal_filtering.md)
 - **Wiener, Norbert** — [Introduction](01_introduction.md); [Linear Prediction](14_linear_prediction.md); [Granger Causality](27_granger_causality.md)
 - **Wiener cascade** — [Nonlinear Representations](39_nonlinear_representation.md)

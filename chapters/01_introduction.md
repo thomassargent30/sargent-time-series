@@ -1,5 +1,48 @@
 # Introduction
 
+````{admonition} About this part of the book — and its debt to Chapter XI
+:class: note
+
+The nucleus of what follows is **Chapter XI, "Time Series," of Thomas J. Sargent,
+*Macroeconomic Theory*, 2nd edition (Academic Press, 1987)**. Sections 1–38 below follow that
+chapter's development and, in most places, its text — corrected, re-typeset, and re-illustrated with
+modern data and code.
+
+But this is no longer a reprint of that chapter, and it would mislead the reader to call it one.
+Around the 1987 nucleus have grown a dozen new sections that take up questions the original chapter
+raised but did not pursue, or that had not yet been written when it appeared: the
+{doc}`uncertainty principle <05a_uncertainty_principle>` for transform pairs,
+{doc}`FFT-based estimation <07a_fft_estimation>` of spectra and bispectra, the
+{doc}`residue theorem <18a_partial_fractions>` behind the partial-fraction calculus,
+{doc}`seasonality and approximation error <33a_seasonality_approximation>`,
+{doc}`Sims's aggregation formula in the time domain <34a_sims_expository_note>`, two chapters of
+Hansen and Sargent's *Rational Expectations Econometrics* on
+{doc}`interpreting vector autoregressions <36a_interpreting_vars>` and
+{doc}`exact linear rational expectations models <36b_exact_linear_re>`,
+{doc}`money demand in hyperinflations <36c_cagan_hyperinflation>`,
+{doc}`explosive autoregressions <36d_explosive_decomposition>`,
+{doc}`Lucas's quantity-theory illustrations and Whiteman's critique <36e_lucas_whiteman_quantity_theory>`,
+and two postscripts on {doc}`nonlinear representations <39_nonlinear_representation>` and
+{doc}`complex demodulation <41_comp_demod>`. Together the added sections now account for roughly a
+third of this part, and — counting the two preparatory chapters and the Chapter XIV capstone that
+frame it — the 1987 chapter supplies well under half of the book.
+
+So read what follows as material **in the spirit of** Chapter XI, and **applying its methods** to a
+wider range of problems than that chapter could take up. The organizing ideas are the ones Chapter XI
+was built on — covariance stationarity, the spectrum, Wold's theorem, Wiener–Kolmogorov prediction,
+and the one-sided projection — and the added sections are there because those ideas kept paying off.
+
+```{admonition} A note on the numbering
+:class: tip, dropdown
+
+The section numbers preserve the 1987 chapter's order so that readers of *Macroeconomic Theory* can
+navigate by them. Sections **1–38** are the original sequence. Sections carrying a **letter suffix**
+(5a, 7a, 18a, 33a, 34a, 36a–36e) are new, and are placed immediately after the original section whose
+argument they extend. Sections **39–41** are postscripts that leave the linear, stationary theory
+behind.
+```
+````
+
 In {doc}`Chapter IX <ch09_difference_equations>`, we studied linear difference equations of the form
 
 $$
@@ -40,6 +83,6 @@ Second, macroeconomists are interested in using their own models of economic tim
 
 One of the goals of much recent work in rational expectations economics has been to create models whose equilibria are vector stochastic difference equations. In these models, the outcome of the interaction of a collection of purposeful agents is a stochastic process for, say, prices and quantities whose evolution can be described by a (vector) stochastic difference equation. We shall study versions of such models in which the equilibria are described by linear stochastic difference equations, i.e., vector versions of {eq}`eq-1`. In such models, some of the $a_j$'s become interpretable in terms of purposeful behavior of the agents in the model; that is, they are functions of the parameters of people's objective functions and constraints. One goal of this line of research is to acquire the ability to predict how the equilibrium stochastic process (or difference equation) would change in response to hypothetical changes in particular aspects of the environment confronting the agents in the model.
 
-The idea that low-order linear stochastic difference equations could provide a useful model for business cycles can be traced back at least as far as Slutsky (1937) and Frisch (1933). We have seen in Chapter IX that low-order nonstochastic linear difference equations with no forcing functions present (i.e., $x_t=0$ for all $t$ in {eq}`eq-1`) result in solutions for $y_t$ that are "smooth", being the weighted sum of a small number of geometric sequences. Such smooth sequences do not resemble observed economic time series. However, if a sufficiently erratic forcing sequence $\{x_t\}$ occurs in {eq}`eq-1`, the resulting $\{y_t\}$ sequence can be sufficiently erratic that it resembles observed economic time series. The idea of Slutsky was to make the $\{x_t\}$ sequence sufficiently erratic by choosing it as the realization of a sequence of independently and identically distributed random variables. The resulting realizations of the $\{y_t\}$ sequence that solves[^fn-intro-1] {eq}`eq-1` would be erratic enough to resemble observed time series. As we shall see, even first-order stochastic linear difference equations ($n=1$ in {eq}`eq-1`) can generate realizations that look like observed economic time series. Furthermore, the hypothesis that $\{x_t\}$ is a sequence of independently and identically distributed random variables in general implies that the future values $(y_{t+1},y_{t+2},\ldots)$ are at best imperfectly predictable from past values $(y_t,y_{t-1},\ldots)$. It is desirable to have models in which both economic agents and econometricians confront uncertainty in this sense. This is one major reason that Slutsky's idea was adopted early in dynamic econometrics, and why it has been retained and expanded upon in work on rational expectations.
+The idea that low-order linear stochastic difference equations could provide a useful model for business cycles can be traced back at least as far as {cite:t}`slutsky1937summation` and {cite:t}`frisch1933propagation`. We have seen in Chapter IX that low-order nonstochastic linear difference equations with no forcing functions present (i.e., $x_t=0$ for all $t$ in {eq}`eq-1`) result in solutions for $y_t$ that are "smooth", being the weighted sum of a small number of geometric sequences. Such smooth sequences do not resemble observed economic time series. However, if a sufficiently erratic forcing sequence $\{x_t\}$ occurs in {eq}`eq-1`, the resulting $\{y_t\}$ sequence can be sufficiently erratic that it resembles observed economic time series. The idea of Slutsky was to make the $\{x_t\}$ sequence sufficiently erratic by choosing it as the realization of a sequence of independently and identically distributed random variables. The resulting realizations of the $\{y_t\}$ sequence that solves[^fn-intro-1] {eq}`eq-1` would be erratic enough to resemble observed time series. As we shall see, even first-order stochastic linear difference equations ($n=1$ in {eq}`eq-1`) can generate realizations that look like observed economic time series. Furthermore, the hypothesis that $\{x_t\}$ is a sequence of independently and identically distributed random variables in general implies that the future values $(y_{t+1},y_{t+2},\ldots)$ are at best imperfectly predictable from past values $(y_t,y_{t-1},\ldots)$. It is desirable to have models in which both economic agents and econometricians confront uncertainty in this sense. This is one major reason that Slutsky's idea was adopted early in dynamic econometrics, and why it has been retained and expanded upon in work on rational expectations.
 
 [^fn-intro-1]: Here "solve" refers to the ordinary sense used in Chapter IX of finding a $\{y_t\}$ sequence that satisfies {eq}`eq-1` given the realization of the $\{x_t\}$ sequence.

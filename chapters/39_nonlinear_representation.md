@@ -2,7 +2,7 @@
 
 ```{note}
 This chapter is a modern postscript to the linear theory developed in
-Sections 13–18. Everything in Chapter XI rests on the
+Sections 13–18. Everything in the preceding sections rests on the
 **Wold representation** $x_t=d(L)\epsilon_t$: the statement that a covariance
 stationary, linearly indeterministic process is a *linear* moving average of its
 own one-step prediction errors. We now ask what happens when the map from the
@@ -245,7 +245,7 @@ a quantity in $[0,1]$ that plays, for quadratic coupling, the role the coherence
 of {doc}`the cross-spectrum section <07_cross_spectrum>` played for linear cross-dependence.
 Both objects are computed and visualized in {doc}`40_nonlinear_lab`. Historically the
 bispectrum was often estimated by **complex demodulation** — shifting each frequency band to
-the origin and low-pass filtering — the route taken by Godfrey (1965); see
+the origin and low-pass filtering — the route taken by {cite:t}`godfrey1965exploratory`; see
 {doc}`Complex Demodulation <41_comp_demod>`.
 
 (nl-classes)=
@@ -355,7 +355,7 @@ H_1(\omega_1)\,H_1(\omega_2)\,H_2^{*}(\omega_1,\omega_2)\ +\ \text{permutations}
 
 This is the key identification equation. Given Gaussian i.i.d. innovations and the
 linear filter $H_1$ already identified from the spectrum — up to the usual
-Blaschke (phase) flips, as in Lii and Rosenblatt (1982) — the quadratic kernel $H_2$ is
+Blaschke (phase) flips, as in {cite:t}`liirosenblatt1982deconvolution` — the quadratic kernel $H_2$ is
 recovered from the bispectrum by dividing out the $H_1$ factors,
 
 $$
@@ -367,7 +367,7 @@ Higher kernels $H_k$ are identified, in the same way, from the order-$(k{+}1)$
 polyspectrum. The procedure is constructive: estimate the polyspectra from data,
 then solve a sequence of (in principle linear) inversion problems for the $H_k$.
 Whether to attempt this at all is decided by the **linearity and Gaussianity
-tests** of Subba Rao and Gabr (1980) and Hinich (1982), which test precisely
+tests** of {cite:t}`subbaraogabr1980test` and {cite:t}`hinich1982testing`, which test precisely
 whether the bispectrum is flat (linear/Gaussian) or structured (nonlinear).
 
 ```{admonition} Classifying a model from its quadratic kernel
@@ -453,7 +453,7 @@ hiding behind a white second-order structure.
   - Neither
 ```
 
-The linear Wold representation of Chapter XI is one term — the order-one chaos —
+The linear Wold representation of the preceding sections is one term — the order-one chaos —
 of a richer nonlinear decomposition. The second-order spectrum that has occupied
 us throughout sees only that one term; the polyspectra see the rest. The
 constructive route is: estimate the spectrum to get $H_1$, estimate the bispectrum
@@ -464,17 +464,7 @@ each of these statements into running code.
 
 ## References
 
-- Brillinger, D. R. (1975). *Time Series: Data Analysis and Theory.* Holt, Rinehart and Winston.
-- Granger, C. W. J., and A. P. Andersen (1978). *An Introduction to Bilinear Time Series Models.* Vandenhoeck and Ruprecht.
-- Hinich, M. J. (1982). Testing for Gaussianity and linearity of a stationary time series. *Journal of Time Series Analysis* 3(3), 169–176.
-- Itô, K. (1951). Multiple Wiener integral. *Journal of the Mathematical Society of Japan* 3(1), 157–169.
-- Lii, K.-S., and M. Rosenblatt (1982). Deconvolution and estimation of transfer function phase and coefficients for non-Gaussian linear processes. *Annals of Statistics* 10(4), 1195–1208.
-- Nikias, C. L., and A. P. Petropulu (1993). *Higher-Order Spectra Analysis: A Nonlinear Signal Processing Framework.* Prentice Hall.
-- Ornstein, D. S. (1974). *Ergodic Theory, Randomness, and Dynamical Systems.* Yale University Press.
-- Priestley, M. B. (1988). *Non-linear and Non-stationary Time Series Analysis.* Academic Press.
-- Rosenblatt, M. (1985). *Stationary Sequences and Random Fields.* Birkhäuser.
-- Schetzen, M. (1980). *The Volterra and Wiener Theories of Nonlinear Systems.* John Wiley & Sons.
-- Subba Rao, T., and M. M. Gabr (1980). A test for linearity of stationary time series. *Journal of Time Series Analysis* 1(2), 145–158.
-- Volterra, V. (1930). *Theory of Functionals and of Integral and Integro-Differential Equations.* Blackie and Son.
-- Wiener, N. (1958). *Nonlinear Problems in Random Theory.* MIT Press.
-- Wold, H. O. A. (1938). *A Study in the Analysis of Stationary Time Series.* Almqvist and Wiksell.
+```{bibliography}
+:labelprefix: NL
+:filter: key in {"brillinger1975time", "grangerandersen1978bilinear", "hinich1982testing", "ito1951multiple", "liirosenblatt1982deconvolution", "nikiaspetropulu1993higher", "ornstein1974ergodic", "priestley1988nonlinear", "rosenblatt1985stationary", "schetzen1980volterra", "subbaraogabr1980test", "volterra1930theory", "wiener1958nonlinear", "wold1938study"}
+```

@@ -88,7 +88,7 @@ Notice that since $\epsilon_t = x_t - P[x_t | x_{t-1}, x_{t-2}, \ldots]$ and sin
 $$
 \begin{aligned}
 E(x_t - \sum_{j=0}^m d_j \epsilon_{t-j})^2 &= E x_t^2 - 2 \sum_{j=0}^m d_j E x_t \epsilon_{t-j} + E\left(\sum_{j=0}^m d_j^2 \epsilon_{t-j}^2\right)\\
-&= E x_t^2 - 2\sigma^2 \sum_{j=0}^m \left(\frac{E x_t \epsilon_{t-j}}{\sigma^2}\right)^2 + \sigma^2 \sum_{j=0}^m \frac{E x_t \epsilon_{t-j}}{\sigma^2}^2\\
+&= E x_t^2 - 2\sigma^2 \sum_{j=0}^m \left(\frac{E x_t \epsilon_{t-j}}{\sigma^2}\right)^2 + \sigma^2 \sum_{j=0}^m \left(\frac{E x_t \epsilon_{t-j}}{\sigma^2}\right)^2\\
 &= E x_t^2 - \sigma^2 \sum_{j=0}^m d_j^2 \geq 0,
 \end{aligned}
 $$
@@ -124,7 +124,7 @@ $$
 P[\etat | x_{t-1}, x_{t-2}, \ldots] = P[x_t | x_{t-1}, x_{t-2}, \ldots] - \sum_{j=1}^{\infty} d_j \epsilon_{t-j}
 $$
 
-Since $P[\epsilont | x_{t-1}, x_{t-2}, \ldots] = 0$ and since $P[x_{t-k} | x_{t-1}, x_{t-2}, \ldots] = \epsilon_{t-k}$ for $k \geq 1$. Subtracting the above equation from the definition of $\eta_t$ gives
+Here we have used $P[\epsilont | x_{t-1}, x_{t-2}, \ldots] = 0$ and $P[\epsilon_{t-k} | x_{t-1}, x_{t-2}, \ldots] = \epsilon_{t-k}$ for $k \geq 1$, the latter because $\epsilon_{t-k}$ is a linear combination of $x$'s dated $t-k$ and earlier. Subtracting the above equation from the definition of $\eta_t$ gives
 
 $$
 \etat - P[\etat | x_{t-1}, x_{t-2}, \ldots] = (\xt - P[x_t | x_{t-1}, x_{t-2}, \ldots]) - d_0 \epsilont = 0
@@ -158,7 +158,7 @@ where $\epsilon_t$ is a covariance stationary, serially uncorrelated process wit
 
 $$
 \begin{aligned}
-\sigma^2 \sum_{\tau = - \infty}^{\infty} \cos \lambda \tau e^{-i \omega \tau} &= \sigma^2 \sum_{\tau= - \infty}^{\infty} \frac{e^{i\lambda \tau} + e^{-i \lambda t}}{2}e^{-i \omega \tau}\\
+\sigma^2 \sum_{\tau = - \infty}^{\infty} \cos \lambda \tau e^{-i \omega \tau} &= \sigma^2 \sum_{\tau= - \infty}^{\infty} \frac{e^{i\lambda \tau} + e^{-i \lambda \tau}}{2}e^{-i \omega \tau}\\
 &= \sigma^2 \sum_{\tau= - \infty}^{\infty} \frac{e^{i(\lambda -\omega)\tau} + e^{-i (\lambda + \omega)\tau}}{2}
 \end{aligned}
 $$
@@ -177,7 +177,7 @@ $$
 \int_{-\infty}^{\infty} \delta(\omega)g(\omega)d\omega = g(0)
 $$
 
-which must hold for all "test functions" $g(\omega)$ that are continuous at $\omega = 0$. Then the spectral density of a process with covariogram $\sigma^2 \cos \lambda t$ is defined as
+which must hold for all "test functions" $g(\omega)$ that are continuous at $\omega = 0$. Then the spectral density of a process with covariogram $\sigma^2 \cos \lambda \tau$ is defined as
 
 $$
 f(\omega) = 2 \pi (\frac{1}{2} \sigma^2 \delta(\omega - \lambda) + \frac{1}{2} \sigma^2 \delta(\omega + \lambda))
@@ -187,8 +187,8 @@ With the spectral density so defined, notice that the inversion formula holds, i
 
 $$
 \begin{aligned}
-c(\tau) = \frac{1}{2 \pi}\int_{-\infty}^{\infty} f(\omega)e^{i \omega \tau} d\omega &= \frac{\sigma^2}{2}\left(\int_{-\infty}^{\infty} \delta(\omega - \lambda)e^{i \omega t} d\omega + \int_{-\infty}^{\infty} \delta(\omega + \lambda) e^{i \omega t} d\omega\right)\\
-&= \sigma^2\left(\frac{e^{i \lambda t} + e^{-i \lambda \tau}}{2}\right) = \sigma^2 \cos \lambda \tau
+c(\tau) = \frac{1}{2 \pi}\int_{-\infty}^{\infty} f(\omega)e^{i \omega \tau} d\omega &= \frac{\sigma^2}{2}\left(\int_{-\infty}^{\infty} \delta(\omega - \lambda)e^{i \omega \tau} d\omega + \int_{-\infty}^{\infty} \delta(\omega + \lambda) e^{i \omega \tau} d\omega\right)\\
+&= \sigma^2\left(\frac{e^{i \lambda \tau} + e^{-i \lambda \tau}}{2}\right) = \sigma^2 \cos \lambda \tau
 \end{aligned}
 $$
 
@@ -352,14 +352,14 @@ transforms.
 
 [^fn-rep-3]: For a proof, see Anderson (1971, p.419).
 
-[^fn-rep-4]: See Wold (1938). The proof given here parallels that given by Anderson (1971). The reader familiar with Hilbert spaces is urged to read Anderson at this point.
+[^fn-rep-4]: See {cite:t}`wold1938study`. The proof given here parallels that given by Anderson (1971). The reader familiar with Hilbert spaces is urged to read Anderson at this point.
 
 [^fn-rep-5]: That is, the sequence of $\sum_{j=0}^{m} d_j \epsilon_{t-j}$ is a Cauchy sequence. In particular, for $n > m$, $E(\sum_{j=0}^m d_j \epsilon_{t-j} - \sum_{j=0}^n d_j \epsilon_{t-j})^2 = E(\sum_{j=m+1}^n d_j^2 \epsilon_{t-j}^2) = \sigma^2 \sum_{j=m+1}^n d_j^2$. Since $\sum_{j=0}^{\infty} d_j^2 < \infty$, it follows that we can choose an $m$ big enough to drive $\sigma^2 \sum_{j=m+1}^n d_j^2$ arbitrarily close to zero.
 
-[^fn-rep-6]: Those linear combinations $\sum_{j=1}^{\infty} f_t x_{t-j}$ for which $\sum_{j=1}^{\infty} f_j^2 < \infty$, so that the variance of the sum is finite.
+[^fn-rep-6]: Those linear combinations $\sum_{j=1}^{\infty} f_j x_{t-j}$ for which $\sum_{j=1}^{\infty} f_j^2 < \infty$, so that the variance of the sum is finite.
 
-[^fn-rep-7]: This is an implication of the orthogonality principle. See Anderson(1971).
+[^fn-rep-7]: This is an implication of the orthogonality principle. See Anderson (1971).
 
-[^fn-rep-8]: For example, let $x(t) = a \cos \lambda t + b \sin \lambda_t$ where $E a = E ab = E b = 0, \quad E a^2 = E b^2 = \sigma^2$. Then: $Ex(t_1)x(t_2) = E\{a^2 \cos \lambda t_1 \cos \lambda t_2 + a b (\sin \lambda t_2 \cos \lambda t_1 + \cos \lambda t_2 \sin \lambda t_1) + b^2 \sin \lambda t_1 \sin \lambda t_2 \} = \sigma^2\{\cos \lambda t_1 \cos \lambda t_2 + \sin \lambda t_1 \sin \lambda t_2\}$. Since $\cos(\alpha - \beta) = \cos \alpha \cos \beta + \sin \alpha \sin \beta$, we have $E x(t_1) x(t_2) = \sigma^2 \cos \lambda(t_1 - t_2)$ or $E x(t) x(t-T) = \sigma^2 \cos \lambda T$. These calculations can easily be extended to prove the assertion made in the text.
+[^fn-rep-8]: For example, let $x(t) = a \cos \lambda t + b \sin \lambda t$ where $E a = E ab = E b = 0, \quad E a^2 = E b^2 = \sigma^2$. Then: $Ex(t_1)x(t_2) = E\{a^2 \cos \lambda t_1 \cos \lambda t_2 + a b (\sin \lambda t_2 \cos \lambda t_1 + \cos \lambda t_2 \sin \lambda t_1) + b^2 \sin \lambda t_1 \sin \lambda t_2 \} = \sigma^2\{\cos \lambda t_1 \cos \lambda t_2 + \sin \lambda t_1 \sin \lambda t_2\}$. Since $\cos(\alpha - \beta) = \cos \alpha \cos \beta + \sin \alpha \sin \beta$, we have $E x(t_1) x(t_2) = \sigma^2 \cos \lambda(t_1 - t_2)$ or $E x(t) x(t-T) = \sigma^2 \cos \lambda T$. These calculations can easily be extended to prove the assertion made in the text.
 
-[^fn-rep-9]: There are essentially two ways in which a process can be deterministic. One is if its spectral density consists entirely of a number of "spikes" or delta functions. A second way is if its spectral density, even though having no spikes, is zero on some interval of $\omega$'s of positive length, or is "too close" to zero over such an interval. Heuristically, this second possible way of being deterministic is suggested by the Kolmogorov formula for the one-step-ahead prediction error variance $\sigma_t^2 = \exp[(2 \pi)^{-1} \int_{-\pi}^{\pi} \ln g(e^{-i \omega})d\omega]$ where $g(e^{-i\omega})$ is the spectral density. See Whittle(1983, p. 26).
+[^fn-rep-9]: There are essentially two ways in which a process can be deterministic. One is if its spectral density consists entirely of a number of "spikes" or delta functions. A second way is if its spectral density, even though having no spikes, is zero on some interval of $\omega$'s of positive length, or is "too close" to zero over such an interval. Heuristically, this second possible way of being deterministic is suggested by the Kolmogorov formula for the one-step-ahead prediction error variance $\sigma_t^2 = \exp[(2 \pi)^{-1} \int_{-\pi}^{\pi} \ln g(e^{-i \omega})d\omega]$ where $g(e^{-i\omega})$ is the spectral density. See Whittle (1983, p. 26).

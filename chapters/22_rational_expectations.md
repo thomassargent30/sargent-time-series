@@ -44,7 +44,7 @@ p_t = (1-\lambda)a(\lambda)^{-1}\left[1 + \sum_{j=1}^{r-1}\left(\sum_{k=j+1}^r \
 a(L)m_t = \epsilon_t.
 ```
 
-These two equations express how the stochastic process for $p_t$ depends on $m_t, m_{t-1}, \ldots, m_{t-r+1}$ via coefficients that partly reflect the stochastic process {eq}`eq-96` that governs $m_t$. As an examples, we set $a(L) = 1 - a_1 L - a_2 L^2 - a_3 L^3$. Then {eq}`eq-95` and {eq}`eq-96` become
+These two equations express how the stochastic process for $p_t$ depends on $m_t, m_{t-1}, \ldots, m_{t-r+1}$ via coefficients that partly reflect the stochastic process {eq}`eq-96` that governs $m_t$. As an example, we set $a(L) = 1 - a_1 L - a_2 L^2 - a_3 L^3$. Then {eq}`eq-95` and {eq}`eq-96` become
 
 $$
 p_t = (1-\lambda)(1- a_1 \lambda - a_2 \lambda^2 - a_3 \lambda^3)^{-1}[1 + (a_2 \lambda + a_3 \lambda^2)L + (a_3\lambda)L^2]m_t
@@ -69,7 +69,7 @@ where $Y_t$ is production, $C_t$ demand for consumption, and $I_t$ holdings of i
 
 ```{math}
 :label: eq-97
-(\gamma + \alpha)P_{t-1}p_t + (\alpha + \beta)p_t = \alpha p_{t-1} - x_t.
+-\alpha P_t p_{t+1} + (\gamma + \alpha)P_{t-1}p_t + (\alpha + \beta)p_t = \alpha p_{t-1} - x_t.
 ```
 
 Taking projections of both sides against information available at time $t - 1$ gives
@@ -143,4 +143,4 @@ $$
 
 This is the solution to the stochastic difference equation {eq}`eq-97` which expresses $p_t$, as a function of current and lagged $x$'s and $p$'s, and which gives a covariance stationary process for $p_t$.
 
-[^fn-1]: in this and the following example we set "transient terms" of the form $c\lambda^t$ to zero because we are interested in obtaining solutions that are covariance stationary processes.
+[^fn-1]: In this and the following example we set "transient terms" of the form $c\lambda^t$ to zero because we are interested in obtaining solutions that are covariance stationary processes.

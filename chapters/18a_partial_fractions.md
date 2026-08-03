@@ -222,9 +222,7 @@ white noise.
 
 ## References
 
-- Churchill, R. V., J. W. Brown, and R. F. Verhey (1974). *Complex Variables and
-  Applications*, 3rd ed. McGraw-Hill.
-- Hansen, L. P., and T. J. Sargent (1980). Formulating and estimating dynamic linear rational
-  expectations models. *Journal of Economic Dynamics and Control* 2, 7–46.
-- Whittle, P. (1983). *Prediction and Regulation by Linear Least-Square Methods*, 2nd ed.
-  University of Minnesota Press.
+```{bibliography}
+:labelprefix: PF
+:filter: key in {"churchill1974complex", "hansensargent1980formulating", "whittle1983prediction"}
+```

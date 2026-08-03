@@ -269,11 +269,7 @@ spending it in the other.
 
 ## References
 
-- Donoho, D. L., and P. B. Stark (1989). Uncertainty principles and signal recovery. *SIAM
-  Journal on Applied Mathematics* 49(3), 906–931.
-- Folland, G. B., and A. Sitaram (1997). The uncertainty principle: a mathematical survey.
-  *Journal of Fourier Analysis and Applications* 3(3), 207–238.
-- Gabor, D. (1946). Theory of communication. *Journal of the Institution of Electrical
-  Engineers* 93(3), 429–457.
-- Slepian, D. (1983). Some comments on Fourier analysis, uncertainty and modeling. *SIAM
-  Review* 25(3), 379–393.
+```{bibliography}
+:labelprefix: UP
+:filter: key in {"donohostark1989uncertainty", "follandsitaram1997uncertainty", "gabor1946theory", "slepian1983some"}
+```

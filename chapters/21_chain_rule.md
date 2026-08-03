@@ -18,7 +18,7 @@ Projecting both sides of this equation on $(x_t, x_{t-1},\ldots)$ gives, via the
 
 ```{math}
 :label: eq-92
-P_{t+k} x_{t+k+1} = h_0 P_t x_{t+k} + h_1 P_t x_{t+k-1} + \ldots h_{k-1} P_t x_{t+1} + \sum_{i=0}^{\infty} h_{k+i} x_{t - i}.
+P_t x_{t+k+1} = h_0 P_t x_{t+k} + h_1 P_t x_{t+k-1} + \ldots + h_{k-1} P_t x_{t+1} + \sum_{i=0}^{\infty} h_{k+i} x_{t - i}.
 ```
 
 This recursion relationship is the "chain rule of forecasting" which shows how to build up projections of $x_t$ arbitrarily far into the future from knowledge of the formula for the one-step-ahead projection alone.
@@ -31,4 +31,4 @@ $$
 
 From application of {eq}`eq-92` it follows that $P_t x_{t+j} = \lambda^j x_t$, $j \geq 1$.
 
-[^fn-1]: Interesting applications at the chain rule of forecasting occur in Shiller (1972).
+[^fn-1]: Interesting applications of the chain rule of forecasting occur in {cite:t}`shiller1972rational`.

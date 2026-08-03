@@ -1,20 +1,39 @@
 # Linear Time Series Analysis
 
 This book is a modernized and extended treatment of the linear time series methods that run
-through macroeconomics and dynamic econometrics. Its core is **Chapter XI: Time Series** from
+through macroeconomics and dynamic econometrics. It grew out of
 
 > Thomas J. Sargent, *Macroeconomic Theory*, 2nd edition (1987), Academic Press,
 
-now preceded by two chapters — **Chapter IX** and **Chapter X** — that develop the two elementary
-tools the time series theory rests on, extended by several new sections, and capped by a full
-application chapter, **Chapter XIV — Investment Under Uncertainty**, that puts the whole apparatus to
-work in building and interpreting a rational expectations equilibrium.
+and in particular out of that book's **Chapter XI, "Time Series."** That chapter is the seed of the
+long middle part of this one — but it is no longer the whole of it, or even most of it. The middle
+part is preceded here by two chapters — **Chapter IX** and **Chapter X** — that develop the two
+elementary tools the time series theory rests on; it has been enlarged by a dozen new sections; and
+it is capped by a full application chapter, **Chapter XIV — Investment Under Uncertainty**, that puts
+the whole apparatus to work in building and interpreting a rational expectations equilibrium.
+
+```{admonition} On the middle part and its title
+:class: note
+
+The long central part of this book is labelled
+{doc}`Linear Time Series (in the spirit of Chapter XI) <chapters/01_introduction>`, and the label is
+meant literally. Its sections 1–38 follow the development, and in most places the text, of Chapter XI
+of *Macroeconomic Theory* — corrected, re-typeset, and re-illustrated with modern data and code. But
+around that nucleus have grown a dozen new sections, which now make up roughly a third of the part;
+counted against the whole book, with its two preparatory chapters and its capstone, the 1987 chapter
+supplies well under half of what follows. What holds the part together is therefore not a table of
+contents inherited from 1987 but a *method*: covariance stationarity, the spectrum, Wold's theorem,
+Wiener–Kolmogorov prediction, and the one-sided projection, applied to a wider range of problems than
+the original chapter could take up. Readers of *Macroeconomic Theory* can still navigate by section
+number — the original numbering is preserved, and added sections carry letter suffixes (5a, 7a, 18a,
+33a, 34a, 36a–36e) placed just after the section whose argument they extend.
+```
 
 ## A book in three movements, and a capstone
 
 The theoretical material is a single arc that runs from elementary algebra and geometry to a full
-theory of linear prediction and its uses in economics. Its logic is a synthesis: **Chapter XI is
-what one gets by combining Chapter IX with Chapter X.**
+theory of linear prediction and its uses in economics. Its logic is a synthesis: **the time series
+theory is what one gets by combining Chapter IX with Chapter X.**
 
 - {doc}`Chapter IX — Difference Equations and Lag Operators <chapters/ch09_difference_equations>`
   is the **algebra**. It introduces the lag operator $L$, the calculus of polynomials in $L$, and
@@ -28,8 +47,8 @@ what one gets by combining Chapter IX with Chapter X.**
   through the orthogonality principle — together with recursive projection (the Kalman filter),
   the law of iterated projections, and the static signal-extraction problem.
 
-- **Chapter XI — Linear Time Series** (the bulk of the book) puts the algebra and the geometry
-  together. It studies covariance stationary stochastic processes built from white noise by linear
+- **{doc}`Linear Time Series <chapters/01_introduction>`** (the bulk of the book) puts the algebra
+  and the geometry together. It studies covariance stationary stochastic processes built from white noise by linear
   difference equations, and it answers, for such processes, the two questions the first two
   chapters were sharpened to ask: *what is the process's structure* (its
   {doc}`spectrum <chapters/06_spectrum>`, its
@@ -43,14 +62,14 @@ A fourth element then closes the book: {doc}`Chapter XIV — Investment Under Un
 prediction theory are deployed together to construct, compute, and interpret a rational expectations
 equilibrium.
 
-## How Chapter XI builds on Chapters IX and X
+## How the time series theory builds on Chapters IX and X
 
 The two elementary chapters are not prerequisites to be gotten out of the way; their ideas are the
-working parts of Chapter XI, reused at every turn. Five threads make the dependence concrete.
+working parts of the middle part, reused at every turn. Five threads make the dependence concrete.
 
 **1. Slutsky's reinterpretation: a difference equation driven by chance.** Chapter IX solved
-$(1 - a_1 L - \cdots - a_n L^n)\,y_t = x_t$ for a *known* forcing sequence $\{x_t\}$. Chapter XI
-opens ({doc}`Section 1 <chapters/01_introduction>`) by making $\{x_t\}$ a sequence of *random*
+$(1 - a_1 L - \cdots - a_n L^n)\,y_t = x_t$ for a *known* forcing sequence $\{x_t\}$. The time series
+theory opens ({doc}`Section 1 <chapters/01_introduction>`) by making $\{x_t\}$ a sequence of *random*
 shocks — a **linear stochastic difference equation**. Slutsky's (1937) insight was that even a
 low-order difference equation, if driven by erratic shocks, produces realizations that look like
 observed business cycles. Everything Chapter IX taught about roots, stability, and oscillation now
@@ -80,7 +99,7 @@ root-sorting (roots inside vs. outside the unit circle, in reciprocal pairs) app
 covariance generating function.
 
 **4. "Stable roots backward, unstable roots forward" returns as forecasting the future.** The
-device that solved Chapter IX's Euler equations reappears throughout Chapter XI whenever agents
+device that solved Chapter IX's Euler equations reappears throughout the middle part whenever agents
 must act on forecasts. The {doc}`Hansen–Sargent formula <chapters/20_geometric_leads>` for a
 geometric distributed *lead* $P_t\sum_j \lambda^j x_{t+j}$ is the stochastic counterpart of the
 forward-looking operator of Chapter IX; it is applied to
@@ -101,9 +120,9 @@ one-sided) projections under {doc}`common filtering <chapters/30_filtering_proje
 orthogonality conditions, and the way {doc}`errors in variables <chapters/35_errors_variables>`
 manufacture spurious causality by turning a one-sided projection two-sided.
 
-## The arc of Chapter XI
+## The arc of the middle part
 
-Read in sequence, Chapter XI moves through five stages:
+Read in sequence, the middle part moves through five stages:
 
 - **Foundations and the frequency domain** ({doc}`2 <chapters/02_preliminary_concepts>`–{doc}`7 <chapters/07_cross_spectrum>`):
   covariance stationarity, the covariogram and its cross-series analogue, the
@@ -138,7 +157,7 @@ Read in sequence, Chapter XI moves through five stages:
 whole apparatus is put to work. It extends the linear-quadratic Euler-equation problems of
 {doc}`Chapter IX <chapters/ch09_difference_equations>` to *stochastic* forcing processes — the
 certainty-equivalence principle lets forecasting and optimization separate — solves them with the
-Wiener–Kolmogorov / Hansen–Sargent geometric-lead formula {eq}`eq-90` of Chapter XI, and assembles
+Wiener–Kolmogorov / Hansen–Sargent geometric-lead formula {eq}`eq-90` of {doc}`§20 <chapters/20_geometric_leads>`, and assembles
 the pieces into Lucas and Prescott's (1971) model of a competitive industry. Its centerpiece is a
 precise, constructive account of a **rational expectations equilibrium** and *two* complementary ways
 to compute and interpret one:
@@ -155,15 +174,15 @@ to compute and interpret one:
   Prescott's device turns "find the equilibrium" into "solve a planning problem," a trick that
   pervades modern macroeconomics.
 
-**The link back to Chapter XI's dynamic supply and demand curves.** From the equilibrium Chapter XIV
+**The link back to the dynamic supply and demand curves of {doc}`§36a <chapters/36a_interpreting_vars>`.** From the equilibrium Chapter XIV
 (§7) reads off a *dynamic supply curve*: current output depends on lagged output and on current and
 **expected future** prices, so — because forecasting future prices requires the parameters of the
 demand process — *the demand curve's parameters appear inside the supply curve*, subverting the
 exclusion restrictions that ordinarily identify a supply schedule. The identifying information that
 remains lives entirely in the **cross-equation restrictions** that a rational expectations
 equilibrium stamps onto the data. This is the very same object studied from the opposite side in
-{doc}`A Difficulty in Interpreting Vector Autoregressions <chapters/36a_interpreting_vars>` (Chapter
-XI's Hansen–Sargent section): there the equilibrium of a market with **forward-looking supply and
+{doc}`A Difficulty in Interpreting Vector Autoregressions <chapters/36a_interpreting_vars>` (the
+Hansen–Sargent section added to the middle part): there the equilibrium of a market with **forward-looking supply and
 demand** is a covariance-stationary vector process — a vector autoregression — and the lesson is that
 its *Wold innovations are generally not the structural supply and demand shocks* that hit agents, so
 the innovation accounting of a fitted VAR misattributes its shocks. The two sections are two views of
@@ -214,7 +233,7 @@ connect it to recent work:
 - {doc}`Money demand in hyperinflations <chapters/36c_cagan_hyperinflation>` — a capstone application,
   following Sargent (1977), that reads Cagan's money-demand regression as a *misspecified distributed
   lag* under rational expectations. It shows that the notorious inconsistency of Cagan's estimator is an
-  instance of **Sims's frequency-domain approximation-error formula** (Exercise 1 of Chapter XI, and
+  instance of **Sims's frequency-domain approximation-error formula** ({ref}`Exercise 1 <ex-1>`, and
   {doc}`§33a <chapters/33a_seasonality_approximation>`), and it ties together the
   {doc}`rational-expectations Cagan model <chapters/22_rational_expectations>`,
   {doc}`Granger causality <chapters/27_granger_causality>` versus mere *leading*
@@ -225,6 +244,15 @@ connect it to recent work:
   into an explosive trend with a random amplitude plus a *stationary anticipative* component. It is the
   explosive-root counterpart of the Beveridge–Nelson permanent/transitory decomposition and sets up
   {ref}`Exercise 4 <ex-4>`.
+- {doc}`Lucas's two illustrations of the quantity theory and Whiteman's critique <chapters/36e_lucas_whiteman_quantity_theory>`
+  — Lucas (1980) read the slope of a scatter of low-pass-filtered series as evidence for the quantity
+  theory; Whiteman (1984) showed, via **Sims's approximation-error formula** once more, that this slope
+  estimates the *sum of coefficients* in a two-sided distributed lag — the ratio of cross spectrum to
+  spectrum at frequency zero — and that inside Lucas's own (1975) model the statistic is *not* a test of
+  the Mundell–Tobin effect. Sargent and Surico (2011) make the point quantitative: the slope is not
+  policy invariant. A third and final application of the approximation formula, alongside
+  {doc}`§33a <chapters/33a_seasonality_approximation>` and
+  {doc}`§36c <chapters/36c_cagan_hyperinflation>`.
 - Two postscripts that move beyond the linear, stationary theory:
   {doc}`nonlinear (Volterra / Wiener–Itô) moving-average representations <chapters/39_nonlinear_representation>`,
   where a nonzero bispectrum is the fingerprint of nonlinearity a flat spectrum cannot see; and
@@ -246,8 +274,8 @@ Relative to the 1987 original, this version:
 
 ## How to read this book
 
-A reader new to the material can proceed linearly: Chapters IX and X first, then Chapter XI, then the
-Chapter XIV capstone. A reader already comfortable with lag operators and regressions can begin
+A reader new to the material can proceed linearly: Chapters IX and X first, then the time series
+part, then the Chapter XIV capstone. A reader already comfortable with lag operators and regressions can begin
 directly at {doc}`chapters/01_introduction` and refer back to
 {doc}`Chapter IX <chapters/ch09_difference_equations>` and
 {doc}`Chapter X <chapters/ch10_regressions>` as needed;
@@ -273,17 +301,7 @@ unless otherwise stated.
 
 ## References
 
-- Sargent, T.J. (1987). *Macroeconomic Theory*, 2nd ed. Academic Press.
-- Lucas, R.E. Jr., and E.C. Prescott (1971). Investment under uncertainty. *Econometrica* 39(5),
-  659–681.
-- Hansen, L.P., and T.J. Sargent (1991). *Rational Expectations Econometrics*. Westview Press.
-- Hansen, L.P., and T.J. Sargent (1993). Seasonality and approximation errors in rational
-  expectations models. *Journal of Econometrics* 55, 21–55.
-- Hinich, M.J., and C.S. Clay (1968). The application of the discrete Fourier transform in the
-  estimation of power spectra, coherence, and bispectra of geophysical data. *Reviews of Geophysics*
-  6(3), 347–363.
-- Whittle, P. (1983). *Prediction and Regulation*, 2nd ed. University of Minnesota Press.
-- Wold, H. (1938). *A Study in the Analysis of Stationary Time Series*. Almqvist & Wiksell.
-- Anderson, T.W. (1971). *The Statistical Analysis of Time Series*. Wiley.
-- Slutsky, E. (1937). The summation of random causes as the source of cyclic processes.
-  *Econometrica* 5, 105–146.
+```{bibliography}
+:labelprefix: I
+:filter: key in {"sargent1987macro", "lucasprescott1971investment", "hansensargent1991book", "hansensargent1993seasonality", "hinichclay1968application", "whittle1983prediction", "wold1938study", "anderson1971statistical", "slutsky1937summation"}
+```

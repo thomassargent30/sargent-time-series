@@ -201,7 +201,7 @@ precisely the terms that {eq}`eq-elre-pv2` excludes by requiring a square-summab
 
 ### Example 5: dynamic demand for a factor of production
 
-Sargent (1978) and Kennan (1979) derive linear factor-demand schedules from quadratic
+{cite:t}`sargent1978estimation` and {cite:t}`kennan1979estimation` derive linear factor-demand schedules from quadratic
 optimization subject to linear constraints. With one factor and no technology shocks, the demand
 function is
 
@@ -417,17 +417,7 @@ frequently identified and estimable even where $D(z)$ is not.
 
 ## References
 
-- Hansen, L. P., and T. J. Sargent (1980). Formulating and estimating dynamic linear rational
-  expectations models. *Journal of Economic Dynamics and Control* 2, 7–46.
-- Hansen, L. P., and T. J. Sargent (1991). Exact linear rational expectations models:
-  specification and estimation. In *Rational Expectations Econometrics*, ch. 3. Westview Press.
-- Kennan, J. (1979). The estimation of partial adjustment models with rational expectations.
-  *Econometrica* 47(6), 1441–1455.
-- Monahan, J. F. (1984). A note on enforcing stationarity in autoregressive–moving average models.
-  *Biometrika* 71(2), 403–404.
-- Sargent, T. J. (1978). Estimation of dynamic labor demand schedules under rational expectations.
-  *Journal of Political Economy* 86(6), 1009–1044.
-- Sargent, T. J. (1979). A note on maximum likelihood estimation of the rational expectations
-  model of the term structure. *Journal of Monetary Economics* 5(1), 133–143.
-- Whittle, P. (1953). Estimation and information in stationary time series.
-  *Arkiv för Matematik* 2, 423–434.
+```{bibliography}
+:labelprefix: EL
+:filter: key in {"hansensargent1980formulating", "hansensargent1991exact", "kennan1979estimation", "monahan1984note", "sargent1978estimation", "sargent1979note", "whittle1953estimation"}
+```

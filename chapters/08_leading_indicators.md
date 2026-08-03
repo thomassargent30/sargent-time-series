@@ -1,6 +1,6 @@
 # A Digression on Leading Indicators
 
-For years, the National Bureau of Economics Research (NBER) has employed a number of
+For years, the National Bureau of Economic Research (NBER) has employed a number of
 heuristic techniques designed to isolate "leading indicators" of business cycle
 movements, presumably as an aid in the early recognition and prediction of cyclical
 movements.[^fn-1] To translate into our vocabulary, essentially a good leading indicator
@@ -10,8 +10,8 @@ coherence with those coincident measures—so that the phase lead is not only la
 average but is regular in its occurrence). While searching for the leading indicators is
 perhaps an important thing to do in terms of categorizing data, it is important to
 recognize that a series $y_t$ that displays a sizable phase lead over another series
-$x_t$, at the most important business cycle frequencies does *not* necessarily help in
-predicting $x_t$ any better that can be done by using past $x$'s alone to predict $x$.
+$x_t$ at the most important business cycle frequencies does *not* necessarily help in
+predicting $x_t$ any better than can be done by using past $x$'s alone to predict $x$.
 We illustrate this fact with two examples.
 
 [^fn-1]: Leading indicators are published in *Business Conditions Digest*, published by
@@ -29,7 +29,7 @@ and $\epsilon$ are serially uncorrelated. The cross spectrum between $y$ and $x$
 given by
 
 $$
-\theta_{yx}(e^{-i\omega}) = (h_0 + h_1 e^{-i\omega})\, g_x(e^{-i\omega})
+g_{yx}(e^{-i\omega}) = (h_0 + h_1 e^{-i\omega})\, g_x(e^{-i\omega})
 = (h_0 + h_1\cos\omega - ih_1\sin\omega)\, g_x(e^{-i\omega}) \\
 = r(\omega)\, e^{i\theta(\omega)}\, g_x(e^{-i\omega})
 $$

@@ -38,7 +38,7 @@ instance of Sims's approximation-error formula applied to a misspecified regress
 ## Cagan's model under rational expectations
 
 Cagan assumed adaptive expectations, $\pi_t=\dfrac{1-\lambda}{1-\lambda L}\,x_t$, where $x_t\equiv p_t-p_{t-1}$
-is inflation and $L$ the lag operator. Sargent and Wallace (1973) observed that
+is inflation and $L$ the lag operator. {cite:t}`sargentwallace1973rational` observed that
 under **rational expectations**, $\pi_t = E_t x_{t+1}$, and solving the resulting forward difference
 equation with $\lvert{-\alpha}/(1-\alpha)\rvert<1$ gives
 
@@ -244,14 +244,7 @@ regression will produce.
 
 ## References
 
-- Anderson, T. W. (1971). *The Statistical Analysis of Time Series.* Wiley. [pp. 159–161].
-- Barro, R. J. (1970). Inflation, the payments period, and the demand for money. *Journal of Political Economy* 78(6), 1228–1263.
-- Cagan, P. (1956). The monetary dynamics of hyperinflation. In M. Friedman (ed.), *Studies in the Quantity Theory of Money*, 25–117. University of Chicago Press.
-- Granger, C. W. J. (1969). Investigating causal relations by econometric models and cross-spectral methods. *Econometrica* 37(3), 424–438.
-- Muth, J. F. (1960). Optimal properties of exponentially weighted forecasts. *Journal of the American Statistical Association* 55(290), 299–306.
-- Sargent, T. J. (1977). The demand for money during hyperinflations under rational expectations: I. *International Economic Review* 18(1), 59–82.
-- Sargent, T. J., and N. Wallace (1973). Rational expectations and the dynamics of hyperinflation. *International Economic Review* 14(2), 328–350.
-- Sims, C. A. (1972a). Money, income, and causality. *American Economic Review* 62(4), 540–552.
-- Sims, C. A. (1972b). Approximate prior restrictions in distributed lag estimation. *Journal of the American Statistical Association* 67(337), 169–175.
-- Wilson, G. T. (1973). The estimation of parameters in multivariate time series models. *Journal of the Royal Statistical Society, Series B* 35(1), 76–85.
+```{bibliography}
+:labelprefix: CG
+:filter: key in {"anderson1971statistical", "barro1970inflation", "cagan1956monetary", "granger1969causality", "muth1960optimal", "sargent1977hyper", "sargentwallace1973rational", "sims1972approx", "sims1972money", "wilson1973estimation"}
 ```

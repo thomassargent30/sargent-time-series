@@ -14,7 +14,7 @@ $(n\times 1)$ vector process $z_t$. *Surprises* — random shocks to the agents'
 sets — prompt revisions in their plans and so move equilibrium prices and quantities. Since
 every covariance stationary process has a vector autoregression (Wold's theorem of
 {doc}`13_representation_theory`), it is tempting to summarize such an equilibrium by its
-vector autoregression and to read the **innovation accounting** of Sims (1980) — variance
+vector autoregression and to read the **innovation accounting** of {cite:t}`sims1980macroeconomics` — variance
 decompositions and impulse responses to the autoregression's innovations — as though those
 innovations *were* the shocks hitting agents. This section describes a class of models in
 which that reading is wrong: the white noise a vector autoregression recovers is generally
@@ -162,7 +162,7 @@ the unit circle, i.e.
 \det M(K_1(z)) = 0 \;\Longrightarrow\; |z| \geq 1 ,
 ```
 
-and Hansen and Sargent (1980) exhibit a class of models — not thin in any natural sense — for
+and {cite:t}`hansensargent1980formulating` exhibit a class of models — not thin in any natural sense — for
 which {eq}`eq-vd-11` fails.
 
 When {eq}`eq-vd-11` fails, the Wold representation that a vector autoregression recovers is
@@ -320,7 +320,7 @@ $$
 confirming that the innovation the econometrician sees carries *more* contemporaneous variance
 than the agents' surprise — it has folded in shocks that the agents already knew. None of this
 can be detected from the autoregression alone; it takes the cross-equation restrictions of the
-economic theory, estimated as in Hansen and Sargent (1980), to recover $R(L)$ — and hence the
+economic theory, estimated as in {cite:t}`hansensargent1980formulating`, to recover $R(L)$ — and hence the
 agents' shocks $\epsilon_t$ — from a record on $(q_t, p_t)$, even when some zeros of $\det R(z)$
 lie inside the unit circle.
 
@@ -596,12 +596,7 @@ to supply *and* demand shocks — through their common effect on the prospective
 
 ## References
 
-- Hansen, L. P., and T. J. Sargent (1980). Formulating and estimating dynamic linear rational
-  expectations models. *Journal of Economic Dynamics and Control* 2, 7–46.
-- Hansen, L. P., and T. J. Sargent (1991). Two difficulties in interpreting vector
-  autoregressions. In *Rational Expectations Econometrics*, ch. 4. Westview Press.
-- Hansen, L. P., and T. J. Sargent (2013). *Recursive Models of Dynamic Linear Economies.*
-  Princeton University Press.
-- Sargent, T. J., and J. Stachurski. Dynamic Stackelberg problems. *QuantEcon*,
-  [https://python-advanced.quantecon.org/dyn_stack.html](https://python-advanced.quantecon.org/dyn_stack.html).
-- Sims, C. A. (1980). Macroeconomics and reality. *Econometrica* 48(1), 1–48.
+```{bibliography}
+:labelprefix: IV
+:filter: key in {"hansensargent1980formulating", "hansensargent1991twodifficulties", "hansensargent2013recursive", "sargentstachurski_dynstack", "sims1980macroeconomics"}
+```

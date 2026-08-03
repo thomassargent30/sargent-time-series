@@ -139,11 +139,11 @@ seen in Figure 8. $\blacksquare$
 [→ {ref}`Exercise 3 <ex-3>`]  *(The backward Wold representation.)*
 
 ```{note}
-As printed, the representation reads $x_t = \sum_{j\ge0} c_j u_{t-j} + \theta_t$;
-since $u_t = x_t - P[x_t\mid x_{t+1},x_{t+2},\dots]$ is the *backward* innovation,
-the sum must run over **future** innovations, $x_t = \sum_{j\ge0} c_j u_{t+j} + \theta_t$.
-(For $j\ge1$, $u_{t-j}$ is orthogonal to $x_t$, so past backward-innovations
-cannot build $x_t$.) We prove the corrected statement.
+Because $u_t = x_t - P[x_t\mid x_{t+1},x_{t+2},\dots]$ is the *backward*
+innovation, the sum must run over **future** innovations,
+$x_t = \sum_{j\ge0} c_j u_{t+j} + \theta_t$ — as the exercise states. (For
+$j\ge1$, $u_{t-j}$ is orthogonal to $x_t$, so past backward-innovations cannot
+build $x_t$; the 1987 printing had $u_{t-j}$, which is corrected here.)
 ```
 
 **A.** Apply Wold's theorem (chapter §13) to the **time-reversed** process
@@ -915,7 +915,7 @@ $$
 \frac{\rho A_2}{(1-\mu L)(1-\mu L^{-1})}+B_1 ,
 $$
 
-is identical in form to the spectral density that Muth (1960) factors when
+is identical in form to the spectral density that {cite:t}`muth1960optimal` factors when
 extracting *permanent income* from observed income. Consider
 
 $$
@@ -1122,7 +1122,7 @@ $$
 
 This is exactly the *second-order Pascal (Solow) lag distribution*: weights
 proportional to $(j+1)A^j$, which rise then decline — the characteristic
-"humped" shape. Comparing with equation (31) of {doc}`Chapter IX <ch09_difference_equations>`, the lag weights
+"humped" shape. Comparing with equation {eq}`eq-9-31` of {doc}`Chapter IX <ch09_difference_equations>`, the lag weights
 coincide up to the normalizing constant $w(1)^{-1}=(1-A)^2$ that makes the
 weights sum to one: the normalized Solow lag is $(1-A)^2(j+1)A^j$. $\blacksquare$
 

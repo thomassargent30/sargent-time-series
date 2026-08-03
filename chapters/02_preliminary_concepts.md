@@ -1,6 +1,6 @@
 # Preliminary Concepts[^fn-prelim-0]
 
-[^fn-prelim-0]: The reader is assumed to be familiar with complex variables. The chapter on complex variables in Allen (1960) is a good place to start. See Churchill, Brown, and Verhey (1974) for a more extensive treatment.
+[^fn-prelim-0]: The reader is assumed to be familiar with complex variables. The chapter on complex variables in {cite:t}`allen1960mathematical` is a good place to start. See {cite:t}`churchill1974complex` for a more extensive treatment.
 
 A *stochastic process* is a collection of random variables, a collection indexed by a
 variable $t$. In our work, we shall regard $t$ as time and will require $t$ to be an
@@ -121,7 +121,7 @@ The coefficient on $z^k$ in {eq}`eq-4` is the $k$th lagged covariance $c_y(k)$.
 First notice that taking mathematical expectation on both sides of {eq}`eq-3` gives
 
 $$
-E(y_t) = \sum_{j=0}^{\infty} b_j E(\epsilon_{t-j}) = 0 \quad \text{for all } k.
+E(y_t) = \sum_{j=0}^{\infty} b_j E(\epsilon_{t-j}) = 0 \quad \text{for all } t.
 $$
 
 It therefore follows that $c_y(k) = E\{(y_t - Ey_t)(y_{t-k} - Ey_{t-k})\} = Ey_t y_{t-k}$ for all $k$.

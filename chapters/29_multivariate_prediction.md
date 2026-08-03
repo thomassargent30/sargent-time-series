@@ -85,4 +85,4 @@ $$
 
 These restrictions embody the content of the theory and are refutable. Hansen and Sargent (1981c) describe how to impose and test these restrictions econometrically.
 
-Further applications of multivariate prediction formulas to rational expectations models occur in Whiteman (1983, 1984), Hansen and Sargent (1981c, 1981a), and Dagli and Taylor (1984).
+Further applications of multivariate prediction formulas to rational expectations models occur in Whiteman (1983, 1984), Hansen and Sargent (1981c, 1981a), and {cite:t}`daglitaylor1984estimation`.

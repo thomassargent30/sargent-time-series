@@ -22,7 +22,7 @@ $$
 \end{bmatrix}
 $$
 
-must be nonnegative definite. This is equivalent with the requirement that for any finite $n$, any finite index set of times $t_1,\ldots,t_n$, and any sequence of $(2\times 1)$ real-valued vectors $h_1, \ldots ,h_n$ the covariance function {eq}`eq-184` must imply that
+be nonnegative definite. This is equivalent with the requirement that for any finite $n$, any finite index set of times $t_1,\ldots,t_n$, and any sequence of $(2\times 1)$ real-valued vectors $h_1, \ldots ,h_n$ the covariance function {eq}`eq-184` must imply that
 
 $$
 Ez^2 \geq 0
@@ -48,7 +48,7 @@ where $u(t)$ is a least-squares residual that satisfies the orthogonality condit
 c_{yx}(k) = \int_{-\infty}^\infty b(s)c_x(k-s)ds
 ```
 
-for all $k \in \mathbf{R}$. The normal equation {eq}`eq-186` determines the function $b(s)$. Now suppose that one has observations on $(y_t, x_t)$ only at the discrete points of time $t \in I$, where $I$ is the set of integers $\{0, \pm 1, \pm 2, \ldots\}$. Thus, we view the discrete time process as representing a sampled version of the underlying continuous time process. Sims (1971) posed and answered the following question. Consider the discrete time projections of $y_t$ on all past, present, and future $x_t$'s:
+for all $k \in \mathbf{R}$. The normal equation {eq}`eq-186` determines the function $b(s)$. Now suppose that one has observations on $(y_t, x_t)$ only at the discrete points of time $t \in I$, where $I$ is the set of integers $\{0, \pm 1, \pm 2, \ldots\}$. Thus, we view the discrete time process as representing a sampled version of the underlying continuous time process. {cite:t}`sims1971discrete` posed and answered the following question. Consider the discrete time projections of $y_t$ on all past, present, and future $x_t$'s:
 
 ```{math}
 :label: eq-187
@@ -57,7 +57,7 @@ y_t = \sum_{j=-\infty}^\infty B_jx_{t-j} +\epsilon_t
 
 where $E\epsilon_t x_{t-j}=0$ for $j\in I$. What is the relationship between the sequence $\{B_j\}_{-\infty}^\infty$ in {eq}`eq-187` and the function $(b(s), s \in \mathbf{R})$ in {eq}`eq-185`? Under what circumstances does the $B_j$ sequence "resemble $b(s)$," i.e., under what circumstances is $B_j$ close to being a sampled version of $b(s)$, so that $B_j \simeq b(j)$, $j \in I$? To answer this question, Sims derived a formula expressing $B_j$ as a particular kind of average of $b(s)$.
 
-Multiplying {eq}`eq-187` by $x_{t-j}$ for integer $\tau$ and taking expectations of both sides gives the normal equations
+Multiplying {eq}`eq-187` by $x_{t-\tau}$ for integer $\tau$ and taking expectations of both sides gives the normal equations
 
 ```{math}
 :label: eq-188
@@ -146,7 +146,7 @@ or from {eq}`eq-194`
 where $P[x(t-s)|\{x_{t-k}\}_{k=-\infty}^\infty] = \sum_{k=-\infty}^\infty \delta_k^s x_{t-k}$, $s \in \mathbf{R}$. The $\{\delta_k^s\}_{k=-\infty}^\infty$ sequence for each $s \in \mathbf{R}$ is determined from the orthogonality conditions
 
 $$
-Ex(t - s)x(t - j) = \sum_{k=-\infty}^\infty \delta_k^s Ex_{t-j}x_{t-j}
+Ex(t - s)x(t - j) = \sum_{k=-\infty}^\infty \delta_k^s Ex_{t-k}x_{t-j}
 $$
 
 or
@@ -176,8 +176,8 @@ This implies that
 B_k = \int_{-\infty}^\infty b(s) \delta_k^sds
 ```
 
-which is equivalent with {eq}`eq-193` because $\delta_k^s=r_x(k - s)$. Equation {eq}`eq-198` expresses $B_k$ as the convolution of the function $b(s)$ with the function $\{\delta_k^s\}$, where $\delta_k^s$ is the coefficient on $x_k$ in the projection of $x(t - s)$ on $\{x_j\}_{j=-\infty}^\infty$.
+which is equivalent with {eq}`eq-193` because $\delta_k^s=r_x(k - s)$. Equation {eq}`eq-198` expresses $B_k$ as the convolution of the function $b(s)$ with the function $\{\delta_k^s\}$, where $\delta_k^s$ is the coefficient on $x_{t-k}$ in the projection of $x(t - s)$ on $\{x_j\}_{j=-\infty}^\infty$.
 
-Equation {eq}`eq-193` or {eq}`eq-198` shows how $B_k$ depends on $b(s)$ for all $s$, not just $s$ close to $k$. Sims (1971) describes examples in which the $r_x(k - s)$ function is such that $B_k$ is very different from $b(k)$. In general, {eq}`eq-193` reveals that even if $b(s)$ is one-sided on the past ($b(s) = 0$ for $s < 0$), $B_k \neq 0$ for $k < 0$. This means that if $y$ fails to Granger cause $x$ in continuous time, in general $y$ in discrete time will Granger cause $x$; how strongly $y$ in discrete time Granger causes $x$ depends on the function $r_x(s)$. Sims's work was extended to a multivariate setting by Geweke (1978). Hansen and Sargent (1982) apply an approach related to Sims's in order to study the connection between vector autoregressions in continuous time and their discrete time counterparts. Methods for estimating continuous time models from discrete time observations are described by Bergstrom (1983) and Hansen and Sargent (1981b).
+Equation {eq}`eq-193` or {eq}`eq-198` shows how $B_k$ depends on $b(s)$ for all $s$, not just $s$ close to $k$. {cite:t}`sims1971discrete` describes examples in which the $r_x(k - s)$ function is such that $B_k$ is very different from $b(k)$. In general, {eq}`eq-193` reveals that even if $b(s)$ is one-sided on the past ($b(s) = 0$ for $s < 0$), $B_k \neq 0$ for $k < 0$. This means that if $y$ fails to Granger cause $x$ in continuous time, in general $y$ in discrete time will Granger cause $x$; how strongly $y$ in discrete time Granger causes $x$ depends on the function $r_x(s)$. Sims's work was extended to a multivariate setting by {cite:t}`geweke1978temporal`. Hansen and Sargent (1982) apply an approach related to Sims's in order to study the connection between vector autoregressions in continuous time and their discrete time counterparts. Methods for estimating continuous time models from discrete time observations are described by {cite:t}`bergstrom1983gaussian` and Hansen and Sargent (1981b).
 
 [^fn-agg-1]: The sequence $\{\gamma_j\}$ is called the "inverse under convolution" of the sequence $\{c_x(\tau)\}$.

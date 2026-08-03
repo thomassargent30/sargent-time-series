@@ -377,9 +377,7 @@ are worth the extra Fourier transform.
 
 ## References
 
-- Blackman, R. B., and J. W. Tukey (1959). *The Measurement of Power Spectra.* Dover.
-- Cooley, J. W., and J. W. Tukey (1965). An algorithm for the machine calculation of complex Fourier series. *Mathematics of Computation* 19, 297–301.
-- Hinich, M. J., and C. S. Clay (1968). The application of the discrete Fourier transform in the estimation of power spectra, coherence, and bispectra of geophysical data. *Reviews of Geophysics* 6(3), 347–363.
-- Jenkins, G. M. (1963). Cross-spectral analysis and the estimation of linear open-loop transfer functions. In M. Rosenblatt (ed.), *Time Series Analysis*. Wiley.
-- Rosenblatt, M., and J. W. Van Ness (1965). Estimation of the bispectrum. *Annals of Mathematical Statistics* 36, 1120–1136.
-- Welch, P. D. (1967). The use of the fast Fourier transform for the estimation of power spectra. *IEEE Transactions on Audio and Electroacoustics* AU-15, 70–73.
+```{bibliography}
+:labelprefix: FF
+:filter: key in {"blackmantukey1959measurement", "cooleytukey1965algorithm", "hinichclay1968application", "jenkins1963cross", "rosenblattvanness1965estimation", "welch1967use"}
+```

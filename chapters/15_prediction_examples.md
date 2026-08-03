@@ -21,7 +21,7 @@ $$
 Thus we have
 
 $$
-P^{t-k}x_{t+k} = \lambda^k x_t.
+P_t x_{t+k} = \lambda^k x_t.
 $$
 
 ## First-Order Moving Average:
@@ -68,10 +68,10 @@ $$
 which with $a < 0$ is equivalent with Cagan's (1956) adaptive expectations scheme
 
 $$
-P_{t-1}x_t = \{(1 - \lambda )/(1 + \lambda L)\}x_{t-1},
+P_{t-1}x_t = \{(1 - \lambda )/(1 - \lambda L)\}x_{t-1},
 $$
 
-with $a = - \lambda$. Notice that as $\beta \to 1$ (from below), we approach the situation in which $(1-L)x_t = (1 + a L)\epsilon_t$, so that the first difference of $x_t$ follows a first-order moving average. The parameter $a$ must be negative in order that $\lambda > 0$
+with $a = - \lambda$. Notice that as $\beta \to 1$ (from below), we approach the situation in which $(1-L)x_t = (1 + a L)\epsilon_t$, so that the first difference of $x_t$ follows a first-order moving average. The parameter $a$ must be negative in order that $\lambda > 0$.
 
 For the general case in which $k \geq 1$, we have
 
@@ -81,7 +81,7 @@ P_{t-k}x_t &= \left(\frac{L^{-k}(1+aL)}{(1-\beta L)}\right)_{+}\left(\frac{1-\be
             &=\left(\frac{\beta^k}{1-\beta L} + \frac{a \beta^{k-1}}{1-\beta L}\right)_{+}\left(\frac{1-\beta L}{1+aL}\right)x_{t-k}\\
             &=\left(\frac{\beta^k}{1-\beta L} + \frac{a \beta^{k-1}}{1-\beta L}\right)\left(\frac{1-\beta L}{1+aL}\right)x_{t-k} = \frac{\beta^{k-1}(\beta + a)}{(1+aL)} x_{t-k}.
 \end{aligned}
-$$
+$$ (eq-62a)
 
 We can write this alternatively as
 
@@ -95,6 +95,6 @@ $$
 P_t x_{t+k} = ((1 + a)/(1 + a L))x_t,
 $$
 
-so that the same forecast is made for all horizons $k \geq 1$. In this sense there is a well-defined concept of "permanent $x$." This was first pointed out in the economics literature by Muth (1960), who showed that the hypothesis of rational expectations in conjunction with the model for income $(1 - L)x_t = (1+aL)\epsilon_t$, provides a rationalization both for the concept of permanent income and the geometric distributed lag formula that Friedman had earlier used to estimate permanent income in empirical work.
+so that the same forecast is made for all horizons $k \geq 1$. In this sense there is a well-defined concept of "permanent $x$." This was first pointed out in the economics literature by {cite:t}`muth1960optimal`, who showed that the hypothesis of rational expectations in conjunction with the model for income $(1 - L)x_t = (1+aL)\epsilon_t$, provides a rationalization both for the concept of permanent income and the geometric distributed lag formula that Friedman had earlier used to estimate permanent income in empirical work.
 
-[^fn-ex-1]: In these examples we continue to assume that $Ex_t = E\epsilon_t = 0$. Modifying the formulas to account for a nonzero mean of $x_t$ is trivial and involves adding constant terms to the formulas. Many more examples are worked out in Whittle (1983) and Nerlove (1967).
+[^fn-ex-1]: In these examples we continue to assume that $Ex_t = E\epsilon_t = 0$. Modifying the formulas to account for a nonzero mean of $x_t$ is trivial and involves adding constant terms to the formulas. Many more examples are worked out in {cite:t}`whittle1983prediction` and {cite:t}`nerlove1967distributed`.

@@ -62,7 +62,7 @@ It is a *linear space*:
    $\{\alpha x_k\} \in l_2$ (i.e., $\sum|\alpha x_k|^2 < \infty$).
 2. If $\{x_t\}, \{y_t\} \in l_2$, then $\{x_k + y_k\} \in l_2$.
 
-[^fn-rf-2]: For properties of linear spaces, see Naylor and Sell (1971).
+[^fn-rf-2]: For properties of linear spaces, see {cite:t}`naylorsell1971linear`.
 
 Similarly, $L_2[-\pi,\pi]$ is the space of functions $f(\omega)$ with
 $\int_{-\pi}^{\pi} |f(\omega)|^2 d\omega < \infty$, which is also a linear space.
@@ -80,7 +80,7 @@ D_2(f, g) = \left\{\frac{1}{2\pi}\int_{-\pi}^{\pi} |f(\omega) - g(\omega)|^2\, d
 $$
 
 [^fn-rf-3]: We adopt the convention that $f = g$ whenever they differ only on a set of
-Lebesgue measure zero. See Naylor and Sell (1971).
+Lebesgue measure zero. See {cite:t}`naylorsell1971linear`.
 
 ## The Fourier Transform as an Isometric Isomorphism
 
@@ -142,7 +142,7 @@ performed.
 
 ## The $z$-Transform Corollary
 
-Making the change of variable $z = e^{i\omega}$ in the Riesz-Fischer theorem yields:
+Making the change of variable $z = e^{-i\omega}$ in the Riesz-Fischer theorem yields:
 
 ---
 

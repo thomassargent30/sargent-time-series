@@ -4,7 +4,7 @@
 This chapter is Chapter XIV of Thomas J. Sargent, *Macroeconomic Theory*, 2nd ed. (Academic
 Press, 1987). It builds directly on two chapters of this book: the Euler-equation and
 stable-roots-backward / unstable-roots-forward machinery of
-{doc}`Chapter IX <ch09_difference_equations>`, and the prediction formulas of Chapter XI —
+{doc}`Chapter IX <ch09_difference_equations>`, and the prediction formulas of the time series part —
 in particular the geometric-lead formula {eq}`eq-90` and the compact vector predictor
 {eq}`eq-108`. Some cross-references in the original ("Chapter I", "Chapter III", "Chapter XII",
 "Chapter XVII", "the next chapter") point to other chapters of the 1987 textbook that are not
@@ -191,7 +191,7 @@ so that $n_t<0$ occurs with negligible probability.
 
 ## 3. Lucas's Critique
 
-In Chapter XI we derived a formula for the linear least squares prediction of a geometric lead of
+In {doc}`§20 <20_geometric_leads>` we derived a formula for the linear least squares prediction of a geometric lead of
 the kind in {eq}`eq-14-14`. Suppose $z_t$ has the autoregressive representation
 
 ```{math}
@@ -199,7 +199,7 @@ the kind in {eq}`eq-14-14`. Suppose $z_t$ has the autoregressive representation
 a(L)z_t = \epsilon_t, \qquad a(L)=1-a_1 L-\cdots-a_r L^r,\quad \epsilon_t=z_t-P[z_t\mid z_{t-1},\ldots].
 ```
 
-Then formula {eq}`eq-90` of Chapter XI asserts that
+Then formula {eq}`eq-90` of {doc}`§20 <20_geometric_leads>` asserts that
 
 ```{math}
 :label: eq-14-16
@@ -389,7 +389,7 @@ a(L)J_t = \epsilon_{Jt}, \qquad g(L)u_t = \epsilon_{ut},
 
 with $a(L)=1-a_1 L-\cdots-a_r L^r$, $g(L)=1-g_1 L-\cdots-g_r L^r$, and innovations
 $\epsilon_{Jt}=J_t-P[J_t\mid J_{t-1},u_{t-1},\ldots]$, $\epsilon_{ut}=u_t-P[u_t\mid\ldots]$, where the
-zeros of $a(z),g(z)$ exceed unity in modulus. Using formula {eq}`eq-90` of Chapter XI, {eq}`eq-14-29`
+zeros of $a(z),g(z)$ exceed unity in modulus. Using formula {eq}`eq-90` of {doc}`§20 <20_geometric_leads>`, {eq}`eq-14-29`
 can be represented as the equilibrium motion of capital
 
 ```{math}
@@ -442,7 +442,7 @@ $(K_t,J_t,1)$ is
 \end{pmatrix}
 ```
 
-or $x_{t+1}=A x_t+\epsilon_{t+1}$, where $x_t=(K_t,J_t,1)^T$. From Chapter XI we have the compact
+or $x_{t+1}=A x_t+\epsilon_{t+1}$, where $x_t=(K_t,J_t,1)^T$. From {doc}`§24 <24_compact_notation>` we have the compact
 predictor {eq}`eq-108`,
 
 ```{math}
@@ -494,7 +494,7 @@ that helps predict future prices appears in firms' supply curve as an "informati
 subverts the exclusion restrictions ordinarily relied upon to identify a supply curve. The
 identifying restrictions that *are* available come from the *cross-equation restrictions* linking
 the equilibrium law of motion {eq}`eq-14-32` to the laws of motion {eq}`eq-14-31` — the common
-appearance of $a(L),g(L)$ in both — exploited by Taylor (1979, 1980) and Hansen and Sargent (1980).
+appearance of $a(L),g(L)$ in both — exploited by Taylor (1979, 1980) and {cite:t}`hansensargent1980formulating`.
 
 ## 8. Investment Under Uncertainty and an Externality
 
@@ -964,61 +964,44 @@ the equilibrium $\lambda_1$ **identifies** whether the industry is competitive o
 
 ## References
 
-- Eckstein, Z. (1984). A rational expectations model of agricultural supply. *Journal of Political Economy* 92(1), 1–19.
-- Eichenbaum, M. S. (1983). A rational expectations equilibrium model of inventories of finished goods and employment. *Journal of Monetary Economics* 12(2), 259–277.
-- Gordon, D. F., and A. Hynes (1970). On the theory of price dynamics. In E. S. Phelps et al. (eds.), *Microeconomic Foundations of Employment and Inflation Theory*. Norton.
-- Hansen, L. P., and T. J. Sargent (1980). Formulating and estimating dynamic linear rational expectations models. *Journal of Economic Dynamics and Control* 2(1), 7–46.
-- Hansen, L. P., and T. J. Sargent (1981). Linear rational expectations models for dynamically interrelated variables. In R. E. Lucas Jr. and T. J. Sargent (eds.), *Rational Expectations and Econometric Practice*. University of Minnesota Press.
-- Holt, C. C., et al. (1960). *Planning Production, Inventories, and Work Force*. Prentice-Hall.
-- Kwakernaak, H., and R. Sivan (1972). *Linear Optimal Control Systems*. Wiley.
-- Lucas, R. E. Jr. (1976). Econometric policy evaluation: a critique. In K. Brunner and A. Meltzer (eds.), *The Phillips Curve and Labor Markets*, Carnegie–Rochester Conference Series 1. North-Holland.
-- Lucas, R. E. Jr., and E. C. Prescott (1971). Investment under uncertainty. *Econometrica* 39(5), 659–681.
-- Romer, P. M. (1983). Externalities and increasing returns in dynamic competitive analysis. Working Paper, University of Rochester.
-- Sargent, T. J. (1981). Interpreting economic time series. *Journal of Political Economy* 89(2), 213–248.
-- Taylor, J. B. (1979). Estimation and control of a macroeconomic model with rational expectations. *Econometrica* 47(5), 1267–1286.
-- Telser, L. G., and R. L. Graves (1972). *Functional Analysis in Mathematical Economics*. University of Chicago Press.
-- Townsend, R. (1983). Forecasting the forecasts of others. *Journal of Political Economy* 91(4), 546–588.
+```{bibliography}
+:labelprefix: CN
+:filter: key in {"eckstein1984rational", "eichenbaum1983rational", "gordonhynes1970theory", "hansensargent1980formulating", "hansensargent1981linear", "holt1960planning", "kwakernaaksivan1972linear", "lucas1976econometric", "lucasprescott1971investment", "romer1983externalities", "sargent1981interpreting", "taylor1979estimation", "telsergraves1972functional", "townsend1983forecasting"}
+```
 
-[^fn-14-1]: The approach originally stems from Holt et al. (1960). For a rigorous treatment see
-Telser and Graves (1972). Engineers solve these systems as matrix Riccati equations; see Kwakernaak
+[^fn-14-1]: The approach originally stems from {cite:t}`holt1960planning`. For a rigorous treatment see
+{cite:t}`telsergraves1972functional`. Engineers solve these systems as matrix Riccati equations; see Kwakernaak
 and Sivan (1972). In their jargon the systems here are *not* "controllable" but are "stabilizable"
 and "detectable," so convergence of the Riccati equations in the infinite-horizon problem is
 assured.
-
 [^fn-14-2]: It is necessary to distinguish two operators $B$ and $L$. The operator $B$ is defined
 by $B^{-1}[Ex_{t+j}\mid\Omega_{t-1}]=Ex_{t+j+1}\mid\Omega_{t-1}$ — application of $B^{-1}$ shifts
 forward by one period the date on the variable whose conditional forecast is being computed, but
 leaves the information set unaltered. The lag operator $L$ is defined by $L^j x_t=x_{t-j}$; in
 particular $L^{-1}(Ex_{t+j}\mid\Omega_{t-1})=Ex_{t+j+1}\mid\Omega_t$, so $L^{-1}$ shifts *both* the
 random variable and the information set forward one period.
-
 [^fn-14-3]: The properties of $B$ make the forward inverse of $1-\lambda_2 B$ the only legitimate
 one (apart from convergence). Operating with polynomials in nonpositive powers of $B$ is
 legitimate, but operating with polynomials in *positive* powers of $B$ is not: for example
 $E_t x_{t+1}=E_t y_{t+1}$ does not imply $BE_t x_{t+1}=BE_t y_{t+1}$, i.e. $x_t=y_t$. The operation
 in the text involves only nonpositive powers of $B$.
-
 [^fn-14-4]: Another stochastic process for $\{n_{t+j}\}$ that satisfies the Euler equations and the
 transversality condition is $n_{t+j}=\lambda_1 n_{t+j-1}-\lambda_1\sum_{i=0}^\infty\lambda_2^{-i}z_{t+j+i}$
 (with the *actual* future $z$'s, not their forecasts). But this depends on future values not
 observable at $t+j$, so it is not a solution of our problem, which requires $n_{t+j}$ to be a
 function of information available at $t+j$. The solution that is also a function of that information
 is said to be *realizable* or *nonanticipative*.
-
 [^fn-14-5]: Because of the quadratic objective and linear law of motion, the decision rule
 {eq}`eq-14-17` is independent of the variance of the innovation $\epsilon_t$; the points here hold
 even if $E\epsilon_t^2=0$, in which case the firm forecasts future $z$'s perfectly from current and
 past $z$'s.
-
 [^fn-14-6]: The transversality condition is derived by a procedure analogous to the one used in
 Section 1 and in {doc}`Chapter IX <ch09_difference_equations>`.
-
 [^fn-14-7]: To obtain a rational expectations *competitive* equilibrium, $A_0-A_1 f_0 nk_{t+j}+u_{t+j}$
 is substituted for $p_{t+j}$ only *after* the Euler equation has been obtained — i.e. after
 {eq}`eq-14-20` has been differentiated with respect to $k_{t+j}$ — which ensures the firm acts as a
 price taker. Substituting *before* differentiating yields a rational expectations *monopoly*
 equilibrium.
-
 [^fn-14-def]: Definition $w_t=J_t-bE_t J_{t+1}$ is chosen so that replacing $J_{t+j}(k_{t+j}-k_{t+j-1})$
 with $w_{t+j}k_{t+j}$ in {eq}`eq-14-27` leads to the same marginal condition {eq}`eq-14-29` (a
 summation-by-parts argument).

@@ -19,8 +19,8 @@ where $\Gamma$ denotes the unit circle and the integral is a contour integral.[^
 In this section we give simple formulas for evaluating {eq}`eq-21` using **residues**.
 Virtually no knowledge of complex analysis is required to use these formulas.
 
-[^fn-izl-1]: Churchill, Brown, and Verhey (1974) is a good reference on the complex
-analysis used here. Gabel and Roberts (1973) is a good reference on operational methods
+[^fn-izl-1]: {cite:t}`churchill1974complex` is a good reference on the complex
+analysis used here. {cite:t}`gabelroberts1973signals` is a good reference on operational methods
 for linear dynamic systems.
 
 ## Poles and Residues
@@ -71,7 +71,7 @@ formulas:[^fn-izl-3]
 :label: eq-25
 c_j = \frac{1}{2\pi i}\int_\Gamma g(z)\, z^{-j-1}\, dz
     = \begin{cases}
-        \text{sum of residues of } g(z^{-1})z^{-j-1}
+        \text{sum of residues of } g(z^{-1})z^{j-1}
         \text{ at poles inside unit circle} \\[4pt]
         \text{sum of residues of } g(z)z^{-j-1}
         \text{ at poles inside unit circle.}
@@ -83,7 +83,7 @@ Choose whichever branch avoids poles of order greater than one at $z = 0$.
 [^fn-izl-3]: The second representation is standard (e.g., Churchill, Brown, and Verhey
 1974). The first follows by noting that $g(z^{-1}) = \sum_j c_{-j} z^j \equiv \sum_j d_j z^j$
 with $d_j = c_{-j}$; applying the second representation to compute $d_j$ then gives
-$c_j = \text{sum of residues of } g(z^{-1})z^{-j-1}$ inside the unit circle.
+$c_j = \text{sum of residues of } g(z^{-1})z^{j-1}$ inside the unit circle.
 
 ## Example 1: $g(z) = 1/(1-\lambda z)$, $|\lambda| < 1$
 

@@ -112,9 +112,9 @@ where $Ev_tx_{t-j}=0$ for $j\geq0$. Let $F$ be the space of one-sided, square su
 f(L)y_t=h(L)[f(L)x_t] + f(L)v_t
 ```
 
-where $E[f(L)v_t]\cdot[f(L)x_{t-k}] = 0$ for $k\geq0$, and where $h(L)$ is the same operator $h(L)$ that appears in {eq}`eq-151`. Then $\{y_t\}$ fails to be Granger-caused by $\{x_t\}$.
+where $E[f(L)v_t]\cdot[f(L)x_{t-k}] = 0$ for $k\geq0$, and where $h(L)$ is the same operator $h(L)$ that appears in {eq}`eq-151`. Then $\{y_t\}$ fails to Granger-cause $\{x_t\}$.
 
-To prove the proposition, we begin by evaluating $E[f(L)v_t]\cdot[f(L)x_{t-k}]$, which is assumed to be zero for all $j\geq0$ and all $f\in F$. For $j=0$, we obtain
+To prove the proposition, we begin by evaluating $E[f(L)v_t]\cdot[f(L)x_{t-k}]$, which is assumed to be zero for all $k\geq0$ and all $f\in F$. For $k=0$, we obtain
 
 $$
 E(f_0v_t + f_1v_{t-1} + f_2v_{t-2} + \cdots)(f_0x_t + f_1x_{t-1}+ \cdots) = \sum_{h=0}^\infty f_h \sum_{k=h+1}^\infty f_kEx_{t-h}v_{t-k}.

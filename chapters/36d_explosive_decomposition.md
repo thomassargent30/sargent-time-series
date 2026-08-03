@@ -84,7 +84,7 @@ variance by $a^{-2}$ — the scalar analogue of the innovation-relabeling that r
 
 **To representing a nonstationary process.** Decomposition {eq}`eq-expl-decomp` is the explosive-root
 cousin of the *unit-root* decompositions studied in {ref}`Exercise 25 <ex-25>` and its
-{doc}`solution <38_exercise_solutions>`. When $a=1$, Beveridge and Nelson (1981) split a difference-
+{doc}`solution <38_exercise_solutions>`. When $a=1$, {cite:t}`beveridge1981new` split a difference-
 stationary series into a random-walk **permanent** component built from *past* shocks plus a stationary
 transitory part; when $a>1$, the permanent piece becomes the explosive $a^{t}Z$ and — tellingly — its
 amplitude $Z$ depends on the *entire* shock sequence, while the stationary remainder looks purely
@@ -102,9 +102,7 @@ Hamilton (1994). The permanent/transitory reading is due to Beveridge and Nelson
 
 ## References
 
-- Beveridge, S., and C. R. Nelson (1981). A new approach to decomposition of economic time series into permanent and transitory components with particular attention to measurement of the "business cycle." *Journal of Monetary Economics* 7(2), 151–174.
-- Chow, G. C. (1983). *Econometrics.* McGraw-Hill.
-- Hamilton, J. D. (1994). *Time Series Analysis.* Princeton University Press.
-- McCabe, B. P. M., and A. R. Tremayne (1989). On the representations of explosive autoregressions. *Journal of Time Series Analysis* 10(4), 353–362.
-- Phillips, P. C. B., and T. Magdalinos (2007). On the treatment of explosive autoregressions in econometrics. *Advances in Econometrics* 20, 257–294.
-- Quenouille, M. H. (1957). *The Analysis of Multiple Time-Series.* Griffin.
+```{bibliography}
+:labelprefix: EX
+:filter: key in {"beveridge1981new", "chow1983econometrics", "hamilton1994time", "mccabetremayne1989representations", "phillips2007treatment", "quenouille1957analysis"}
+```

@@ -59,7 +59,7 @@ $$
 \frac{1}{1 - C} = 1 + C + C^2 + \cdots.
 $$ (eq-9-3)
 
-Thus suggests treating $\lambda L$ of {eq}`eq-9-2` exactly like the $C$ of {eq}`eq-9-3` to get
+This suggests treating $\lambda L$ of {eq}`eq-9-2` exactly like the $C$ of {eq}`eq-9-3` to get
 
 $$
 \frac{1}{1 - \lambda L} = 1 + \lambda L + \lambda^2 L^2 + \cdots,
@@ -263,7 +263,7 @@ $$
 \lim_{n \to \infty} \sum_{i=n}^{\infty} \left(\frac{1}{\lambda}\right)^i X_{t+i} = 0.
 $$ (eq-9-9-prime)
 
-The principle of solving "stable roots" ($|\lambda| < 1$) backward and "unstable roots" ($|\lambda| > 1$) forward was encountered in Chapter I. It is a device designed to ensure that the solution of the differential (or difference) equation maps bounded functions (or sequences) as driving processes into bounded functions (or sequences). Below, we shall see that a formal justification for this procedure is sometimes available in the context of difference equations that emerge from optimum problems.
+The principle of solving "stable roots" ($|\lambda| < 1$) backward and "unstable roots" ($|\lambda| > 1$) forward was encountered in Chapter I of *Macroeconomic Theory*. It is a device designed to ensure that the solution of the differential (or difference) equation maps bounded functions (or sequences) as driving processes into bounded functions (or sequences). Below, we shall see that a formal justification for this procedure is sometimes available in the context of difference equations that emerge from optimum problems.
 
 (sec-9-2)=
 ## 2. Second-Order Difference Equations
@@ -324,9 +324,9 @@ $$
 = 1 - (\lambda_1 + \lambda_2)L + \lambda_1 \lambda_2 L^2,
 $$ (eq-9-16)
 
-[^fn-9-1]: It would be useful for the reader to be familiar with the material on difference equations in Allen (1960) and Baumol (1959).
+[^fn-9-1]: It would be useful for the reader to be familiar with the material on difference equations in {cite:t}`allen1960mathematical` and {cite:t}`baumol1959economic`.
 
-[^fn-9-2]: This chapter aims to teach the reader to manipulate lag operators, while devoting little or no attention to describing their mathematical foundations. The key Riesz–Fischer theorem which justifies these methods is discussed briefly in Chapter XI, pp. 249–253. The reader interested in increasing his proficiency with these techniques is urged to consult Gabel and Roberts (1973, Chapter 4).
+[^fn-9-2]: This chapter aims to teach the reader to manipulate lag operators, while devoting little or no attention to describing their mathematical foundations. The key Riesz–Fischer theorem which justifies these methods is discussed briefly in {doc}`04_fourier_z_transforms`. The reader interested in increasing his proficiency with these techniques is urged to consult Gabel and Roberts (1973, Chapter 4).
 
 [^fn-9-3]: Actually, we should write $A(L) = I/(1 - \lambda L)$ where $I$ is the identity lag operator defined by $I \equiv 1 + 0L + 0L^2 + \cdots$. So $I$ satisfies $Ix_t = x_t$, and thus acts like unity.
 
@@ -414,7 +414,7 @@ $$
 \frac{1}{1 - \lambda_1 L}\frac{1}{1 - \lambda_2 L} = \sum_{i=0}^{\infty}\lambda_1^i L^i \sum_{j=0}^{\infty}\lambda_2^j L^j,
 $$
 
-so that the sum of the distributed lag weights $\sum_{i=0}^{\infty}\lambda_1^i\sum_{j=0}^{\infty}\lambda_2^i$ is finite and equals $1/((1 - \lambda_1)(1 - \lambda_2))$ provided that both $|\lambda_1| < 1$, $|\lambda_2| < 1$. So in writing {eq}`eq-9-19` we require either that both $|\lambda_1|$ and $|\lambda_2|$ be less than unity or that $a = 0$, so that $a\sum_{i=0}^{\infty}\lambda_1^i\sum_{j=0}^{\infty}\lambda_2^j$ is defined. Furthermore, we require that
+so that the sum of the distributed lag weights $\sum_{i=0}^{\infty}\lambda_1^i\sum_{j=0}^{\infty}\lambda_2^j$ is finite and equals $1/((1 - \lambda_1)(1 - \lambda_2))$ provided that both $|\lambda_1| < 1$, $|\lambda_2| < 1$. So in writing {eq}`eq-9-19` we require either that both $|\lambda_1|$ and $|\lambda_2|$ be less than unity or that $a = 0$, so that $a\sum_{i=0}^{\infty}\lambda_1^i\sum_{j=0}^{\infty}\lambda_2^j$ is defined. Furthermore, we require that
 
 $$
 \lim_{n \to \infty}\sum_{i=n}^{\infty}\lambda_j^i X_{t-i} = 0, \qquad \text{all } t,
@@ -487,7 +487,7 @@ Y_t &= pe^{i\theta}r^t e^{iwt} + pe^{-i\theta}r^t e^{-iwt} = pr^t[e^{i(wt+\theta
 \end{aligned}
 $$ (eq-9-24)
 
-This is the solution of the "unforced" (i.e., $X_t = 0$ for all $t$) second-order difference equation with complex roots. The parameters $p$ and $\theta$ are chosen to satisfy two side conditions on the path of $Y_t$, say two initial conditions. The path of $Y_t$ oscillates with a frequency determined by $w$. The "damping factor" $r^t$ is determined by the amplitude $r$ of the complex roots. The value $Y_t = 0$ is the stationary point of the difference equation, which will be approached at $t \to \infty$ for arbitrary initial conditions if $r < 1$. If $r > 1$, the path of $Y_t$ displays explosive oscillations, unless the initial conditions are, say, $Y_0 = 0$, $Y_1 = 0$, so that $Y$ starts out at the stationary point for two successive values. If $r < 1$, the system displays damped oscillations provided $w \neq 0$, which is so when the roots are complex. If $r = 1$, $Y_t$ displays repeated oscillations of unchanging amplitude, and the solution is "periodic."
+This is the solution of the "unforced" (i.e., $X_t = 0$ for all $t$) second-order difference equation with complex roots. The parameters $p$ and $\theta$ are chosen to satisfy two side conditions on the path of $Y_t$, say two initial conditions. The path of $Y_t$ oscillates with a frequency determined by $w$. The "damping factor" $r^t$ is determined by the amplitude $r$ of the complex roots. The value $Y_t = 0$ is the stationary point of the difference equation, which will be approached as $t \to \infty$ for arbitrary initial conditions if $r < 1$. If $r > 1$, the path of $Y_t$ displays explosive oscillations, unless the initial conditions are, say, $Y_0 = 0$, $Y_1 = 0$, so that $Y$ starts out at the stationary point for two successive values. If $r < 1$, the system displays damped oscillations provided $w \neq 0$, which is so when the roots are complex. If $r = 1$, $Y_t$ displays repeated oscillations of unchanging amplitude, and the solution is "periodic."
 
 If $\lambda_1$ and $\lambda_2$ are complex, the distributed lag weights of {eq}`eq-9-19` are easily shown to oscillate. For we have
 
@@ -685,7 +685,7 @@ time before decaying. Generated by
 
 $t_1 + t_2 = c$ in Figure 2. Using Figure 2, the values of $c$ and $\gamma$ compatible with damped oscillations, explosive oscillations, and so on, can easily be determined.
 
-Figure 3 shows some realizations of second-order difference equations for various values of $t_1$ and $t_2$. In each case the values $Y_1$ and $Y_2$ were the two initial conditions which we specified arbitrarily. The reader can check that the behavior of these realizations matches that predicted by Figure 1.
+Figure 3 shows some realizations of second-order difference equations for various values of $t_1$ and $t_2$. In each case the values $Y_0$ and $Y_1$ were the two initial conditions which we specified arbitrarily. The reader can check that the behavior of these realizations matches that predicted by Figure 1.
 
 (sec-9-3)=
 ## 3. Second-Order Difference Equations (Equal Roots)
@@ -736,7 +736,7 @@ $$
 b \sum_{j=0}^{\infty} (j + 1 + t)\lambda^{t+j} X_{0-j} = b\lambda^t \sum_{j=0}^{\infty} (j + 1)\lambda^j X_{0-j} + bt\lambda^t \sum_{j=0}^{\infty} \lambda^j X_{0-j}.
 $$
 
-Therefore (32) becomes
+Therefore {eq}`eq-9-32` becomes
 
 $$
 Y_t = b \sum_{i=0}^{t-1} (1 + i)\lambda^i X_{t-i} + \lambda^t \theta_0 + t\lambda^t \eta_0
@@ -748,7 +748,7 @@ $$
 \theta_0 = \left\{ c_1 + b \sum_{j=0}^{\infty} (j + 1)\lambda^j X_{0-j} \right\} \quad \text{and} \quad \eta_0 = \left\{ c_2 + b \sum_{j=0}^{\infty} \lambda^j X_{0-j} \right\}.
 $$
 
-As for our earlier cases, (33) displays the solution for $t \geq 1$ as the sum of the distributed lag in $X_1, X_2, \ldots, X_t$ and two initial conditions. If $X_t = 0$ for $t \geq 1$, the sequence $Y_t$ will approach its stationary value of zero if $|\lambda| < 1$. If $|\lambda| > 1$, the sequence $Y_t$ will diverge from the stationary point of zero unless $\theta_0 = \eta_0 = 0$.
+As for our earlier cases, {eq}`eq-9-33` displays the solution for $t \geq 1$ as the sum of the distributed lag in $X_1, X_2, \ldots, X_t$ and two initial conditions. If $X_t = 0$ for $t \geq 1$, the sequence $Y_t$ will approach its stationary value of zero if $|\lambda| < 1$. If $|\lambda| > 1$, the sequence $Y_t$ will diverge from the stationary point of zero unless $\theta_0 = \eta_0 = 0$.
 
 (sec-9-4)=
 ## 4. Nth-Order Difference Equations (Distinct Roots)
@@ -789,7 +789,7 @@ $$
 A_i = \frac{F(1/\lambda_i)}{(1 - (\lambda_1/\lambda_i)) \cdots (1 - (\lambda_{i-1}/\lambda_i))(1 - (\lambda_{i+1}/\lambda_i)) \cdots (1 - (\lambda_n/\lambda_i))}.
 $$ (eq-9-35)
 
-As an example, consider applying (34) to the second-order denominator polynomial
+As an example, consider applying {eq}`eq-9-34` to the second-order denominator polynomial
 
 $$
 A(L) = \frac{1}{(1 - \lambda_1 L)(1 - \lambda_2 L)} = \frac{A_1}{1 - \lambda_1 L} + \frac{A_2}{1 - \lambda_2 L}.
@@ -807,7 +807,7 @@ $$
 \frac{1}{(1 - \lambda_1 L)(1 - \lambda_2 L)} = \frac{1}{\lambda_1 - \lambda_2} \left( \frac{\lambda_1}{1 - \lambda_1 L} - \frac{\lambda_2}{1 - \lambda_2 L} \right),
 $$
 
-which we earlier used on the way to deriving (19).
+which we earlier used on the way to deriving {eq}`eq-9-19`.
 
 Suppose we have an $n$th-order difference equation
 
@@ -815,13 +815,13 @@ $$
 (1 - \lambda_1 L)(1 - \lambda_2 L) \cdots (1 - \lambda_n L) Y_t = b X_t.
 $$ (eq-9-36)
 
-The general solution to (36) is obtained by "dividing"[^fn-9-6] by $(1 - \lambda_1 L) \cdots (1 - \lambda_n L)$ to obtain
+The general solution to {eq}`eq-9-36` is obtained by "dividing"[^fn-9-6] by $(1 - \lambda_1 L) \cdots (1 - \lambda_n L)$ to obtain
 
 $$
 Y_t = \frac{b}{(1 - \lambda_1 L) \cdots (1 - \lambda_n L)} X_t + c_1 \lambda_1^{\,t} + \cdots + c_n \lambda_n^{\,t},
 $$
 
-where $c_1, \ldots, c_n$ are any constants. That this is the solution can be verified by operating on both sides of the above equation with $(1 - \lambda_1 L) \cdots (1 - \lambda_n L)$. We now require $n$ side conditions on the path of $Y_t$ to determine the $n$ constants $c_1, \ldots, c_n$. We suppose that the $\lambda_j$ are all distinct. Then application of (34) to the above equation gives
+where $c_1, \ldots, c_n$ are any constants. That this is the solution can be verified by operating on both sides of the above equation with $(1 - \lambda_1 L) \cdots (1 - \lambda_n L)$. We now require $n$ side conditions on the path of $Y_t$ to determine the $n$ constants $c_1, \ldots, c_n$. We suppose that the $\lambda_j$ are all distinct. Then application of {eq}`eq-9-34` to the above equation gives
 
 $$
 Y_t = b \sum_{r=1}^{n} \left( \frac{A_r}{1 - \lambda_r L} \right) X_t + \sum_{j=1}^{n} c_j \lambda_j^{\,t},
@@ -831,13 +831,13 @@ which shows that $Y_t$ can be expressed as the weighted sum of $n$ geometric dis
 
 [^fn-9-6]: That is, "operating on both sides with the operator inverse of $(1 - \lambda_1 L)(1 - \lambda_2 L) \cdots (1 - \lambda_n L)$."
 
-Given $n$ initial values of $Y$, and assuming $X_t = 0$ always, it is possible to start up difference equation (36) finitely far back in the past and to obtain a solution of the form
+Given $n$ initial values of $Y$, and assuming $X_t = 0$ always, it is possible to start up difference equation {eq}`eq-9-36` finitely far back in the past and to obtain a solution of the form
 
 $$
 Y_t = \lambda_1^{\,t} \eta_1 + \lambda_2^{\,t} \eta_2 + \cdots + \lambda_n^{\,t} \eta_n
 $$
 
-where $\eta_1, \ldots, \eta_n$ are constants chosen to satisfy the $n$ initial values. The above equation can be derived from (37) by applying calculations analogous to those applied above in the first- and second-order cases.
+where $\eta_1, \ldots, \eta_n$ are constants chosen to satisfy the $n$ initial values. The above equation can be derived from {eq}`eq-9-37` by applying calculations analogous to those applied above in the first- and second-order cases.
 
 (sec-9-5)=
 ## 5. Nth-Order Difference Equations (N Equal Roots)
@@ -860,7 +860,7 @@ $$
 (1 - x)^{-n} = 1 + nx + \frac{n(n + 1)}{2!} x^2 + \frac{n(n + 1)(n + 2)}{3!} x^3 + \cdots + \frac{n(n + 1) \cdots (n + i - 1)}{i!} x^i + \cdots, \qquad |x| < 1.
 $$
 
-Notice that $n(n + 1) \cdots (n + i - 1) = (n + i - 1)!/(n - 1)!$ The coefficient on $x$ in the above expansion is thus
+Notice that $n(n + 1) \cdots (n + i - 1) = (n + i - 1)!/(n - 1)!$ The coefficient on $x^i$ in the above expansion is thus
 
 $$
 \binom{n + i - 1}{i} \equiv \frac{(n + i - 1)!}{i!(n - 1)!}.
@@ -880,7 +880,7 @@ $$ (eq-9-39)
 
 which agrees with our earlier formulas for the special cases $n = 1$ and $n = 2$.
 
-To arrive at (39) in an alternative way, write
+To arrive at {eq}`eq-9-39` in an alternative way, write
 
 $$
 f(\lambda L) = \frac{1}{1 - \lambda L} = \sum_{i=0}^{\infty} (\lambda L)^i.
@@ -892,7 +892,7 @@ $$
 f'(\lambda L) = \frac{1}{(1 - \lambda L)^2} = \sum_{i=0}^{\infty} i(\lambda L)^{i-1} = \sum_{i=0}^{\infty} (i + 1)(\lambda L)^i,
 $$
 
-which is (39) with $n = 2$. Differentiating again with respect to $\lambda L$ gives
+which is {eq}`eq-9-39` with $n = 2$. Differentiating again with respect to $\lambda L$ gives
 
 $$
 f''(\lambda L) = \frac{2}{(1 - \lambda L)^3} = \sum_{i=0}^{\infty} i(i - 1)(\lambda L)^{i-2}
@@ -904,9 +904,9 @@ $$
 \frac{1}{(1 - \lambda L)^3} = \sum_{i=0}^{\infty} \frac{(i + 1)(i + 2)}{2} (\lambda L)^i = \sum_{i=0}^{\infty} \binom{i + 2}{i} (\lambda L)^i,
 $$
 
-which is (39) with $n = 3$.
+which is {eq}`eq-9-39` with $n = 3$.
 
-With the aid of (39), the solution to (38) can be written
+With the aid of {eq}`eq-9-39`, the solution to {eq}`eq-9-38` can be written
 
 $$
 Y_t = b \sum_{i=0}^{\infty} \binom{n + i - 1}{i} \lambda^i X_{t-i} + c_1 \lambda^t + c_2 t \lambda^t + \cdots + c_n t^{n-1} \lambda^t.
@@ -917,7 +917,7 @@ $$
 (sec-9-6)=
 ## 6. An Example of a First-Order System
 
-Consider the following model studied by Cagan (1956). Let $m_t$ be the log of the money supply, $p_t$ the log of the price level and $p_{t+1}^{\,\mathrm{e}}$ the log of the price expected to prevail at time $t + 1$ given information available at time $t$. The model is
+Consider the following model studied by {cite:t}`cagan1956monetary`. Let $m_t$ be the log of the money supply, $p_t$ the log of the price level and $p_{t+1}^{\,\mathrm{e}}$ the log of the price expected to prevail at time $t + 1$ given information available at time $t$. The model is
 
 $$
 m_t - p_t = \alpha(p_{t+1}^{\,\mathrm{e}} - p_t), \qquad \alpha < 0,
@@ -931,7 +931,7 @@ $$
 p_{t+1}^{\,\mathrm{e}} - p_t = \gamma(p_t - p_{t-1}),
 $$ (eq-9-41)
 
-so that the public expects inflation next period to be the current rate of inflation, $p_t - p_{t-1}$, multiplied by the constant $\gamma$. Then (40) becomes
+so that the public expects inflation next period to be the current rate of inflation, $p_t - p_{t-1}$, multiplied by the constant $\gamma$. Then {eq}`eq-9-40` becomes
 
 $$
 m_t - p_t = \alpha\gamma p_t - \alpha\gamma p_{t-1}.
@@ -969,13 +969,13 @@ $$
 
 Thus, the long-run effect of a once-and-for-all jump in $m$ is to drive $p$ up by an equal amount (provided the above "stability condition" is met).
 
-Returning to (40), let us abandon (41) and now assume perfect foresight:
+Returning to {eq}`eq-9-40`, let us abandon {eq}`eq-9-41` and now assume perfect foresight:
 
 $$
 p_{t+1}^{\,\mathrm{e}} = p_{t+1}.
 $$ (eq-9-42)
 
-Substituting (42) into (40) gives
+Substituting {eq}`eq-9-42` into {eq}`eq-9-40` gives
 
 $$
 m_t - p_t = \alpha p_{t+1} - \alpha p_t \quad \text{or} \quad \alpha p_{t+1} + (1 - \alpha) p_t = m_t.
@@ -993,13 +993,13 @@ $$
 \left( 1 - \frac{\alpha - 1}{\alpha} L \right) p_t = \frac{1}{\alpha} m_{t-1}.
 $$ (eq-9-43)
 
-Notice that since $\alpha < 0$, it follows that $(\alpha - 1)/\alpha > 1$. This fact is an invitation to solve (43) in the "forward" direction, i.e., to use (6). Dividing both sides of (43) by $(1 - ((\alpha - 1)/\alpha)L)$ gives
+Notice that since $\alpha < 0$, it follows that $(\alpha - 1)/\alpha > 1$. This fact is an invitation to solve {eq}`eq-9-43` in the "forward" direction, i.e., to use {eq}`eq-9-6`. Dividing both sides of {eq}`eq-9-43` by $(1 - ((\alpha - 1)/\alpha)L)$ gives
 
 $$
 p_t = \left( \frac{\alpha^{-1}}{1 - (\alpha - 1)\alpha^{-1} L} \right) m_{t-1} + c \left( \frac{\alpha - 1}{\alpha} \right)^t
 $$
 
-where $c$ is any constant. Using (6), this becomes
+where $c$ is any constant. Using {eq}`eq-9-6`, this becomes
 
 $$
 \begin{aligned}
@@ -1012,18 +1012,18 @@ $$
 p_t = \frac{1}{1 - \alpha} \sum_{i=0}^{\infty} \left( \frac{\alpha}{\alpha - 1} \right)^i m_{t+i} + c \left( \frac{\alpha - 1}{\alpha} \right)^t.
 $$ (eq-9-44)
 
-Notice that since $\alpha < 0$, $0 < \alpha/(\alpha - 1) < 1$, so that the sum of the lag weights is finite. Equation (44) expresses the log of the current price as a moving sum of current and *future* values of the log of the money supply. Notice that
+Notice that since $\alpha < 0$, $0 < \alpha/(\alpha - 1) < 1$, so that the sum of the lag weights is finite. Equation {eq}`eq-9-44` expresses the log of the current price as a moving sum of current and *future* values of the log of the money supply. Notice that
 
 $$
 \frac{1}{1 - \alpha} \sum_{i=0}^{\infty} \left( \frac{\alpha}{\alpha - 1} \right)^i = \frac{(1 - \alpha)^{-1}}{1 - \alpha(\alpha - 1)^{-1}} = 1,
 $$
 
-so that $p$ is a weighted *average* of current and future values of $m$. The solution for $p_t$ given by (44) will be finite for all finite $t$ if there is a constant $K > 0$ and an $x$, $1 \leq x < (\alpha - 1)/\alpha$ such that $|m_t| < Kx^t$ for all $t$. This is a condition that the money supply not grow too fast. For the solution given by (44) to be bounded for money supply paths that are bounded, we would require that $c = 0$. This amounts to an arbitrary terminal condition that rules out the occurrence of runaway inflations in the absence of runaway growth in the money supply.
+so that $p$ is a weighted *average* of current and future values of $m$. The solution for $p_t$ given by {eq}`eq-9-44` will be finite for all finite $t$ if there is a constant $K > 0$ and an $x$, $1 \leq x < (\alpha - 1)/\alpha$ such that $|m_t| < Kx^t$ for all $t$. This is a condition that the money supply not grow too fast. For the solution given by {eq}`eq-9-44` to be bounded for money supply paths that are bounded, we would require that $c = 0$. This amounts to an arbitrary terminal condition that rules out the occurrence of runaway inflations in the absence of runaway growth in the money supply.
 
 (sec-9-7)=
 ## 7. An Example of a Second-Order System
 
-Consider the following model studied by Muth (1961). Let $p_t$ be the price of a commodity at $t$, $C_t$ the demand for current consumption, $I_t$ the stock of inventories of the commodity, $Y_t$ the output of the commodity, and $p_t^{\,\mathrm{e}}$ the price previously expected to prevail at time $t$; $\{X_t\}$ is a bounded sequence of real numbers that represents the effects of the weather on supply. The model is
+Consider the following model studied by {cite:t}`muth1961rational`. Let $p_t$ be the price of a commodity at $t$, $C_t$ the demand for current consumption, $I_t$ the stock of inventories of the commodity, $Y_t$ the output of the commodity, and $p_t^{\,\mathrm{e}}$ the price previously expected to prevail at time $t$; $\{X_t\}$ is a bounded sequence of real numbers that represents the effects of the weather on supply. The model is
 
 $$
 \begin{aligned}
@@ -1082,7 +1082,7 @@ $$
 1 - \phi L + L^2 = (1 - \lambda L)(1 - \lambda^{-1} L)
 $$
 
-where $\lambda$ is chosen to satisfy $\lambda + \lambda^{-1} = \phi$. So (45) can be written
+where $\lambda$ is chosen to satisfy $\lambda + \lambda^{-1} = \phi$. So {eq}`eq-9-45` can be written
 
 $$
 (1 - \lambda L)(1 - \lambda^{-1} L) p_t = \alpha^{-1} X_{t-1}.
@@ -1090,13 +1090,13 @@ $$ (eq-9-46)
 
 Since $(\beta + \gamma)/\alpha > 0$, it follows that $\phi = ((\beta + \gamma)/\alpha) + 2 > 2$. That implies that $\lambda$ does not equal 1 since $\lambda + \lambda^{-1} = \phi$. Notice that if $\lambda > 1$, $\lambda^{-1} < 1$. So one of our roots necessarily exceeds 1, the other necessarily is less than 1.
 
-We divide both sides of (46) by $(1 - \lambda L)(1 - \lambda^{-1} L)$ to obtain
+We divide both sides of {eq}`eq-9-46` by $(1 - \lambda L)(1 - \lambda^{-1} L)$ to obtain
 
 $$
 p_t = \frac{1}{\alpha} \frac{1}{(1 - \lambda L)(1 - \lambda^{-1} L)} X_{t-1} + c_1 \lambda^t + c_2 \left( \frac{1}{\lambda} \right)^t
 $$ (eq-9-47)
 
-where $c_1$ and $c_2$ are any constants. Without loss of generality, suppose $\lambda < 1$ and let $\lambda_2 = 1/\lambda$. Use (6) and (19) to write the solution as
+where $c_1$ and $c_2$ are any constants. Without loss of generality, suppose $\lambda < 1$ and let $\lambda_2 = 1/\lambda$. Use {eq}`eq-9-6` and {eq}`eq-9-19` to write the solution as
 
 $$
 \begin{aligned}
@@ -1114,7 +1114,7 @@ $$
 p_t = \frac{\alpha^{-1}}{\lambda - \lambda^{-1}} \sum_{i=-\infty}^{\infty} \lambda^{|i|} X_{t-i} + c_1 \lambda^t + c_2 \lambda^{-t}.
 $$ (eq-9-48)
 
-The solution (48) expresses $p_t$ as a "two-sided" distributed lag of $X$, i.e., as a weighted sum of past, present, and future values of $X$. In this model the current price depends on the entire path of exogenous shock $X$ over the entire past *and* the entire future. As usual, the constants $c_1$ and $c_2$ are determined from two side conditions on the path of $p_t$. For example, if we were to impose the side conditions $\lim_{t \to -\infty} |p_t| < \infty$, $\lim_{t \to +\infty} |p_t| < \infty$, i.e., if we imposed boundedness on the $p_t$ path for all bounded $\{X_t\}$ sequences, then we would require $c_1 = c_2 = 0$.
+The solution {eq}`eq-9-48` expresses $p_t$ as a "two-sided" distributed lag of $X$, i.e., as a weighted sum of past, present, and future values of $X$. In this model the current price depends on the entire path of exogenous shock $X$ over the entire past *and* the entire future. As usual, the constants $c_1$ and $c_2$ are determined from two side conditions on the path of $p_t$. For example, if we were to impose the side conditions $\lim_{t \to -\infty} |p_t| < \infty$, $\lim_{t \to +\infty} |p_t| < \infty$, i.e., if we imposed boundedness on the $p_t$ path for all bounded $\{X_t\}$ sequences, then we would require $c_1 = c_2 = 0$.
 
 (sec-9-8)=
 ## 8. An Optimization Example: Solving a System of Euler Equations
@@ -1463,7 +1463,7 @@ That the Euler equations assume the form {eq}`eq-9-74` can be proved using the m
 The related-pairs property of the zeros of the characteristic polynomial of the Euler equation that held in the univariate case generalizes as follows.
 
 
-If $z_0$ is a zero of $\det\{H + D(bz^{-1})'D(z)\}$ then so is $bz_0^{-1}$. Here "det" denotes the determinant of a matrix. The appropriate matrix analogue of the scalar polynomial factorization (62) is a matrix polynomial factorization $C(bL^{-1})'C(L)$, where the zeros of $\det C(z)$ exceed $\sqrt{b}$ in absolute value, while those of $\det C(bz^{-1})$ are less than $\sqrt{b}$ in absolute value. By a theorem on matrix polynomials of the form that appears in (74), there always exists a matrix factorization
+If $z_0$ is a zero of $\det\{H + D(bz^{-1})'D(z)\}$ then so is $bz_0^{-1}$. Here "det" denotes the determinant of a matrix. The appropriate matrix analogue of the scalar polynomial factorization {eq}`eq-9-62` is a matrix polynomial factorization $C(bL^{-1})'C(L)$, where the zeros of $\det C(z)$ exceed $\sqrt{b}$ in absolute value, while those of $\det C(bz^{-1})$ are less than $\sqrt{b}$ in absolute value. By a theorem on matrix polynomials of the form that appears in {eq}`eq-9-74`, there always exists a matrix factorization
 
 $$
 H + D(bL^{-1})'D(L) = C(bL^{-1})'C(L)
@@ -1477,7 +1477,7 @@ $$ (eq-9-76)
 
 and where the zeros of $\det C(z)$ exceed $\sqrt{b}$ in absolute value.
 
-The solution of (74) satisfying (73) is then given by
+The solution of {eq}`eq-9-74` satisfying {eq}`eq-9-73` is then given by
 
 $$
 C(L)Y_t = C(bL^{-1})'^{-1}G_t.
@@ -1501,17 +1501,17 @@ $$
 A_h = \lim_{z \to \lambda_h b} (1 - \lambda_h bz^{-1})C(bz^{-1})'^{-1}.
 $$ (eq-9-79)
 
-Note that each $A_h$ is an $(n \times n)$ matrix. Using (78), (77) can be represented
+Note that each $A_h$ is an $(n \times n)$ matrix. Using {eq}`eq-9-78`, {eq}`eq-9-77` can be represented
 
 $$
 C(L)Y_t = \sum_{h=1}^{k} A_h \sum_{j=0}^{\infty} (\lambda_h b)^j G_{t+j}.
 $$ (eq-9-80)
 
-Representation (80) is the vector generalization of (70).
+Representation {eq}`eq-9-80` is the vector generalization of {eq}`eq-9-70`.
 
-Note in (77) a sort of symmetry in form between the "feedback part" $C(L)Y_t$ and the "feedforward part" $C(bL^{-1})'^{-1}G_t$ that generalizes a similar symmetry that we observed in the univariate problems.
+Note in {eq}`eq-9-77` a sort of symmetry in form between the "feedback part" $C(L)Y_t$ and the "feedforward part" $C(bL^{-1})'^{-1}G_t$ that generalizes a similar symmetry that we observed in the univariate problems.
 
-A key step in solving problems of this sort is achieving the matrix factorization (75). Hansen and Sargent (1981) describe several methods for accomplishing this.
+A key step in solving problems of this sort is achieving the matrix factorization {eq}`eq-9-75`. {cite:t}`hansensargent1981linear` describe several methods for accomplishing this.
 
 ### Example (i): Interrelated Factor Demand
 
@@ -1527,9 +1527,9 @@ $$
 q_t = f_1'\binom{n_t}{k_t} - \frac{1}{2}\binom{n_t}{k_t}' F \binom{n_t}{k_t},
 $$ (eq-9-82)
 
-where $k_t$ is the stock of capital, $n_t$ is the stock of labor, $w_t$ is the real rental on labor, and $J_t$ is the real rental on capital; $f_1$ is a $(2 \times 1)$ vector of positive constants, $F$ is a positive definite matrix, and $d_1$ and $d_2$ are positive constants measuring adjustment costs. We assume that $\{J_t\}$ and $\{w_t\}$ for $t \geq 0$ are known sequences of exponential order less than $1/\sqrt{b}$. The problem is to choose sequences $\{k_t, n_t, t \geq 0\}$ to maximize (81) subject to (82), given initial values $n_{-1}$, $k_{-1}$ and given sequences for $w_t$ and $J_t$.
+where $k_t$ is the stock of capital, $n_t$ is the stock of labor, $w_t$ is the real rental on labor, and $J_t$ is the real rental on capital; $f_1$ is a $(2 \times 1)$ vector of positive constants, $F$ is a positive definite matrix, and $d_1$ and $d_2$ are positive constants measuring adjustment costs. We assume that $\{J_t\}$ and $\{w_t\}$ for $t \geq 0$ are known sequences of exponential order less than $1/\sqrt{b}$. The problem is to choose sequences $\{k_t, n_t, t \geq 0\}$ to maximize {eq}`eq-9-81` subject to {eq}`eq-9-82`, given initial values $n_{-1}$, $k_{-1}$ and given sequences for $w_t$ and $J_t$.
 
-Problem (81)–(82) is a special case of (72) with
+Problem {eq}`eq-9-81`–{eq}`eq-9-82` is a special case of {eq}`eq-9-72` with
 
 $$
 G_t = f_1 - \begin{bmatrix} w_t \\ J_t \end{bmatrix},
@@ -1539,15 +1539,15 @@ $$
 D(L) = \begin{bmatrix} \sqrt{d_1}\,(1 - L) & 0 \\ 0 & \sqrt{d_2}\,(1 - L) \end{bmatrix},
 $$
 
-and $H = F$. The solution (80) is an interrelated pair of decision rules for $(n_t, k_t)$ of the form
+and $H = F$. The solution {eq}`eq-9-80` is an interrelated pair of decision rules for $(n_t, k_t)$ of the form
 
 $$
 C(L)\begin{bmatrix} n_t \\ k_t \end{bmatrix} = \sum_{h=1}^{2} A_h \sum_{j=0}^{\infty} (\lambda_h b)^j\left\{f_1 - \begin{bmatrix} w_{t+j} \\ J_{t+j} \end{bmatrix}\right\}
 $$ (eq-9-83)
 
-where $C(L) = C_0 + C_1 L$. In (83) the decision rules for capital and labor interact in the sense that each of $(n_t, k_t)$ depends on lagged values of the other, and that each depends on future rental rates for the other. This interdependence occurs so long as either $F$ (or $H$) or $D(L)$ is not diagonal.
+where $C(L) = C_0 + C_1 L$. In {eq}`eq-9-83` the decision rules for capital and labor interact in the sense that each of $(n_t, k_t)$ depends on lagged values of the other, and that each depends on future rental rates for the other. This interdependence occurs so long as either $F$ (or $H$) or $D(L)$ is not diagonal.
 
-Versions of this problem were studied and utilized by Nadiri and Rosen (1973), Hansen and Sargent (1981), and Eichenbaum (1983).
+Versions of this problem were studied and utilized by {cite:t}`nadirirosen1973disequilibrium`, {cite:t}`hansensargent1981linear`, and {cite:t}`eichenbaum1983rational`.
 
 ### Example (ii): A Dynamic Nash Equilibrium[^fn-9-10]
 
@@ -1557,7 +1557,7 @@ $$
 p_t = A_0 - \frac{A_1}{2}(q_{1t} + q_{2t}) + u_t, \quad A_0, A_1 > 0,
 $$ (eq-9-84)
 
-[^fn-9-10]: A variety of linear quadratic dynamic games is analyzed by Hansen, Epple, and Roberds (1985). These authors use lag operator methods to obtain explicit solutions of their games, and to extract the econometric restrictions implied by their games.
+[^fn-9-10]: A variety of linear quadratic dynamic games is analyzed by {cite:t}`hansenepplroberds1985linear`. These authors use lag operator methods to obtain explicit solutions of their games, and to extract the econometric restrictions implied by their games.
 
 where $q_{it}$ is output of firm $i$ at $t$, $p_t$ is the price of output at $t$, and $u_t$ is a given sequence of disturbances to demand of exponential order less than $1/\sqrt{b}$. Firm $i$ maximizes
 
@@ -1565,9 +1565,9 @@ $$
 \sum_{t=0}^{\infty} b^t\{p_t q_{it} - q_{it}s_{it} - \tfrac{1}{2}[d_i(L)q_{it}]^2\}, \quad 0 < b < 1,
 $$ (eq-9-85)
 
-where $d_i(L) = d_{i0} + \cdots + d_{im}L^m$, and where $s_{it}$ is a sequence of shocks to costs of production of firm $i$, assumed to be a known sequence of exponential order less than $1/\sqrt{b}$. Here $[d_i(L)q_{it}]^2$ stands for costs of adjusting production rapidly. The maximization of (85) by $i$ takes $\{s_{it}\}$, $\{u_t\}$, and $\{q_{jt}, j \neq i\}$ given for $t \geq 0$, and $q_{it}$ given for $\{t = -m, \ldots, -1\}$, $i = 1, 2$. In particular, firm $i$ is supposed to regard firm $j$'s output sequence as given and beyond its influence.
+where $d_i(L) = d_{i0} + \cdots + d_{im}L^m$, and where $s_{it}$ is a sequence of shocks to costs of production of firm $i$, assumed to be a known sequence of exponential order less than $1/\sqrt{b}$. Here $[d_i(L)q_{it}]^2$ stands for costs of adjusting production rapidly. The maximization of {eq}`eq-9-85` by $i$ takes $\{s_{it}\}$, $\{u_t\}$, and $\{q_{jt}, j \neq i\}$ given for $t \geq 0$, and $q_{it}$ given for $\{t = -m, \ldots, -1\}$, $i = 1, 2$. In particular, firm $i$ is supposed to regard firm $j$'s output sequence as given and beyond its influence.
 
-Substituting (84) into (85) gives
+Substituting {eq}`eq-9-84` into {eq}`eq-9-85` gives
 
 $$
 \sum_{t=0}^{\infty} b^t\left\{\left[A_0 - \frac{A_1}{2}(q_{1t} + q_{2t}) + u_t\right]q_{it} - q_{it}s_{it} - \tfrac{1}{2}[d_i(L)q_{it}]^2\right\}.
@@ -1583,7 +1583,7 @@ $$
 = \begin{bmatrix} A_0 + u_t - s_{1t} \\ A_0 + u_t - s_{2t} \end{bmatrix}.
 $$ (eq-9-87)
 
-We define a Nash equilibrium in the space of sequences of quantities $q_{1t}$, $q_{2t}$ as a pair of sequences for $q_{1t}$, $q_{2t}$[^fn-9-11] that solve the interrelated Euler equations (87) and satisfy the boundary conditions
+We define a Nash equilibrium in the space of sequences of quantities $q_{1t}$, $q_{2t}$ as a pair of sequences for $q_{1t}$, $q_{2t}$[^fn-9-11] that solve the interrelated Euler equations {eq}`eq-9-87` and satisfy the boundary conditions
 
 $$
 \sum_{t=0}^{\infty} b^t q_{it}^2 < +\infty \quad \text{for } i = 1, 2.
@@ -1591,11 +1591,11 @@ $$ (eq-9-88)
 
 Equivalently, the Nash equilibrium is the pair of $(q_{1t}, q_{2t})$ sequences that satisfies the following conditions:
 
-(i) Firm $i$'s quantity sequence maximizes its present value (85), given firm $j$'s sequence, for $(i, j) = (1, 2)$ and $(2, 1)$.
+(i) Firm $i$'s quantity sequence maximizes its present value {eq}`eq-9-85`, given firm $j$'s sequence, for $(i, j) = (1, 2)$ and $(2, 1)$.
 
-(ii) The output market clears, in the sense that (84) holds for all $t$.
+(ii) The output market clears, in the sense that {eq}`eq-9-84` holds for all $t$.
 
-Equation (87) is evidently in the form of a vector Euler equation in $(q_{1t}, q_{2t})$. The matrix polynomial on the left side of (87) can be factored into the form
+Equation {eq}`eq-9-87` is evidently in the form of a vector Euler equation in $(q_{1t}, q_{2t})$. The matrix polynomial on the left side of {eq}`eq-9-87` can be factored into the form
 
 [^fn-9-11]: It is necessary to add the qualifier "in the space of sequences of quantities $q_{1t}$, $q_{2t}$" because different definitions of strategy spaces in general give rise to distinct Nash equilibria.
 
@@ -1611,11 +1611,11 @@ $$
 C(L) = C_0 + C_1 L + \cdots + C_m L^m.
 $$
 
-Note that the vector Euler equation (87) was discovered by our having solved an interrelated pair of univariate dynamic optimization problems. The resulting system of Euler equations (87) can itself be viewed as solving some vector optimization problem, since the matrix characteristic polynomial is expressible in the form $H + D(bL^{-1})'D(L)$. To seek the vector dynamic optimization problem that is implicitly solved by (87) is to pose a version of an "inverse optimal control problem:" given a system of difference equations, attempt to synthesize an optimum problem for which they are necessary conditions.[^fn-9-12][^fn-9-13]
+Note that the vector Euler equation {eq}`eq-9-87` was discovered by our having solved an interrelated pair of univariate dynamic optimization problems. The resulting system of Euler equations {eq}`eq-9-87` can itself be viewed as solving some vector optimization problem, since the matrix characteristic polynomial is expressible in the form $H + D(bL^{-1})'D(L)$. To seek the vector dynamic optimization problem that is implicitly solved by {eq}`eq-9-87` is to pose a version of an "inverse optimal control problem:" given a system of difference equations, attempt to synthesize an optimum problem for which they are necessary conditions.[^fn-9-12][^fn-9-13]
 
-[^fn-9-12]: We will encounter another "inverse optimal control problem" in Chapter XIV. There we will study the implicit social welfare criteria that are maximized by various versions of an equilibrium model of investment under uncertainty. In Chapter XI, we will study a technically related problem called the "inverse optimal predictor problem." Such a problem was posed by John F. Muth (1960). Given the expectations formation scheme utilized by Cagan (1956), Muth sought to discover a random environment which would render such a forecasting scheme optimum.
+[^fn-9-12]: We will encounter another "inverse optimal control problem" in Chapter XIV. There we will study the implicit social welfare criteria that are maximized by various versions of an equilibrium model of investment under uncertainty. In Chapter XI, we will study a technically related problem called the "inverse optimal predictor problem." Such a problem was posed by John F. {cite:t}`muth1960optimal`. Given the expectations formation scheme utilized by {cite:t}`cagan1956monetary`, Muth sought to discover a random environment which would render such a forecasting scheme optimum.
 
-[^fn-9-13]: In Chapter XV, we shall study a dominant player dynamic game in some detail.
+[^fn-9-13]: In Chapter XV of *Macroeconomic Theory*, we study a dominant player dynamic game in some detail.
 
 (sec-9-11)=
 ## 11. Another Example: Learning by Doing
@@ -1634,7 +1634,7 @@ $$
 C(Q_t) = c_0 + c_1 Q_t + \frac{c_2}{2}Q_t^2 + c_3 Q_t s_t - c_4[h(L)Q_t]Q_t, \quad c_0, c_1, c_2, c_3, c_4 > 0,
 $$ (eq-9-90)
 
-where $s_t$ is a known sequence of shocks to marginal cost, assumed to be of exponential order less than $1/\sqrt{b}$, where $h(L) = \sum_{j=0}^{\infty} h_j L^j$. As an example of the sort of $h(L)$ that we have in mind, we shall later consider the special case $h(L) = 1/(1 - \rho L)$ where $\rho < 1$ but where $\rho$ is close to one. Then (90) captures the notion that marginal costs of current output fall with cumulated past output. This is one version of a "learning-by-doing" cost structure.
+where $s_t$ is a known sequence of shocks to marginal cost, assumed to be of exponential order less than $1/\sqrt{b}$, where $h(L) = \sum_{j=0}^{\infty} h_j L^j$. As an example of the sort of $h(L)$ that we have in mind, we shall later consider the special case $h(L) = 1/(1 - \rho L)$ where $\rho < 1$ but where $\rho$ is close to one. Then {eq}`eq-9-90` captures the notion that marginal costs of current output fall with cumulated past output. This is one version of a "learning-by-doing" cost structure.
 
 The firm maximizes
 
@@ -1642,13 +1642,13 @@ $$
 \sum_{t=0}^{\infty} b^t\{p_t Q_t - C(Q_t)\}, 0 < b < 1,
 $$
 
-or using (89) and (90)
+or using {eq}`eq-9-89` and {eq}`eq-9-90`
 
 $$
 \sum_{t=0}^{\infty} b^t\left\{\left[A_0 - \frac{A_1}{2}Q_t + u_t\right]Q_t - \left[c_0 + c_1 Q_t + \frac{c_2}{2}Q_t^2 + c_3 Q_t s_t - c_4[h(L)Q_t]Q_t\right]\right\}.
 $$ (eq-9-91)
 
-The firm chooses a sequence $\{Q_t\}_{t=0}^{\infty}$ to maximize (91), taking as given $Q_t$ for $t < 0$ and the sequences $\{u_t\}_{t=0}^{\infty}$, $\{s_t\}_{t=0}^{\infty}$. By using the preceding method, the Euler equation for the firm's problem is found to be, after some rearrangement,
+The firm chooses a sequence $\{Q_t\}_{t=0}^{\infty}$ to maximize {eq}`eq-9-91`, taking as given $Q_t$ for $t < 0$ and the sequences $\{u_t\}_{t=0}^{\infty}$, $\{s_t\}_{t=0}^{\infty}$. By using the preceding method, the Euler equation for the firm's problem is found to be, after some rearrangement,
 
 $$
 [(A_1 + c_2) - c_4 h(L) - c_4 h(bL^{-1})]Q_t = A_0 + u_t - c_1 - c_3 s_t.
@@ -1660,13 +1660,13 @@ $$
 A_1 \sum_{t=0}^{\infty} b^t Q_t^2 < +\infty.
 $$ (eq-9-93)
 
-We shall now consider the special case of the model that emerges when we set $h(L) = 1/(1 - \rho L)$, $0 < \rho < 1$. In this case, the characteristic polynomial on the left side of the Euler equation (92) becomes the rational polynomial
+We shall now consider the special case of the model that emerges when we set $h(L) = 1/(1 - \rho L)$, $0 < \rho < 1$. In this case, the characteristic polynomial on the left side of the Euler equation {eq}`eq-9-92` becomes the rational polynomial
 
 $$
 k - \frac{c_4}{1 - \rho L} - \frac{c_4}{1 - \rho b L^{-1}}
 $$
 
-where $k \equiv (A_1 + c_2)$. To solve the Euler equation (92) subject to boundary condition (93), the first step is to express the characteristic polynomial in terms of a common denominator, which gives
+where $k \equiv (A_1 + c_2)$. To solve the Euler equation {eq}`eq-9-92` subject to boundary condition {eq}`eq-9-93`, the first step is to express the characteristic polynomial in terms of a common denominator, which gives
 
 $$
 \frac{[k(1 + \rho^2 b) - 2c_4] - (k - c_4)\rho L - (k - c_4)b\rho L^{-1}}{(1 - \rho b L^{-1})(1 - \rho L)}.
@@ -1684,21 +1684,21 @@ $$
 \frac{1}{\alpha b} + \alpha = \left[\frac{k(1 + \rho^2 b) - 2c_4}{(k - c_4)\rho b}\right].
 $$ (eq-9-96)
 
-We assume that the parameter $k \equiv A_1 + c_2$, $c_4$, $\rho$, $b$ are such that the right side exceeds $2\sqrt{b}$ in absolute value. This guarantees the existence of a real number $\alpha$ that solves (96). Note that for $\rho = b = 1$, the above equation has the solution $\alpha = 1/\alpha = 1$. By continuity of the solution in the arguments on the right hand side, for values of $\rho$ and $b$ sufficiently close to 1, $\alpha$ will be close to one.
+We assume that the parameter $k \equiv A_1 + c_2$, $c_4$, $\rho$, $b$ are such that the right side exceeds $2\sqrt{b}$ in absolute value. This guarantees the existence of a real number $\alpha$ that solves {eq}`eq-9-96`. Note that for $\rho = b = 1$, the above equation has the solution $\alpha = 1/\alpha = 1$. By continuity of the solution in the arguments on the right hand side, for values of $\rho$ and $b$ sufficiently close to 1, $\alpha$ will be close to one.
 
-Using (94) and (95), the Euler equation can be expressed
+Using {eq}`eq-9-94` and {eq}`eq-9-95`, the Euler equation can be expressed
 
 $$
 \frac{(1 - \alpha b L^{-1})(1 - \alpha L)}{(1 - \rho b L^{-1})(1 - \rho L)}Q_t = \frac{\alpha b}{(k - c_4)\rho b}[A_0 + u_t - c_3 s_t].
 $$ (eq-9-97)
 
-The solution of the Euler equation (97) that satisfies boundary condition (93) can be expressed in "feedback-feedforward" form
+The solution of the Euler equation {eq}`eq-9-97` that satisfies boundary condition {eq}`eq-9-93` can be expressed in "feedback-feedforward" form
 
 $$
 \frac{(1 - \alpha L)}{(1 - \rho L)}Q_t = \frac{\alpha b}{(A_1 + c_2 - c_4)\rho b} \cdot \frac{(1 - \rho b L^{-1})}{(1 - \alpha b L^{-1})}[A_0 + u_t - c_3 s_t].
 $$ (eq-9-98)
 
-Unless $\alpha = \rho$, $Q_t$ feeds back on an infinite number of its own past values, reflecting the dynamics of the firm's optimally coping with the learning-by-doing cost structure. In general, $\rho \neq \alpha$. However, in the special limiting case $\rho = b = 1$, it can be verified that $\rho = \alpha$. In this special case, (98) collapses to the static decision rule
+Unless $\alpha = \rho$, $Q_t$ feeds back on an infinite number of its own past values, reflecting the dynamics of the firm's optimally coping with the learning-by-doing cost structure. In general, $\rho \neq \alpha$. However, in the special limiting case $\rho = b = 1$, it can be verified that $\rho = \alpha$. In this special case, {eq}`eq-9-98` collapses to the static decision rule
 
 $$
 Q_t = \frac{1}{A_1 + c_2 - c_4}[A_0 + u_t - c_3 s_t],
@@ -1745,21 +1745,21 @@ $$
 A_0 \quad \text{given.}
 $$ (eq-9-103)
 
-Here $c_t$ is consumption, $y_t$ is labor income, $A_t$ is nonhuman assets available at the beginning of period $t$, and $R$ is the gross rate of return on nonhuman assets. We assume that $0 > B > -\infty$, so that (102) requires that assets be uniformly bounded from below. This condition rules out a strategy of consuming large amounts and financing it by borrowing along an increasing and unbounded path.
+Here $c_t$ is consumption, $y_t$ is labor income, $A_t$ is nonhuman assets available at the beginning of period $t$, and $R$ is the gross rate of return on nonhuman assets. We assume that $0 > B > -\infty$, so that {eq}`eq-9-102` requires that assets be uniformly bounded from below. This condition rules out a strategy of consuming large amounts and financing it by borrowing along an increasing and unbounded path.
 
-Use (101) to express $c_t$ as
+Use {eq}`eq-9-101` to express $c_t$ as
 
 $$
 c_t = y_t - (R^{-1}L^{-1} - 1)A_t.
 $$ (eq-9-104)
 
-Substituting (104) into (100) gives the criterion
+Substituting {eq}`eq-9-104` into {eq}`eq-9-100` gives the criterion
 
 $$
 J = \sum_{t=0}^{\infty} b^t\left\{u_0 + u_1(y_t - (R^{-1}L^{-1} - 1)A_t) - \frac{u_2}{2}\left(y_t^2 - 2y_t(R^{-1}L^{-1} - 1)A_t + [(R^{-1}L^{-1} - 1)A_t]^2\right)\right\},
 $$ (eq-9-105)
 
-which is to be maximized by selecting a sequence for $A_t$, subject to the boundary conditions (102) and (103). Repeatedly applying formula (99), we find the Euler equation
+which is to be maximized by selecting a sequence for $A_t$, subject to the boundary conditions {eq}`eq-9-102` and {eq}`eq-9-103`. Repeatedly applying formula {eq}`eq-9-99`, we find the Euler equation
 
 $$
 -\frac{u_1}{u_2}(R^{-1}b^{-1} - 1) + (R^{-1}b^{-1}L - 1)y_t - (R^{-1}b^{-1}L - 1)(R^{-1}L^{-1} - 1)A_t = 0
@@ -1769,7 +1769,7 @@ $$
 \text{for } t = 1, 2, \ldots.
 $$
 
-The zeros of the characteristic polynomial in $A_t$ are at $L = R^{-1} < 1$ and $L = Rb$. In order to satisfy the boundary conditions (102) and (103), the polynomial $(R^{-1}L^{-1} - 1)$ must be solved forwards, and the polynomial $(R^{-1}b^{-1}L - 1)$ solved backwards. Dividing (106) by $(R^{-1}L^{-1} - 1)$ gives
+The zeros of the characteristic polynomial in $A_t$ are at $L = R^{-1} < 1$ and $L = Rb$. In order to satisfy the boundary conditions {eq}`eq-9-102` and {eq}`eq-9-103`, the polynomial $(R^{-1}L^{-1} - 1)$ must be solved forwards, and the polynomial $(R^{-1}b^{-1}L - 1)$ solved backwards. Dividing {eq}`eq-9-106` by $(R^{-1}L^{-1} - 1)$ gives
 
 $$
 (R^{-1}b^{-1}L - 1)A_t = \frac{-u_1}{u_2}\frac{(R^{-1}b^{-1} - 1)}{(R^{-1} - 1)} + \left(\frac{R^{-1}b^{-1}L - 1}{R^{-1}L^{-1} - 1}\right)y_t
@@ -1781,7 +1781,7 @@ $$
 A_t = R^{-1}b^{-1}A_{t-1} + \frac{u_1}{u_2}\frac{(R^{-1}b^{-1} - 1)}{(R^{-1} - 1)} + \left(\frac{1 - R^{-1}b^{-1}L}{R^{-1}L^{-1} - 1}\right)y_t.
 $$ (eq-9-107)
 
-Subtracting (107) from (101) lagged one period, namely,
+Subtracting {eq}`eq-9-107` from {eq}`eq-9-101` lagged one period, namely,
 
 $$
 A_t = R[A_{t-1} + y_{t-1} - c_{t-1}],
@@ -1805,19 +1805,19 @@ $$
 c_t = (1 - R^{-2}b^{-1})\left[A_t + \sum_{j=0}^{\infty} R^{-j}y_{t+j}\right] - \frac{u_1}{u_2}\left(\frac{R^{-1}b^{-1} - 1}{1 - R}\right).
 $$ (eq-9-109)
 
-This is a certainty version of the permanent income theory of consumption. According to (109), consumption is a linear function of wealth, defined as the sum of nonhuman wealth $A_t$ and the discounted present value of labor income, $\sum_{j=0}^{\infty} R^{-j}y_{t+j}$. In the special case that $bR = 1$, (109) collapses to
+This is a certainty version of the permanent income theory of consumption. According to {eq}`eq-9-109`, consumption is a linear function of wealth, defined as the sum of nonhuman wealth $A_t$ and the discounted present value of labor income, $\sum_{j=0}^{\infty} R^{-j}y_{t+j}$. In the special case that $bR = 1$, {eq}`eq-9-109` collapses to
 
 $$
 c_t = (1 - R^{-1})\left[A_t + \sum_{j=0}^{\infty} R^{-j}y_{t+j}\right].
 $$
 
-It is also true that when $Rb = 1$, (109) and (101) imply that $c_t = c_0$ for all $t$, so that the model implies complete consumption smoothing. To convince oneself of this, the reader is invited to verify that the Euler equation of this model can be represented as
+It is also true that when $Rb = 1$, {eq}`eq-9-109` and {eq}`eq-9-101` imply that $c_t = c_0$ for all $t$, so that the model implies complete consumption smoothing. To convince oneself of this, the reader is invited to verify that the Euler equation of this model can be represented as
 
 $$
 c_t = (Rb)^{-1}c_{t-1}.
 $$
 
-Robert Hall [1978] pursued the empirical implications of a stochastic version of such an Euler equation. In Chapter XII below, we shall study this consumption example further.
+Robert Hall [1978] pursued the empirical implications of a stochastic version of such an Euler equation. In Chapter XII of *Macroeconomic Theory*, we study this consumption example further.
 
 
 (sec-9-13)=
@@ -1835,7 +1835,7 @@ $$
 y_t = \sum_{j=0}^{\infty} \lambda^j x_{t+j}.
 $$ (eq-9-110)
 
-This equation represents the solution for $y_t$ in terms of an infinite number of future values of the "forcing variable" $x_t$. In practice, one often prefers a "nonanticipative" representation of a solution, in which $y_t$ is expressed as a solution only of $x$'s dated $t$ and earlier. We now briefly show how representation (110) can be converted to an alternative representation expressing $y_t$ as such a function of current and past $x$'s only. Given (110), such a representation in terms of current and past $x$'s can be attained by positing a specific difference equation for $\{x_t\}$ itself, using this difference equation to express $x_{t+j}$ for $j \geq 1$ as functions of $\{x_t, x_{t-1}, \ldots\}$, and then using these functions to eliminate $x_{t+j}$ for $j \geq 1$ from (110). The parameters of the representation for $y_t$ as a function of current and past $x$'s will depend on the parameters of the difference equation for $x_t$. This is so because the representation expressing $y_t$ as a function of $\{x_t, x_{t-1}, \ldots\}$ incorporates the solution of the difference equation expressing $x_{t+j}$, $j \geq 1$, in terms of $\{x_t, x_{t-1}, x_{t-2}, \ldots\}$. For example, suppose that $x_t$ is governed by the difference equation
+This equation represents the solution for $y_t$ in terms of an infinite number of future values of the "forcing variable" $x_t$. In practice, one often prefers a "nonanticipative" representation of a solution, in which $y_t$ is expressed as a solution only of $x$'s dated $t$ and earlier. We now briefly show how representation {eq}`eq-9-110` can be converted to an alternative representation expressing $y_t$ as such a function of current and past $x$'s only. Given {eq}`eq-9-110`, such a representation in terms of current and past $x$'s can be attained by positing a specific difference equation for $\{x_t\}$ itself, using this difference equation to express $x_{t+j}$ for $j \geq 1$ as functions of $\{x_t, x_{t-1}, \ldots\}$, and then using these functions to eliminate $x_{t+j}$ for $j \geq 1$ from {eq}`eq-9-110`. The parameters of the representation for $y_t$ as a function of current and past $x$'s will depend on the parameters of the difference equation for $x_t$. This is so because the representation expressing $y_t$ as a function of $\{x_t, x_{t-1}, \ldots\}$ incorporates the solution of the difference equation expressing $x_{t+j}$, $j \geq 1$, in terms of $\{x_t, x_{t-1}, x_{t-2}, \ldots\}$. For example, suppose that $x_t$ is governed by the difference equation
 
 $$
 x_t = \rho x_{t-1}, \qquad |\rho \lambda| < 1.
@@ -1847,7 +1847,7 @@ $$
 x_{t+j} = \rho^j x_t, \qquad j \geq 1.
 $$
 
-Substituting this into (110) gives
+Substituting this into {eq}`eq-9-110` gives
 
 $$
 y_t = \left( \frac{1}{1 - \lambda \rho} \right) x_t,
@@ -1861,22 +1861,22 @@ $$
 a(L) x_t = 0
 $$ (eq-9-112)
 
-where $a(L) = 1 - a_1 L - a_2 L^2 - \cdots - a_r L^r$ and where the zeros of $a(z)$ exceed $1/\lambda$ in absolute value. Then Hansen and Sargent (1980) show that the solution of (110) can be represented as
+where $a(L) = 1 - a_1 L - a_2 L^2 - \cdots - a_r L^r$ and where the zeros of $a(z)$ exceed $1/\lambda$ in absolute value. Then {cite:t}`hansensargent1980formulating` show that the solution of {eq}`eq-9-110` can be represented as
 
 $$
 y_t = a(\lambda)^{-1} \left[ 1 + \sum_{j=1}^{r-1} \left( \sum_{k=j+1}^{r} \lambda^{k-j} a_k \right) L^j \right] x_t.
 $$ (eq-9-113)
 
-(We shall show how to derive this formula in Chapter XI.) Equation (113) is evidently a generalization of (111). That is, (111) is (113) for the case $r = 1$, $a_0 = 1$, $a_1 = \rho$.
+(We shall show how to derive this formula in {doc}`§20 <20_geometric_leads>`.) Equation {eq}`eq-9-113` is evidently a generalization of {eq}`eq-9-111`. That is, {eq}`eq-9-111` is {eq}`eq-9-113` for the case $r = 1$, $a_0 = 1$, $a_1 = \rho$.
 
-Equations (112) and (113) display a hallmark of economic models incorporating foresight as in (110), namely the presence of cross-equation restrictions between, on the one hand, the parameters of the process $\{x_t\}$ of the forcing variables, and, on the other hand, the solution for $y_t$ in terms of $\{x_t, x_{t-1}, \ldots\}$. This characteristic of models with foresight means that it will not be possible to find a representation expressing $y_t$ as a function of $\{x_t, x_{t-1}, \ldots\}$ that is independent of the law of motion (difference equation) governing the forcing process $\{x_t\}$. Alterations in the law of motion for $x_t$ will alter the *function* describing the dependence of $y_t$ on current and past $x$'s.
+Equations {eq}`eq-9-112` and {eq}`eq-9-113` display a hallmark of economic models incorporating foresight as in {eq}`eq-9-110`, namely the presence of cross-equation restrictions between, on the one hand, the parameters of the process $\{x_t\}$ of the forcing variables, and, on the other hand, the solution for $y_t$ in terms of $\{x_t, x_{t-1}, \ldots\}$. This characteristic of models with foresight means that it will not be possible to find a representation expressing $y_t$ as a function of $\{x_t, x_{t-1}, \ldots\}$ that is independent of the law of motion (difference equation) governing the forcing process $\{x_t\}$. Alterations in the law of motion for $x_t$ will alter the *function* describing the dependence of $y_t$ on current and past $x$'s.
 
 The presence of such cross-equation restrictions in models with foresight is the source of Robert E. Lucas's (1976) criticism of some econometric policy evaluation procedures of the past. Lucas criticized methods that took representations of a variable like $y_t$ as a function of $\{x_t, x_{t-1}, \ldots\}$ and treated them as being invariant with respect to alterations in the difference equation generating the $\{x_t\}$ sequence.
 
 (sec-9-exercises)=
 ## Exercises
 
-**1.** Verify that the presence of both *lagged* employment and *future* values of $w_t$ and $a_t$ on the right-hand side of the employment decision rule (55) (demand schedule) depends on having the adjustment cost parameter $d$ strictly positive. (Set $d = 0$ and rework the firm's optimum problem.)
+**1.** Verify that the presence of both *lagged* employment and *future* values of $w_t$ and $a_t$ on the right-hand side of the employment decision rule {eq}`eq-9-55` (demand schedule) depends on having the adjustment cost parameter $d$ strictly positive. (Set $d = 0$ and rework the firm's optimum problem.)
 
 ```{admonition} Solution to Exercise 1
 :class: dropdown
@@ -2079,7 +2079,7 @@ $$
 Show that then the sequence of budget constraints (†) implies
 
 $$
-A_t + \sum_{t=0}^{\infty} \frac{y_{t+i}}{(1+r)^i} = \sum_{t=0}^{\infty} \frac{c_{t+i}}{(1+r)^i}, \qquad t = 0, 1, 2, \ldots.
+A_t + \sum_{i=0}^{\infty} \frac{y_{t+i}}{(1+r)^i} = \sum_{i=0}^{\infty} \frac{c_{t+i}}{(1+r)^i}, \qquad t = 0, 1, 2, \ldots.
 $$
 
 Interpret this result.
@@ -2400,20 +2400,7 @@ $$
 
 ## References
 
-- Allen, R. G. D. (1960). *Mathematical Economics*, 2nd ed., London: Macmillan.
-- Baumol, W. J. (1959). *Economic Dynamics*, New York: Macmillan.
-- Cagan, P. (1956). "The monetary dynamics of hyperinflation." *Studies in the Quantity Theory of Money* (M. Friedman, ed.), Chicago: University of Chicago Press.
-- Eichenbaum, M. S. (1983). "A rational expectations equilibrium model of inventories of finished goods and employment." *Journal of Monetary Economics*, Vol. 29, No. 3, pp. 259–277.
-- Gabel, R. A. and Roberts, R. A. (1973). *Signals and Linear Systems*, New York: Wiley.
-- Hall, R. E. (1978). "Stochastic implications of the life cycle-permanent income hypothesis: theory and evidence." *Journal of Political Economy*, Vol. 86, No. 6, pp. 971–987, reprinted in *Rational Expectations and Econometric Practice* (R. E. Lucas, Jr. and T. J. Sargent, eds.), Minneapolis: University of Minnesota Press, 1981.
-- Hansen, L. P. and Sargent, T. J. (1980). "Formulating and estimating dynamic linear rational expectations models." *Journal of Economic Dynamics and Control*, Vol. 2, No. 1, pp. 7–46, reprinted in *Rational Expectations and Econometric Practice* (R. E. Lucas, Jr. and T. J. Sargent, eds.), Minneapolis: University of Minnesota Press, 1981.
-- Hansen, L. P. and Sargent, T. J. (1981). "Linear rational expectations models for dynamically interrelated variables." *Rational Expectations and Econometric Practice*, (R. E. Lucas, Jr. and T. J. Sargent, eds.), Minneapolis: University of Minnesota Press.
-- Hansen, L. P., Epple, D., and Roberds, W. (1985). "Linear quadratic models of resource depletion." *Energy, Foresight, and Strategy* (T. J. Sargent, ed.), Washington, DC: Resources for the Future.
-- Lucas, R. E. Jr. (1976). "Econometric policy evaluation: a critique." *The Phillips Curve and Labor Markets* (K. Brunner and A. Meltzer, eds.), Vol. 1, Carnegie-Rochester Conference Series on Public Policy, Amsterdam: North-Holland.
-- "Math and music: the deeper links." *New York Times*, Sunday, August 29, 1982.
-- Muth, J. F. (1960). "Optimal properties of exponentially weighted forecasts." *Journal of the American Statistical Association*, Vol. 55, No. 290, pp. 299–321.
-- Muth, J. F. (1961). "Rational expectations and the theory of price movements." *Econometrica*, Vol. 29, No. 3, pp. 315–335.
-- Nadiri, M. and Rosen, S. (1973). *A Disequilibrium Model of Demand for Factors of Production*, New York: Columbia University Press, for the NBER.
-- Samuelson, P. (1944). "Interaction between the multiplier analysis and the principle of acceleration." *Readings in Business Cycle Theory*, American Economic Association, New York: McGraw-Hill.
-
-
+```{bibliography}
+:labelprefix: C9
+:filter: key in {"allen1960mathematical", "baumol1959economic", "cagan1956monetary", "eichenbaum1983rational", "gabelroberts1973signals", "hall1978stochastic", "hansensargent1980formulating", "hansensargent1981linear", "hansenepplroberds1985linear", "lucas1976econometric", "sargent_nyt1982math", "muth1960optimal", "muth1961rational", "nadirirosen1973disequilibrium", "samuelson1944interaction"}
+```

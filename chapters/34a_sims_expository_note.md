@@ -299,22 +299,14 @@ This is Geweke's formula.
 
 ## References
 
-- Ash, R. B., *Real Analysis and Probability*, Academic Press, 1972.
-- Geweke, John, "Temporal Aggregation in the Multivariate Regression Model," Chapter 6 of "Employment Turnover and Wage Dynamics in U.S. Manufacturing," University of Minnesota Ph.D. Thesis, 1975. (Manuscript, 1974.)
-- Nerlove, Marc, "Distributed Lags and Unobserved Components in Economic Time Series," in W. Fellner, et al., *Ten Economic Studies in the Tradition of Irving Fisher*, John Wiley, 1967.
-- Papoulis, A., *The Fourier Integral and Its Applications*, McGraw-Hill, 1962.
-- Sims, C. A., "Approximate Specification in Distributed Lag Models," manuscript, 1971.
-- Sims, Christopher A., "Discrete Approximations to Continuous Time Distributed Lags in Econometrics," *Econometrica*, May 1971.
-- Theil, Henri, *Principles of Econometrics*, John Wiley, 1971, pp. 548–555.
+```{bibliography}
+:labelprefix: SN
+:filter: key in {"ash1972real", "geweke1975employment", "nerlove1967distributed", "papoulis1962fourier", "sims1971approximate", "sims1971discrete", "theil1971principles"}
+```
 
-[^note-1]: The results do not actually require that $b(t)$ be absolutely integrable. They will remain true if $b(t)$ is viewed as a generalized function, for example, a train of delta functions or derivatives of delta functions. See Sims (1971). For an introductory discussion of the properties of delta functions and other generalized functions, see Papoulis (1962).
-
+[^note-1]: The results do not actually require that $b(t)$ be absolutely integrable. They will remain true if $b(t)$ is viewed as a generalized function, for example, a train of delta functions or derivatives of delta functions. See {cite:t}`sims1971discrete`. For an introductory discussion of the properties of delta functions and other generalized functions, see {cite:t}`papoulis1962fourier`.
 [^note-2]: That condition {eq}`eq-note-2` uniquely determines the projection is proved, for example, by Ash (1972, p. 121).
-
 [^note-3]: Again, see Ash (1972, p. 121).
-
 [^note-4]: Readers familiar with lag operators may find the following helpful. The covariance generating function or $z$-transform of $R_X$ is $\rho_X(z) = \sum_{\tau=-\infty}^\infty R_X(\tau)\, z^\tau$, so that the coefficient on $z^\tau$ is the covariance at lag $\tau$. The $z$-transform of the inverse under convolution of $R_X$, namely $\rho_X^{-1}(z)$, must satisfy $\rho_X(z)\, \rho_X^{-1}(z) = 1$. Suppose, for example, that $x_t$ follows the moving average process $x_t = B(L)\varepsilon_t$, with $\varepsilon_t$ white noise of variance $\sigma_\varepsilon^2$ and $B(L) = (1 - b_1 L - b_2 L^2 - \cdots - b_p L^p)$, where $L$ is the lag operator, $L^n x_t = x_{t-n}$. It is easy to show that $\rho_X(z) = \sigma_\varepsilon^2\, B(z)\, B(z^{-1})$ (e.g., see Nerlove 1967). Then the inverse under convolution of $R_X$ has $z$-transform $\rho_X^{-1}(z) = \frac{1}{\sigma_\varepsilon^2}\frac{1}{B(z)\, B(z^{-1})}$. For example, suppose $B(L) = (1 - b_1 L)^{-1}$, so that $x$ is first-order Markov. Then $\rho_X(z) = \sigma_\varepsilon^2\frac{1}{1 - b_1 z}\frac{1}{1 - b_1 z^{-1}}$ and $\rho_X^{-1}(z) = \frac{1}{\sigma_\varepsilon^2}(1 - b_1 z)(1 - b_1 z^{-1}) = \frac{1}{\sigma_\varepsilon^2}\big({-b_1} z^{-1} + (1 + b_1^2) - b_1 z\big)$. The value of $R_X^{-1}(n)$ is the coefficient on $z^n$ in the above expression.
-
 [^note-5]: Although $R_X^{-1} * R_x(\tau)$ is well defined in the preceding equation of the text, naming it the convolution of a sequence with a function is a slight abuse. More precisely, $R_X^{-1} * R_x(\tau)$ is the convolution of the generalized function, say $R_{Xg}^{-1}$, corresponding to the sequence $R_X^{-1}$ with $R_x$. That is, define $R_{Xg}^{-1}(t) = \sum_{n=-\infty}^\infty R_X^{-1}(n)\, \delta(t-n)$, so that $R_{Xg}^{-1}(t)$ is the generalized function with "mass" $R_X^{-1}(n)$ at integer $n$ and value zero elsewhere. Then $R_{Xg}^{-1} * R_x(t) = \int_{-\infty}^\infty R_x(t-\tau) \sum_{n} R_X^{-1}(n)\, \delta(\tau - n)\, d\tau = \sum_{n=-\infty}^\infty R_X^{-1}(n)\, R_x(t-n)$, which agrees with the definition in the text. In line with the pedagogical purpose of this note, generalized functions have been kept out of the text.
-
 [^note-6]: Notice that for $t$ an integer we must have $\gamma_n^t = 1$ for $n = t$, and $\gamma_n^t = 0$ for all $n \neq t$. This follows because the projection of $x(t)$ on the sequence $X(s)$ is simply $X(t) = X(n)$ for $t = n$. Since $\gamma_0^t = R_X^{-1} * R_x(-t)$, this shows that the weighting function $R_X^{-1} * R_x(t)$ must be unity at $t = 0$ and zero at all other integers.

@@ -1,6 +1,6 @@
 # Preservation of Orthogonality Conditions under Filtering
 
-Various rational expectations models often lead to restrictions that take the form of orthogonality conditions. Hayashi and Sims (1983) and Hansen and Sargent (1982a) have studied the effects that filtering an equation has on the validity of such orthogonality conditions. They were concerned with understanding the circumstances under which filtering to remove serial correlation from a set of disturbances could create a representation among filtered variables not satisfying the theoretical orthogonality conditions that characterized the original unfiltered representation.
+Various rational expectations models often lead to restrictions that take the form of orthogonality conditions. {cite:t}`hayashisims1983nearly` and Hansen and Sargent (1982a) have studied the effects that filtering an equation has on the validity of such orthogonality conditions. They were concerned with understanding the circumstances under which filtering to remove serial correlation from a set of disturbances could create a representation among filtered variables not satisfying the theoretical orthogonality conditions that characterized the original unfiltered representation.
 
 Suppose that one is interested in the one-sided projection equation
 
@@ -9,7 +9,7 @@ Suppose that one is interested in the one-sided projection equation
 y_t=\sum_{j=0}^\infty h_j x_{t-j} + v_t
 ```
 
-where $Ev_tx_{t-k} = 0$ for $j\geq0$. Suppose that $v_t$ is serially correlated, and has covariance generating function $g_v(z)$ which can be factored as
+where $Ev_tx_{t-k} = 0$ for $k\geq0$. Suppose that $v_t$ is serially correlated, and has covariance generating function $g_v(z)$ which can be factored as
 
 ```{math}
 :label: eq-154

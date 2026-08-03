@@ -57,13 +57,13 @@ $$
 z_t = \sum_{j=-\infty}^\infty (b_j^0 - b_j^1)x_{t-j} + \epsilon_t.
 $$
 
-(b) Apply formula (33) to calculate the spectrum of $z_t$. (c) Apply formula (20) to calculate the variance of $z_t$ (see Sims, 1972b).
+(b) Apply formula {eq}`eq-33` to calculate the spectrum of $z_t$. (c) Apply formula {eq}`eq-20` to calculate the variance of $z_t$ (see Sims, 1972b).
 
 ---
 
 (ex-2)=
 
-**2.** ("Optimal" seasonal adjustment via signal extraction.) Suppose that an analyst is interested in estimating $x_t$ but only observes $X_t = x_t + u_t$, where $Ex_tu_t = 0$ for all $t$ and $s$, and where $x_t$ and $u_t$ are both covariance stationary stochastic processes with means of zero and known (to the analyst) covariance generating functions $g_x(z)$ and $g_u(z)$ respectively; $g_u(e^{-i\omega}) > 0$ for all $\omega$, but has most of its power concentrated at seasonal frequencies. The analyst estimates $x_t$ by the projection
+**2.** ("Optimal" seasonal adjustment via signal extraction.) Suppose that an analyst is interested in estimating $x_t$ but only observes $X_t = x_t + u_t$, where $Ex_tu_s = 0$ for all $t$ and $s$, and where $x_t$ and $u_t$ are both covariance stationary stochastic processes with means of zero and known (to the analyst) covariance generating functions $g_x(z)$ and $g_u(z)$ respectively; $g_u(e^{-i\omega}) > 0$ for all $\omega$, but has most of its power concentrated at seasonal frequencies. The analyst estimates $x_t$ by the projection
 
 $$
 \hat{x}_t = \sum_{j=-\infty}^\infty h_jX_{t-j},
@@ -71,7 +71,7 @@ $$
 
 the projection of the unknown $x_t$ on the $X_t$ process.
 
-A. Derive a formula for the $h_j$ (use formula (45)).
+A. Derive a formula for the $h_j$ (use formula {eq}`eq-45`).
 
 B. Prove that $g_{\hat{x}}(e^{-i\omega}) < g_x(e^{-i\omega})$ for all $\omega$.
 
@@ -173,7 +173,7 @@ where $c_t$, $Y_t$ and $I_t$ are consumption, GNP, and investment, respectively,
 
 A. Determine whether $Y$ Granger causes $I$.
 
-B. Determine whether $c$ Granger causes $Y$ and whether $Y$ Granger causes $c$. (*Hint*: solve for $c$ and $Y$, each as "reduced form" functions of $I$ and $\epsilon$, then apply formula (18) to calculate the cross spectrum and use formula (45) to investigate Granger causality.)
+B. Determine whether $c$ Granger causes $Y$ and whether $Y$ Granger causes $c$. (*Hint*: solve for $c$ and $Y$, each as "reduced form" functions of $I$ and $\epsilon$, then apply formula {eq}`eq-18` to calculate the cross spectrum and use formula {eq}`eq-45` to investigate Granger causality.)
 
 C. Is the consumption function a projection (regression) equation?
 
@@ -379,6 +379,10 @@ $$
 \text{coh}(\omega)=1-\frac{g_u(\omega)}{g_y(\omega)}, \qquad \text{coh}(\omega)=1-\frac{g_\epsilon(\omega)}{g_x(\omega)}
 $$
 
+```{note}
+The denominators as printed are interchanged. Each residual should be normalized by the spectrum of the variable being *explained*: $\text{coh}=1-g_u/g_x=1-g_\epsilon/g_y$. The solution derives and uses these.
+```
+
 B. Prove that $R^2$ in equation (ii) (i.e., $1 - Eu^2/Ey^2$) is given by
 
 $$
@@ -395,7 +399,11 @@ $$
 
 (ex-15)=
 
-**15.** Let $y_t$ be a mixed moving average, autoregressive process $y_t=(B(L)/A(L))\epsilon_t$, where $\epsilon_t$ is a white noise with unit variance, $B(L) = \prod_{j=1}^m(1 - \lambda_jL)$, $|\lambda_j|<1$ for $j=1,\ldots,m$, $|\mu_k|<1$ for $k=1,\ldots,n$, and $m\leq n$. The autocovariance generating function for $y$ is $g_y(z) = B(z)B(z^{-1})/A(z)A(z^{-1})$. Use formula (25) to establish the formula
+**15.** Let $y_t$ be a mixed moving average, autoregressive process $y_t=(B(L)/A(L))\epsilon_t$, where $\epsilon_t$ is a white noise with unit variance, $B(L) = \prod_{j=1}^m(1 - \lambda_jL)$, $A(L) = \prod_{k=1}^n(1 - \mu_kL)$, $|\lambda_j|<1$ for $j=1,\ldots,m$, $|\mu_k|<1$ for $k=1,\ldots,n$, and $m\leq n$.
+
+```{note}
+In the displayed answer below the symbols are used the other way round: the summation variable $\lambda_s$ runs over the **autoregressive** poles and $\mu_j$ over the **moving average** roots. See the solution, which renames them $p_s$ and $q_j$ to keep the two straight.
+``` The autocovariance generating function for $y$ is $g_y(z) = B(z)B(z^{-1})/A(z)A(z^{-1})$. Use formula {eq}`eq-25` to establish the formula
 
 $$
 c_y(\tau) = \sum_{s=1}^n \frac{\lambda_s^{n+|\tau|-m-1}\prod_{j=1}^m(1 - \mu_j\lambda_s)(\lambda_s-\mu_j)}{\prod_{j=1}^n(1 - \mu_j\lambda_s)\prod_{j=1,j\neq s}^n(\lambda_s-\lambda_j)}
@@ -405,7 +413,7 @@ $$
 
 (ex-16)=
 
-**16.** Let $b(L)$ be the polynomial in the lag operator $b(L)=(1 + \mu L)/(1-\lambda L)=\sum_{j=-\infty}^{\infty} b_jL^j$ where $|\lambda| < 1$. Use formula (25) to establish that
+**16.** Let $b(L)$ be the polynomial in the lag operator $b(L)=(1 + \mu L)/(1-\lambda L)=\sum_{j=-\infty}^{\infty} b_jL^j$ where $|\lambda| < 1$. Use formula {eq}`eq-25` to establish that
 
 $$
 b_j = \begin{cases}
@@ -419,7 +427,7 @@ $$
 
 (ex-17)=
 
-**17.** Consider the generating function of the second-order Solow-Pascal lag distribution $w(z) = 1/(1 - Az)^2$, $|A|< 1$. Use formulas (23) and (25) to evaluate the coefficients of the lag distribution. Compare your results with equation (31) of {doc}`Chapter IX <ch09_difference_equations>`.
+**17.** Consider the generating function of the second-order Solow-Pascal lag distribution $w(z) = 1/(1 - Az)^2$, $|A|< 1$. Use formulas {eq}`eq-23` and {eq}`eq-25` to evaluate the coefficients of the lag distribution. Compare your results with equation {eq}`eq-9-31` of {doc}`Chapter IX <ch09_difference_equations>`.
 
 ---
 
@@ -480,6 +488,10 @@ P[x_{t+k}|x_t,x_{t-1},\ldots] = \rho^k P[x_{t+1}|x_t,x_{t-1},\ldots]
 $$
 
 for all $k \geq 1$ where $|\rho| < 1$. Use the Wiener-Kolmogorov formula to prove that $c(L)$ must be given by $c(L)=(c_0 + (c_1 - \rho c_0)L)/(1-\rho L)$.
+
+```{note}
+As printed the condition is inconsistent: setting $k=1$ gives $P_tx_{t+1}=\rho\,P_tx_{t+1}$, which forces $\rho=1$. Read the exponent as $\rho^{\,k-1}$, so that $k=1$ is an identity and $k=2$ reproduces Exercise 20.
+```
 
 ---
 
@@ -603,7 +615,7 @@ $$
 (1-L)z_t=c(L)\epsilon_t
 $$
 
-where $c(L) = \sum_{j=0}^\infty c_jL^j$, $\sum_{j=0}^\infty c_j^2 < \infty$, and $\epsilon_t$ is a fundamental white noise for $(1-L)z_t$. Beveridge and Nelson (1981) define the "permanent component" of $z_t$ as
+where $c(L) = \sum_{j=0}^\infty c_jL^j$, $\sum_{j=0}^\infty c_j^2 < \infty$, and $\epsilon_t$ is a fundamental white noise for $(1-L)z_t$. {cite:t}`beveridge1981new` define the "permanent component" of $z_t$ as
 
 $$
 \tilde{z}_t= z_t + \lim_{n \to \infty}E_t[\Delta z_{t+1} + \ldots + \Delta z_{t+n}]
@@ -639,6 +651,6 @@ $$
 s_t = \frac{c(L)-c(1)}{1-L}\epsilon_t.
 $$
 
-Is this a Wold representation for $s_t$? *Hints*: at this point the reader might want to consult Hansen and Sargent (1980). Note that this is the version of formula {eq}`eq-88` that is obtained by solving Exercise 24, then driving $\lambda$ to unity from below. Does the assumption that $c(L)$ has a square summable inverse in nonnegative powers of $L$ imply that $[c(L) - c(1)]$ has a square summable inverse in nonnegative powers of $L$?
+Is this a Wold representation for $s_t$? *Hints*: at this point the reader might want to consult {cite:t}`hansensargent1980formulating`. Note that this is the version of formula {eq}`eq-88` that is obtained by solving Exercise 24, then driving $\lambda$ to unity from below. Does the assumption that $c(L)$ has a square summable inverse in nonnegative powers of $L$ imply that $[c(L) - c(1)]$ has a square summable inverse in nonnegative powers of $L$?
 
 F. In light of your answer to E, describe the effects of filtering a pair of time series $(z_{1t},z_{2t})$, each with the univariate filter applied by Beveridge and Nelson, to obtain cyclical series $(s_{1t},s_{2t})$. Suppose that $z_2$ fails to Granger cause $z_1$. Does it follow that $s_2$ fails to Granger cause $s_1$?

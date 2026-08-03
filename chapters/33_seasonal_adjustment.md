@@ -117,16 +117,16 @@ whereas the actual value of $y_t^a$ is determined by the right side of {eq}`eq-1
 We illustrate these calculations as follows. For monthly U.S. money supply (M2) for the period 1959 to the present (Sargent's original used 1959:1–1986:2) we constructed an 18th order autoregression for both seasonally adjusted and seasonally unadjusted M2. The spectral densities of seasonally adjusted and unadjusted M2 are reported in Figure 8. Notice the dips in the spectral density of the adjusted series at the seasonal frequencies (see Exercise 2). The autoregressive coefficients are plotted for seasonally adjusted and unadjusted series in Figure 9. In Figure 10, we report the values of the two filters in $x$ associated with {eq}`eq-177` and {eq}`eq-181`; namely,
 
 $$
-b^{nsa}(L)=h(L)\left[\frac{1-\lambda c(\lambda)c(L)^{-1}L^{-1}}{1-\lambda L^{-1}}\right]x_t^a, \qquad b^{sa}(L)=h(L)\left[\frac{1-\lambda d(\lambda)d(L)^{-1}L^{-1}}{1-\lambda L^{-1}}\right]x_t^a
+b^{nsa}(L)=\frac{1-\lambda c(\lambda)c(L)^{-1}L^{-1}}{1-\lambda L^{-1}}, \qquad b^{sa}(L)=\frac{1-\lambda d(\lambda)d(L)^{-1}L^{-1}}{1-\lambda L^{-1}}
 $$
 
-where we set $\lambda=0.9$ and where we have used the estimated autoregressive representations reported in Figure 9 for $c(L)$ and $d(L)$. Note the difference in $b^{nsa}(L)$ and $b^{sa}(L)$ in the vicinity of 12 lags. Figures 11 and 12 summarize the magnitude and phase of the transfer function from innovations in M2 to "$y_t$" that are associated with $b^{sa}(L)$. That is, let the filters associated with the autoregressive representations be denoted as $a^{sa}(L)$ and $a^{nsa}(L)$, respectively. Then Figures 11–12 report the magnitude and phase of
+where we set $\lambda=0.9$ and where we have used the estimated autoregressive representations reported in Figure 9 for $c(L)$ and $d(L)$. Note the difference in $b^{nsa}(L)$ and $b^{sa}(L)$ in the vicinity of 12 lags. Figures 11 and 12 summarize the magnitude and phase of the transfer function from innovations in M2 to "$y_t$" that are associated with $b^{sa}(L)$. That is, let the filters associated with the autoregressive representations be denoted as $a^{sa}(L)$ and $a^{nsa}(L)$, respectively. Then Figures 11–12 report the magnitude and phase of the transfer function
 
 $$
-h(e^{-i\omega})h(e^{+i\omega})
+k(e^{-i\omega})
 $$
 
-where $h(L)$ is given by $b^{nsa}(L)/a^{nsa}(L)$ or $b^{sa}(L)/a^{sa}(L)$, respectively. Note the substantially different responses revealed in these figures.
+where $k(L)$ is given by $b^{nsa}(L)/a^{nsa}(L)$ or $b^{sa}(L)/a^{sa}(L)$, respectively. (We write $k$ rather than $h$ here to avoid collision with the seasonal adjustment filter $h(L)$ of {eq}`eq-174`.) Note the substantially different responses revealed in these figures.
 
 Some of these ideas are explored further in Exercises 22 and 23.
 

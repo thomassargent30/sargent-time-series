@@ -67,14 +67,14 @@ $$
 
 which tells us the frequency at which the spectrum of $y$ attains a peak. For fixed
 $m/n$, the spectrum of $y$ approaches a spike as $n \to \infty$. This means that as
-$n \to \infty$, $y$ tends to have more and more like a cosine of angular frequency
-$\cos^{-1}((1-m/n)(1+m/n))$.
+$n \to \infty$, $y$ tends to behave more and more like a cosine of angular frequency
+$\cos^{-1}\!\left(\frac{1-(m/n)}{1+(m/n)}\right)$.
 
 What Slutsky showed, then, is that by successively summing and then successively
 differencing a serially uncorrelated or "white-noise" process $\epsilon_t$, a series
 with "cycles" is obtained.
 
-Another use {eq}`eq-33` is in the analysis of transformations that have been applied to
+Another use of {eq}`eq-33` is in the analysis of transformations that have been applied to
 data. An example is Howrey's (1968) analysis of the transformations used by Kuznets.
 Data constructed by Kuznets have been inspected to verify the existence of "long
 swings," long cycles in economic activity of around twenty years. Before analysis,
@@ -118,7 +118,7 @@ A(e^{-i\omega})A(e^{i\omega})
 = \frac{\left(\frac{1}{5}\right)^2(e^{i\omega 2}-e^{-i\omega 3})(e^{-i\omega 2}-e^{i\omega 3})}
        {(1-e^{-i\omega})(1-e^{i\omega})} \\
 = \frac{\left(\frac{1}{5}\right)^2(2-(e^{i\omega 5}+e^{-i\omega 5}))}
-       {1-(e^{i\omega}+e^{-i\omega})} \\
+       {2-(e^{i\omega}+e^{-i\omega})} \\
 = \frac{\left(\frac{1}{5}\right)^2 2(1-\cos 5\omega)}{2(1-\cos\omega)}
 = \frac{\left(\frac{1}{5}\right)^2(1-\cos 5\omega)}{1-\cos\omega}.
 $$
@@ -146,7 +146,7 @@ $$
 5\omega = 0,\, 2\pi,\, 4\pi, \qquad \omega = 0,\, \tfrac{2}{5}\pi,\, \tfrac{4}{5}\pi.
 $$
 
-The condition $\cos 10\omega = 1$ on $[0, \pi]$ where
+The condition $\cos 10\omega = 1$ occurs on $[0, \pi]$ where
 
 $$
 10\omega = 0,\, 2\pi,\, 4\pi,\, 6\pi,\, 8\pi,\, 10\pi \qquad \text{or} \qquad

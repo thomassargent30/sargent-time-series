@@ -47,7 +47,7 @@ Now project both sides of {eq}`eq-134` against the entire sequence $\{m_{t-j}\}^
 
 ```{math}
 :label: eq-136
-y_t= \sum_{j=0}^\infty h_jm_{t-j} + \sum_{k=0}^\infty w_k \sum_{j=-\infty}^\infty \gamma_{kj}m_{t-j} + \xi_t
+y_t= \sum_{j=0}^\infty v_jm_{t-j} + \sum_{k=0}^\infty w_k \sum_{j=-\infty}^\infty \gamma_{kj}m_{t-j} + \xi_t
 ```
 
 where $E\xi_tm_{t-j} = 0$ for all $j$ and
@@ -66,7 +66,7 @@ where
 
 $$
 d_j = \begin{cases}
-h_j + \sum_{k=0}^\infty w_k\gamma_{kj}, & j\geq0 \\
+v_j + \sum_{k=0}^\infty w_k\gamma_{kj}, & j\geq0 \\
 \sum_{k=0}^\infty w_k\gamma_{kj}, & j<0
 \end{cases}
 $$
@@ -80,7 +80,7 @@ y_t = \sum_{j=-\infty}^\infty \delta_jm_{t-j} + \hat{\eta}_t
 
 where $E\hat{\eta}_tm_{t-j}=0$ for all $j$, and testing the null hypothesis that $\delta_j=0$ for all $j<0$ provides a means of testing the null hypothesis that the St. Louis equation is "properly specified" — i.e., that it is appropriate to set the $w_k$ equal to zero.
 
-Using post-World War II U.S. data, Sims estimated {eq}`eq-137` and implemented the preceding test. He found that he could not reject with high confidence the hypothesis that future $m$'s bear zero coefficient in {eq}`eq-137`. In general, if the Keynesian objection to the St. Louis equation were correct, in large enough samples one would expect to reject the hypothesis tested by Sims. Sims's particular statistical results have provoked much controversy. Since his tests are subject to the usual kinds of type I and type II statistical errors, there is some room for disagreement about how far his reports go in confirming using the St. Louis equation to estimate money multipliers. Nevertheless, it should be recognized how much of a contribution Sims made in providing a formal statistical setting in which one could in principle subject to statistical testing the Keynesian claims made against the St. Louis approach. Before Sims's work, those claims were entirely *a priori* and, though they had been made repeatedly, had never been subjected to any empirical tests.
+Using post-World War II U.S. data, Sims estimated {eq}`eq-137` and implemented the preceding test. He found that he could not reject with high confidence the hypothesis that future $m$'s bear zero coefficient in {eq}`eq-137`. In general, if the Keynesian objection to the St. Louis equation were correct, in large enough samples one would expect to reject the hypothesis tested by Sims. Sims's particular statistical results have provoked much controversy. Since his tests are subject to the usual kinds of type I and type II statistical errors, there is some room for disagreement about how far his reports go toward vindicating the use of the St. Louis equation to estimate money multipliers. Nevertheless, it should be recognized how much of a contribution Sims made in providing a formal statistical setting in which one could in principle subject to statistical testing the Keynesian claims made against the St. Louis approach. Before Sims's work, those claims were entirely *a priori* and, though they had been made repeatedly, had never been subjected to any empirical tests.
 
 As it happens, the test implemented by Sims is also useful in discriminating against another hypothesis which has often been advanced to argue that the St. Louis equation {eq}`eq-133` is not a legitimate final form (i.e. does not have a disturbance that obeys the requirement that it be orthogonal to past, present, and future $m$'s). The argument is that the money supply fails to be exogenous in {eq}`eq-133` because the monetary authority has set $m$ via some sort of feedback rule on lagged $y$'s. For example, it is often asserted that the Federal Reserve "leans against the wind," increasing $m$ faster in recessions, and more slowly in a boom. If the Fed behaved this way, it could mean that the projection {eq}`eq-133` of $y$ on $m$ partly reflects this feedback from past $y$ to $m$ as well as the effect of $m$ on $y$. Furthermore, such behavior by the Fed would in general lead us to expect the projection of $y$ on the entire $m$ process to differ from the projection of $y$ on current and past $m$'s, so that the $\eta_t$ in {eq}`eq-133` would not obey the restrictions $E\eta_t m_{t-s} = 0$ for all $s$; i.e., {eq}`eq-133` would not be a final form.
 

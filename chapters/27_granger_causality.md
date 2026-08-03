@@ -6,7 +6,7 @@ $$
 g_{yx}(z)/g_x(z) = [g_{yx}(z)/d(z^{-1})]_{+}(1/d(z)\sigma^2)
 $$
 
-where $g_x(z) = \sigma^2 d(z)d(z^{-1})$. Sims (1972a) proved the important result that these two projections are equal if and only if lagged $y$'s fail linearly to help predict $x$, given lagged $x$'s. We shall first prove Sims's result in a different way than he did. The method is in the spirit of Wiener's derivation of the Wiener-Kolmogorov prediction formula and has certain advantages when it comes to working Exercises 6–13.
+where $g_x(z) = \sigma^2 d(z)d(z^{-1})$. {cite:t}`sims1972money` proved the important result that these two projections are equal if and only if lagged $y$'s fail linearly to help predict $x$, given lagged $x$'s. We shall first prove Sims's result in a different way than he did. The method is in the spirit of Wiener's derivation of the Wiener-Kolmogorov prediction formula and has certain advantages when it comes to working Exercises 6–13.
 
 We consider a jointly covariance stationary stochastic process $\{y_t,x_t\}$ with $Ex_t = Ey_t = 0$ and with covariance generating functions $g_x(z), g_y(z), g_{yx}(z)$. We assume that $x$ possesses an autoregressive representation and that both $y$ and $x$ are linearly indeterministic. We now consider the projection of $x_t$ on past values of $x$ and past values of $y$:
 
@@ -41,17 +41,17 @@ which are required to hold *only for positive integers* $\tau = 1, 2, \ldots$. M
 
 ```{math}
 :label: eq-119
-g_x(z) - m(z) = h(z)g_x(z) + v(z)g_{yx}(z)
+g_x(z) + m(z) = h(z)g_x(z) + v(z)g_{yx}(z)
 ```
 
 ```{math}
 :label: eq-120
-g_{xy}(z) - n(z) = h(z)g_{xy}(z) + v(z)g_y(z)
+g_{xy}(z) + n(z) = h(z)g_{xy}(z) + v(z)g_y(z)
 ```
 
 where $m(z)$ and $n(z)$ are each unknown series in *nonpositive powers of $z$* only. That $m(z)$ and $n(z)$ are series in nonpositive powers of $z$ is equivalent with Equations {eq}`eq-117` and {eq}`eq-118` holding only for $\tau \geq 1$. Equations {eq}`eq-119` and {eq}`eq-120` are the normal equations for $h(z)$ and $v(z)$.
 
-Following Wiener, Granger (1969) has proposed the terminology that "$y$ causes $x$" whenever $v(z) \neq 0$. That is, $y$ is said to cause $x$ if, given all past values of $x$, past values of $y$ help to predict $x$. The conditions under which $v(z)$ does or does not equal zero turn out to be of substantial interest to econometricians and macroeconomists, which is the reason that this concept of causality is an interesting one to study.
+Following Wiener, {cite:t}`granger1969causality` has proposed the terminology that "$y$ causes $x$" whenever $v(z) \neq 0$. That is, $y$ is said to cause $x$ if, given all past values of $x$, past values of $y$ help to predict $x$. The conditions under which $v(z)$ does or does not equal zero turn out to be of substantial interest to econometricians and macroeconomists, which is the reason that this concept of causality is an interesting one to study.
 
 Consider the projection of $y_t$ on the entire $x$ process,
 
@@ -289,7 +289,7 @@ This establishes that if $A_0^{-1}A(L)$ is lower triangular, then {eq}`eq-128` c
 \begin{bmatrix} x_t \\ y_t \end{bmatrix} = C(L)\begin{bmatrix} \epsilon_t \\ u_t \end{bmatrix}
 ```
 
-where $A(L)^{-1} = C(L) = C_0 + C_1L + C_2L^2 + \cdots$, $C_j$ being a $2 \times 2$ matrix, and where $C(L)$ is lower triangular. Recall the extensive orthogonality conditions satisfied by $\epsilon$ and $u$; the $\epsilon$ and $u$ process are orthogonal at all lags, even contemporaneously.[^fn-gc-5] Conversely, suppose that a moving average representation of the lower triangular form {eq}`eq-130` exists with $\epsilon_t$ and $u_t$ being serially uncorrelated processes with $E\epsilon_t u_s=0$ for all $t$ and $s$. Then assuming that $C(L)^{-1}$ exists and equals $A(L)$ gives a representation
+where $A(L)^{-1} = C(L) = C_0 + C_1L + C_2L^2 + \cdots$, $C_j$ being a $2 \times 2$ matrix, and where $C(L)$ is lower triangular. Recall the extensive orthogonality conditions satisfied by $\epsilon$ and $u$; the $\epsilon$ and $u$ processes are orthogonal at all lags, even contemporaneously.[^fn-gc-5] Conversely, suppose that a moving average representation of the lower triangular form {eq}`eq-130` exists with $\epsilon_t$ and $u_t$ being serially uncorrelated processes with $E\epsilon_t u_s=0$ for all $t$ and $s$. Then assuming that $C(L)^{-1}$ exists and equals $A(L)$ gives a representation
 
 $$
 C(L)^{-1}\begin{bmatrix} x_t \\ y_t \end{bmatrix} = \begin{bmatrix} \epsilon_t \\ u_t \end{bmatrix} \quad \text{or} \quad A(L)\begin{bmatrix} x_t \\ y_t \end{bmatrix} = \begin{bmatrix} \epsilon_t \\ u_t \end{bmatrix}

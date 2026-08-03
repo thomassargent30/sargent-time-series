@@ -29,8 +29,21 @@ repository:
   url: https://github.com/maxmaxmaxmaxmaxmax373/sargent-time-series
   branch: main
 
+bibtex_bibfiles:
+  - references.bib
+
 sphinx:
+  local_extensions:
+    bibstyle_parens: _ext
   config:
+    bibtex_reference_style: author_year_paren
+    bibtex_default_style: alpha
+    # Works cited by several chapters appear in each of those chapters'
+    # reference lists on purpose; unique :labelprefix: values keep the
+    # labels distinct, so the repeated-entry notices are expected.
+    suppress_warnings:
+      - bibtex.duplicate_citation
+      - bibtex.duplicate_label
     mathjax_path: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
     mathjax3_config:
       tex:

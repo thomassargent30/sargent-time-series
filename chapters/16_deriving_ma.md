@@ -1,6 +1,6 @@
 # Deriving the Moving Average Representation
 
-The univariate prediction formulas given above assume that one has in hand a moving average representation for the covariance stationary stochastic process $x_t = d(L)\epsilon_t$, in which $x_t$ lies in the linear space spanned by current and lagged $x_t$'s. Suppose that one starts with a covariogram $c(\tau)$ of $x_t$ and wishes to obtain such a moving average representation. We show how to accomplish this, beginning with a special case of a first-order moving average process.
+The univariate prediction formulas given above assume that one has in hand a moving average representation for the covariance stationary stochastic process $x_t = d(L)\epsilon_t$, in which $\epsilon_t$ lies in the linear space spanned by current and lagged $x_t$'s. Suppose that one starts with a covariogram $c(\tau)$ of $x_t$ and wishes to obtain such a moving average representation. We show how to accomplish this, beginning with a special case of a first-order moving average process.
 
 Suppose that $c(\tau) = 0$ for $|\tau| \geq 2$. We seek a first order moving average process
 
@@ -9,7 +9,7 @@ Suppose that $c(\tau) = 0$ for $|\tau| \geq 2$. We seek a first order moving ave
 x_t = d_0 \epsilon_t + d_1 \epsilon_{t-1}
 ```
 
-where $\epsilon_t$ is a white noise that can be expressed as a square summable linear combination of $\{x_{t-1}, x_{t-2}, \ldots\}$. If representation {eq}`eq-63` is correct, then we must have
+where $\epsilon_t$ is a white noise that can be expressed as a square summable linear combination of $\{x_t, x_{t-1}, \ldots\}$. If representation {eq}`eq-63` is correct, then we must have
 
 ```{math}
 :label: eq-64
@@ -96,11 +96,11 @@ For $|d_1|<1$, we have that $\epsilon_t$ can be expressed as a square summable l
 However, when $|d_1|>1$, the right side of the representation {eq}`eq-66` is not square summable. When $|d_1|>1$, the $\epsilon_t$ in {eq}`eq-63` lies in the linear space spanned by square summable linear combinations of *future* $x_t$'s and can be expressed as
 
 $$
-\epsilon_t = \sum_{j=1}^\infty \left(\frac{1}{d_1}\right)^j x_{t+j}.
+\epsilon_t = \sum_{j=1}^\infty (-1)^{j-1}\left(\frac{1}{d_1}\right)^j x_{t+j}.
 $$
 
-Thus, to obtain the representation in which $\epsilon_t$ lies in the linear space spanned by $\{x_{t-1}, x_{t-2}, \ldots\}$, we select $|d_1|<1$. Since $\sigma_\epsilon^2 = c(1)/d_1$, this selection results in selecting from among moving average representations that satisfy {eq}`eq-64` the one for which $\sigma_\epsilon^2$ is maximal. For the representation chosen in this way, $\sigma_\epsilon^2$ is the variance of $(x_t - P[x_t | x_{t-1}, x_{t-2}, \ldots])$. The white noise process $\epsilon_t$ chosen by this procedure is said to be *fundamental* white noise for $x_t$, meaning that it equals the process of one-step ahead errors in predicting $x_t$ from its own past values.[^fn-ma-2]
+Thus, to obtain the representation in which $\epsilon_t$ lies in the linear space spanned by $\{x_t, x_{t-1}, \ldots\}$, we select $|d_1|<1$. Since $\sigma_\epsilon^2 = c(1)/d_1$, this selection results in selecting from among moving average representations that satisfy {eq}`eq-64` the one for which $\sigma_\epsilon^2$ is maximal. For the representation chosen in this way, $\sigma_\epsilon^2$ is the variance of $(x_t - P[x_t | x_{t-1}, x_{t-2}, \ldots])$. The white noise process $\epsilon_t$ chosen by this procedure is said to be *fundamental* white noise for $x_t$, meaning that it equals the process of one-step ahead errors in predicting $x_t$ from its own past values.[^fn-ma-2]
 
 [^fn-ma-1]: The spectral density for this $x_t$ process is given by $g_x(e^{-i\omega}) = c(0) + 2 c(1)\cos \omega$. We require that $2|c(1)| < c(0)$ in order that the spectral density be nonnegative, or equivalently, in order that $c(\tau)$ be a nonnegative definite sequence.
 
-[^fn-ma-2]: One sometimes encounters an alternative condition that serves to select the moving average representation with a fundamental white noise. This is the "minimum phase condition" which in our example requires that the solution of {eq}`eq-64` be selected in which the phase of $d(e^{-i\omega}) = 1 + d_1 e^{-i\omega}$ is smallest. For our example, the phase of $d(e^{-i\omega})$ is given by $\theta(\omega) = \tan^{-1}(-d_1 \sin \omega/(1 + d_1 \sin \omega))$. For low frequency, this is minimized in absolute value when the solution with $|d_1| < 1$ is selected.
+[^fn-ma-2]: One sometimes encounters an alternative condition that serves to select the moving average representation with a fundamental white noise. This is the "minimum phase condition" which in our example requires that the solution of {eq}`eq-64` be selected in which the phase of $d(e^{-i\omega}) = 1 + d_1 e^{-i\omega}$ is smallest. For our example, the phase of $d(e^{-i\omega})$ is given by $\theta(\omega) = \tan^{-1}(-d_1 \sin \omega/(1 + d_1 \cos \omega))$. For low frequency, this is minimized in absolute value when the solution with $|d_1| < 1$ is selected.

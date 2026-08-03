@@ -141,10 +141,10 @@ whether the peaks come from the shocks, from tastes/technology, or from hidden p
 Now suppose the econometrician fits an approximating model indexed by a parameter vector $\delta$,
 with mean $\mu(\delta)$ and spectral density $G(\cdot,\delta)$ for the stacked process $\{Y_t\}$,
 while the *truth* has mean $\nu$ and spectral density $F(\omega) = S_Y[\exp(-i\omega)]$. Estimating
-$\delta$ by Gaussian maximum likelihood is, as Akaike (1973) and White (1982) stressed, a way of
+$\delta$ by Gaussian maximum likelihood is, as {cite:t}`akaike1973information` and {cite:t}`white1982maximum` stressed, a way of
 minimizing a Kullback–Leibler discrepancy. For stationary linear time series the population limit
 of the (misspecified) log-likelihood has a clean **frequency-domain representation** — an
-extension to the multivariate, mean-augmented case of an approximation formula of Sims (1972).
+extension to the multivariate, mean-augmented case of an approximation formula of {cite:t}`sims1972approx`.
 The maximum-likelihood estimator converges almost surely to the minimizer of
 
 ```{math}
@@ -514,15 +514,7 @@ model.
 
 ## References
 
-- Akaike, H. (1973). Information theory and an extension of the maximum likelihood principle. In
-  B. N. Petrov and F. Csáki (eds.), *2nd International Symposium on Information Theory*. Akadémiai
-  Kiadó.
-- Hansen, L. P., and T. J. Sargent (1993). Seasonality and approximation errors in rational
-  expectations models. *Journal of Econometrics* 55, 21–55.
-- Sims, C. A. (1972). Approximate prior restrictions in distributed lag estimation. *Journal of the
-  American Statistical Association* 67, 169–175.
-- Sims, C. A. (1974). Seasonality in regression. *Journal of the American Statistical Association*
-  69, 618–626.
-- Tiao, G. C., and M. R. Grupe (1980). Hidden periodic autoregressive–moving average models in time
-  series data. *Biometrika* 67, 365–373.
-- White, H. (1982). Maximum likelihood estimation of misspecified models. *Econometrica* 50, 1–25.
+```{bibliography}
+:labelprefix: SA
+:filter: key in {"akaike1973information", "hansensargent1993seasonality", "sims1972approx", "sims1974seasonality", "tiaogrupe1980hidden", "white1982maximum"}
+```

@@ -22,7 +22,7 @@ $$
 \hat y = a_0 + a_1 x_1 + \cdots + a_n x_n.
 $$ (eq-10-1)
 
-[^fn-10-1]: Luenberger (1969) and Naylor and Sell (1982) contain good treatments of inner product spaces, and of the technical results used in this chapter. The reader with some background in econometrics will note that we are *not* studying the "general linear model," (e.g., see Johnston, 1963, Chapter 4), which assumes that the right-hand side $x$ variables are nonstochastic.
+[^fn-10-1]: {cite:t}`luenberger1969optimization` and {cite:t}`naylorsell1982linear` contain good treatments of inner product spaces, and of the technical results used in this chapter. The reader with some background in econometrics will note that we are *not* studying the "general linear model," (e.g., see Johnston, 1963, Chapter 4), which assumes that the right-hand side $x$ variables are nonstochastic.
 
 [^fn-10-2]: The restriction to a linear function is in general a binding one. It is possible to show that to minimize $E\{y - g(x_1, \ldots, x_n)\}^2$ with respect to the choice of $g(x_1, \ldots, x_n)$, the optimal thing to do is to set $g(x_1, \ldots, x_n) = E[y|x_1, \ldots, x_n]$, the mathematical expectation of $y$ conditional on $x_1, \ldots, x_n$. In general, the mathematical expectation $E[y|x_1, \ldots, x_n]$ is *not* a linear function of $x_1, \ldots, x_n$. In the special case that the variates $(y, x_1, \ldots, x_n)$ follow a multivariate normal distribution, the conditional mathematical expectation $E[y|x_1, \ldots, x_n]$ is linear in $x_1, \ldots, x_n$.
 
@@ -312,7 +312,7 @@ Notice that $0 < a_1 < 1$, and that the greater is $Eu^2/Ez^2$, the closer to un
 (sec-10-5)=
 ## 5. Signal Extraction with Dynamics
 
-We now use the recursive projection formula {eq}`eq-10-15-prime` to solve a signal extraction problem that John Muth (1960) used to provide a rationalization for Milton Friedman's formula for permanent income. This will lead us to a version of the Kalman filter.[^fn-10-5]
+We now use the recursive projection formula {eq}`eq-10-15-prime` to solve a signal extraction problem that John {cite:t}`muth1960optimal` used to provide a rationalization for Milton Friedman's formula for permanent income. This will lead us to a version of the Kalman filter.[^fn-10-5]
 
 We consider the structure
 
@@ -326,7 +326,7 @@ $$ (eq-10-17)
 
 where $\rho$ and $c$ are scalars, $\varepsilon_{t+1}$ is a random variable satisfying $E\varepsilon_t = 0$ for all $t$, $E\varepsilon_t^2 = \sigma_\varepsilon^2$ for all $t$, and $E\varepsilon_t \varepsilon_{t-s} = 0$ for $s \neq 0$. We assume that $u_t$ is a random variable satisfying $Eu_t = 0$ for all $t$, $Eu_t^2 = \sigma_u^2$ for all $t$, $Eu_t u_{t-s} = 0$ for $s \neq 0$ and $Eu_t \varepsilon_s = 0$ for all $t, s$. Equation {eq}`eq-10-16` states that $\theta_t$ is governed by a first-order linear stochastic difference equation, while equation {eq}`eq-10-17` states that $z_t$ is a linear combination of $\theta_t$ and a "noise" $u_t$. Given this structure, consider the following problem that is to be solved by an agent who knows the values of $(c, \rho, \sigma_u^2, \sigma_\varepsilon^2)$. At time $t$, the agent is supposed to see $(z_t, z_{t-1}, \ldots, z_0)$, but not to have seen $\theta_t$ for any $t$. Thus $\theta_t$ is a "hidden variable." At time 0, before observing $z_0$, the agent is supposed to have an initial idea about the location of $\theta_0$, which can be summarized by saying that he thinks it is distributed with mean $\hat\theta_0$ and variance about $\hat\theta_0$ of $\Sigma_0$. The agent's problem is to calculate $P[\theta_{t+1} | z_t, z_{t-1}, \ldots, z_0]$. Using {eq}`eq-10-15-prime`, we shall derive a convenient recursive formula for this projection.
 
-[^fn-10-5]: Anderson and Moore (1979) is a good source of results on recursive methods for solving prediction and filtering problems.
+[^fn-10-5]: {cite:t}`andersonmoore1979optimal` is a good source of results on recursive methods for solving prediction and filtering problems.
 
 We define $\hat\theta_{t+1} = P[\theta_{t+1} | z_t, z_{t-1}, \ldots, z_0]$. In {eq}`eq-10-15-prime`, at $t \geq 1$, we let $y = \theta_{t+1}$, $\Omega = (z_{t-1}, z_{t-2}, \ldots, z_0)$, $x = z_t$. Then in light of {eq}`eq-10-16`–{eq}`eq-10-17`, and using $P[\varepsilon_{t+1} | z_t, z_{t-1}, \ldots, z_0] = 0$ and the orthogonality conditions assumed for $(\varepsilon_{t+1}, u_t)$, {eq}`eq-10-15-prime` becomes
 
@@ -526,7 +526,7 @@ where $\Omega_t \supset \Omega_{t-1} \supset \Omega_{t-2} \supset \cdots$, so th
 $$
 \begin{aligned}
 P[{}_{t+j}F_{1t}|\Omega_{t-1}] &= P[P[R_{1t+j}|\Omega_t]|\Omega_{t-1}] \\
-&= P[R_{1t+j}|\Omega_{t-1}] = {}_{t+j}F_{t-1}
+&= P[R_{1t+j}|\Omega_{t-1}] = {}_{t+j}F_{1t-1}
 \end{aligned}
 $$
 
@@ -723,7 +723,7 @@ $$
 which is {eq}`eq-10-15-prime`.
 ```
 
-**8.** Interpret $Y$, $\Omega$, and $X$ as sets, and $P[Y|\Omega, X]$ as $Y (\Omega\ X)$. Derive the Kalman filter formula using Venn diagrams. (Interpret $Y - X$ as $Y \cap X^c$ where $X^c$ is the complement of $X$.)
+**8.** Interpret $Y$, $\Omega$, and $X$ as sets, and $P[Y|\Omega, X]$ as $Y \cap (\Omega \cup X)$. Derive the Kalman filter formula using Venn diagrams. (Interpret $Y - X$ as $Y \cap X^c$ where $X^c$ is the complement of $X$.)
 
 ```{admonition} Solution to Exercise 8
 :class: dropdown
@@ -976,25 +976,13 @@ the golden ratio reappearing just as in the Fibonacci/adjustment problems of Cha
 
 ## References
 
-- Anderson, B. D. O. and Moore, J. B. (1979). *Optimal Filtering*, Englewood Cliffs: Prentice-Hall.
-- Cagan, P. (1956). "The Monetary Dynamics of Hyperinflation." *Studies in the Quantity Theory of Money* (M. Friedman, ed.), Chicago, Illinois: University of Chicago Press.
-- Friedman, M. (1956). *A Theory of the Consumption Function*, Princeton, New Jersey: Princeton University Press.
-- Hicks, J. R. (1953). *Value and Capital*, London and New York: Oxford University Press.
-- Johnston, J. (1963). *Econometric Methods*, New York: McGraw-Hill.
-- Luenberger, D. G. (1969). *Optimization by Vector Space Methods*, New York: Wiley.
-- Meiselman, D. (1963). *The Term Structure of Interest Rates*, Englewood Cliffs, New Jersey: Prentice-Hall.
-- Muth, J. F. (1960). "Optimal Properties of Exponentially Weighted Forecasts." *Journal of the American Statistical Association*, Vol. 55, No. 290, pp. 299–306.
-- Muth, J. F. (1961). "Rational Expectations and the Theory of Price Movements." *Econometrica*, Vol. 29, No. 3, pp. 315–335.
-- Naylor, A. W. and Sell, G. R. (1982). *Linear Operator Theory in Engineering and Science*, 2nd ed., New York: Springer-Verlag.
-- Samuelson, P. A. (1965). "Proof That Properly Anticipated Prices Fluctuate Randomly." *Industrial Management Review*, Vol. 6, No. 2, pp. 41–50.
-- Shiller, R. (1978). "Rational Expectations And the Dynamic Structure of Macroeconomic Models: A Critical Review." *Journal of Monetary Economics*, Vol. 4, No. 1.
+```{bibliography}
+:labelprefix: CX
+:filter: key in {"andersonmoore1979optimal", "cagan1956monetary", "friedman1957theory", "hicks1939value", "johnston1963econometric", "luenberger1969optimization", "meiselman1962term", "muth1960optimal", "muth1961rational", "naylorsell1982linear", "samuelson1965proof", "shiller1978rational"}
+```
 
-[^fn-10-6]: The present description of Meiselman's model is along the lines developed after Meiselman by Mincer, Pye, Diller, Shiller, and Nelson. For a useful survey of this literature, see Shiller (1978).
-
+[^fn-10-6]: The present description of Meiselman's model is along the lines developed after Meiselman by Mincer, Pye, Diller, Shiller, and Nelson. For a useful survey of this literature, see {cite:t}`shiller1978rational`.
 [^fn-10-7]: This formula is an arithmetic approximation to Hicks's formula. Hicks's formula assumes discount bonds that have zero coupons. See Hicks (1939).
-
 [^fn-10-8]: Further, notice that we have no restrictions on the signs of $\phi_j$; they may be either positive or negative, depending on the various covariances among "surprises" that go into composing $\phi_j$.
-
 [^fn-10-9]: Samuelson proved that a property analogous to {eq}`eq-10-37` holds where linear projections are replaced by conditional mathematical expectations. A sequence that obeys that condition is called a martingale with respect to the conditioning information. For conditional expectations, there is a law of iterated expectations precisely paralleling the law of iterated projections. Given this law, Samuelson's theorem is proved in a similar fashion to the weak martingale theorem exhibited in the text.
-
 [^fn-10-10]: Exercises 6–10 were written by Charles Whiteman.
