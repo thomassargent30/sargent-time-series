@@ -294,7 +294,7 @@ price innovation), but the supply surprise enters the recovered innovations as a
 lag*. The recovered innovations are therefore mixtures of current and past structural shocks,
 not the structural shocks themselves. Computed with QuantEcon's `DLE` class (a port of the
 authors' MATLAB `twodiff1.m`); see
-[`code/ch36a_two_difficulties.py`](https://github.com/maxmaxmaxmaxmaxmax373/sargent-time-series/blob/main/code/ch36a_two_difficulties.py).
+[`code/ch36a_two_difficulties.py`](https://github.com/thomassargent30/sargent-time-series/blob/main/code/ch36a_two_difficulties.py).
 ```
 
 The economic reading of the rows is the substance of the example. The supply innovation
@@ -542,7 +542,7 @@ process $(A, C, G_p)$, returns precisely the dynamic-curve coefficients: the sup
 on $q_{t-1}$ is $\delta_s/\beta = 0.744$, and the demander's feedback on $(q_{t-1},\dots,q_{t-4})$
 is $(\gamma_{d,1},\dots,\gamma_{d,4}) = (-0.117,\,-0.079,\,-0.045,\,-0.017)$ — exactly the
 coefficients read off the factored Euler equations. See
-[`code/ch36a_price_taker_lq.py`](https://github.com/maxmaxmaxmaxmaxmax373/sargent-time-series/blob/main/code/ch36a_price_taker_lq.py).
+[`code/ch36a_price_taker_lq.py`](https://github.com/thomassargent30/sargent-time-series/blob/main/code/ch36a_price_taker_lq.py).
 
 **Big $X$ equals little $x$: the equilibrium fixed point.** Each agent's rule is a best response
 to the price process $X_t$, and *only* a best response: the agent takes $X_t$ as given, and its

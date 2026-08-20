@@ -50,13 +50,13 @@ this folder (the one containing `_config.yml`).
 **Or clone a fresh copy** from GitHub:
 
 ```bash
-git clone https://github.com/maxmaxmaxmaxmaxmax373/sargent-time-series.git
+git clone https://github.com/thomassargent30/sargent-time-series.git
 cd sargent-time-series
 ```
 
 To publish later you must be able to push to a GitHub repo. Two options:
 
-- **A — You have write access** to `maxmaxmaxmaxmaxmax373/sargent-time-series`:
+- **A — You have write access** to `thomassargent30/sargent-time-series`:
   nothing more to do; skip to Step 3.
 - **B — You want your *own* online copy** (recommended if you're not the owner):
   see [Appendix: Publish your own copy](#appendix-publish-your-own-copy) at the end,
@@ -211,7 +211,7 @@ There are **two different links** — this trips everyone up:
 
 👉 **Read the book at the `github.io` address:**
 
-**https://maxmaxmaxmaxmaxmax373.github.io/sargent-time-series/**
+**https://thomassargent30.github.io/sargent-time-series/**
 
 The repo's right-sidebar **"About → 🔗 website"** field also links straight to it.
 After a successful Actions run, refresh that page (use **Cmd/Ctrl + Shift + R** to
@@ -248,7 +248,7 @@ git push                               # 6. publish (auto-deploys)
 
 ## Appendix: Publish your *own* copy
 
-If you are not the owner of `maxmaxmaxmaxmaxmax373/sargent-time-series` but want
+If you are not the owner of `thomassargent30/sargent-time-series` but want
 your own online edition:
 
 1. **Create a new empty repo** on GitHub (e.g. `my-time-series-book`). Don't add a

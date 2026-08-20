@@ -26,7 +26,7 @@ html:
   home_page_in_navbar: false
 
 repository:
-  url: https://github.com/maxmaxmaxmaxmaxmax373/sargent-time-series
+  url: https://github.com/thomassargent30/sargent-time-series
   branch: main
 
 bibtex_bibfiles:
