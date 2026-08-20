@@ -5,13 +5,15 @@ This section describes Robert E. Lucas, Jr., "Two Illustrations of the Quantity 
 *American Economic Review* 70(5), 1005–1014 (1980); Charles H. Whiteman, "Lucas on the Quantity Theory:
 Hypothesis Testing without Theory," *American Economic Review* 74(4), 742–749 (1984); and Thomas J.
 Sargent and Paolo Surico, "Two Illustrations of the Quantity Theory of Money: Breakdowns and Revivals,"
-*American Economic Review* 101(1), 109–128 (2011). It is the third application in this book of
-**Sims's approximation-error formula** — after {doc}`33a_seasonality_approximation` and
-{doc}`36c_cagan_hyperinflation` — and it is perhaps the cleanest illustration of what that formula is
-good for. A computational treatment, with Python code for the filters, the scatter plots, the VAR, and
-the Bayesian estimation of the DSGE model, is the QuantEcon lecture
+*American Economic Review* 101(1), 109–128 (2011). We follow their arguments and omit the details of
+the Bayesian estimation. A computational treatment, with Python code for the filters, the scatter
+plots, the VAR, and the estimation of the DSGE model, is the QuantEcon lecture
 [*Two Illustrations of the Quantity Theory of Money*](https://python.quantecon.org/sargent_surico.html).
 ```
+
+This is the third application in this book of Sims's approximation error formula
+{eq}`eq-hs93-sims`, after {doc}`33a_seasonality_approximation` and
+{doc}`36c_cagan_hyperinflation`.
 
 ## Lucas's method
 
@@ -118,14 +120,14 @@ Sargent and Surico write this object $h(0)$; it is a *population* magnitude that
 delivers. Whiteman emphasized that this holds "regardless of the time-series properties" of the two
 series: the method is a robust, if extremely roundabout, estimator of a sum of lag coefficients.
 
-Two features of the book's machinery deserve notice here. First, it is legitimate to filter *both*
-series with the same filter precisely because, as {doc}`30_filtering_projections` establishes, applying
-a common filter to $y$ and $x$ **leaves the two-sided projection unaltered** (it is the *one-sided*
-projection that a common filter disturbs, except when Granger non-causality makes the two coincide).
-Lucas's low-pass filter therefore reweights *which frequencies the fit attends to* without changing the
-$\gamma_k$'s being estimated. Second, the exercise is a benign cousin of the
-{doc}`Slutsky–Kuznets effects <09_slutsky_kuznets>`: filtering can manufacture apparent regularities,
-and one must know exactly what a filter does before reading economics off a smoothed plot.
+Two features of the book's machinery bear on this. Filtering both series with the same filter is
+legitimate because a common filter applied to $y$ and $x$ leaves the two-sided projection unaltered,
+as {doc}`30_filtering_projections` establishes; a common filter disturbs the *one-sided* projection,
+except when Granger non-causality makes the two coincide. Lucas's low-pass filter therefore reweights
+which frequencies the fit attends to without changing the $\gamma_k$ being estimated. And the exercise
+is a benign cousin of the {doc}`Slutsky–Kuznets effects <09_slutsky_kuznets>`: filtering can
+manufacture apparent regularities, so one must know what a filter does before reading economics off a
+smoothed plot.
 
 ```{admonition} Why not just add up estimated lag coefficients?
 :class: dropdown
@@ -217,7 +219,7 @@ Whiteman's conclusions are these.
   as a whole is that the restriction holds *with $\alpha_2\ne0$* — that is, **Lucas's numbers can be
   read as evidence in favor of the very Mundell–Tobin effect he took them to refute.**
 
-The moral is a **Lucas-critique-based admonition** turned on Lucas's own paper. Reduced-form
+Lucas's critique returns here against Lucas's own paper. Reduced-form
 low-frequency correlations are complicated functions of the structure of the economy *and* of the laws
 of motion of the processes agents care about; they are unlikely to reveal much about the true model
 "unless one already has it very much in mind." This is the same non-invariance that drives

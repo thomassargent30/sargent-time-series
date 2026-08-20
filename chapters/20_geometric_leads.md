@@ -121,3 +121,18 @@ g_{j-1} &= \lambda g_j + \lambda g_0 a_j \quad j=r,r-1, \ldots, 2.
 ```
 
 Various versions of formulas {eq}`eq-88`, {eq}`eq-89`, and {eq}`eq-90` were originally derived in papers by {cite:t}`saracoglusargent1978seasonality`, {cite:t}`hansensargent1980formulating`, and {cite:t}`futia1981rational`.
+
+
+```{seealso}
+Formula {eq}`eq-90` is used repeatedly in what follows.
+{doc}`22_rational_expectations` uses it to solve Cagan's model and a supply and demand model with
+inventories, and to derive their cross-equation restrictions.
+{doc}`25_optimal_prediction` recovers it in compact state space notation.
+{doc}`33_seasonal_adjustment` applies it to seasonally adjusted data and shows how the implied
+restrictions are distorted, and {doc}`33a_seasonality_approximation` asks whether the distortion
+matters. {doc}`36_bubbles` uses it to isolate the bubble term.
+{doc}`36b_exact_linear_re` embeds it in an exact linear rational expectations model, and
+{doc}`36c_cagan_hyperinflation` uses it to derive an equilibrium money rule.
+{doc}`Chapter XIV <ch14_investment_uncertainty>` uses it to build a rational expectations
+equilibrium of investment under uncertainty.
+```

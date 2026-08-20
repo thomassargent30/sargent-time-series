@@ -557,7 +557,7 @@ back into either agent's regulator — as the verification does — returns a qu
 consistent with it.
 
 **Open-loop versus closed-loop decision rules.** The construction has produced two distinct
-pairs of decision rules, and it is worth keeping them apart. The dynamic supply curve
+pairs of decision rules. We keep them apart. The dynamic supply curve
 {eq}`eq-vd-20` and the dynamic demand curve {eq}`eq-vd-22` give each agent's optimal quantity as
 a function of its own past quantities and of its forecasts $E_t\,p_{t+j}$ of an **arbitrary**
 price process $\{p_t\}_t$ that it takes as exogenously given. They are best responses to

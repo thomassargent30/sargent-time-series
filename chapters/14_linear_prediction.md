@@ -70,6 +70,17 @@ P_{t-k}x_t = \left(\frac{d(L)}{L^k}\right)_{+} \frac{1}{d(L)}x_{t-k}
 
 which generalizes formula {eq}`eq-61`. Equation {eq}`eq-62` is the Wiener-Kolmogorov formula for $k$-step-ahead linear least squares predictions.
 
+
+
+```{seealso}
+{doc}`15_prediction_examples` computes {eq}`eq-62` for particular processes.
+{doc}`18a_partial_fractions` evaluates the annihilation operator $[\,\cdot\,]_+$ pole by pole.
+{doc}`20_geometric_leads` extends the formula from a single future date to a geometric sum of them.
+{doc}`25_optimal_prediction` restates it as $P[x_{t+\tau}\mid x_t] = A^{\tau} x_t$ in state space
+form. {doc}`26_optimal_filtering` and {doc}`29_multivariate_prediction` extend it to filtering and
+to vector processes.
+```
+
 [^fn-pred-1]: A key reference on the subject of this section is {cite:t}`whittle1983prediction`.
 
 [^fn-pred-2]: For example, by suitable detrending and seasonal adjustment.

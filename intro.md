@@ -1,71 +1,64 @@
 # Linear Time Series Analysis
 
-This book is a modernized and extended treatment of the linear time series methods that run
-through macroeconomics and dynamic econometrics. It grew out of
+This book is an updated and extended version of Chapters IX, X, XI, and XIV of
 
-> Thomas J. Sargent, *Macroeconomic Theory*, 2nd edition (1987), Academic Press,
+> Thomas J. Sargent, *Macroeconomic Theory*, 2nd edition (1987), Academic Press.
 
-and in particular out of that book's **Chapter XI, "Time Series."** That chapter is the seed of the
-long middle part of this one — but it is no longer the whole of it, or even most of it. The middle
-part is preceded here by two chapters — **Chapter IX** and **Chapter X** — that develop the two
-elementary tools the time series theory rests on; it has been enlarged by a dozen new sections; and
-it is capped by a full application chapter, **Chapter XIV — Investment Under Uncertainty**, that puts
-the whole apparatus to work in building and interpreting a rational expectations equilibrium.
+Those four chapters describe basic tools that are used throughout modern macroeconomics and applied
+dynamics. Chapter IX develops linear difference equations and the algebra of lag operators.
+Chapter X develops the linear least squares projection. Chapter XI combines them into a theory of
+covariance stationary processes and of linear prediction. Chapter XIV uses all three to construct
+and interpret a rational expectations equilibrium.
 
-```{admonition} On the middle part and its title
+This book builds on those foundations in several ways. Graphs are redrawn with data that have
+arrived since 1987. Python code illustrates many of the concepts, and each figure links to the
+script that draws it. Answers now accompany the exercises of the 1987 book, and many new exercises
+appear with answers of their own. A dozen new sections extend the theory or connect it to work
+published since.
+
+A reader will find that this book mostly uses what are now called **sequence space methods** rather
+than the recursive formulations of the macroeconomics textbooks that I wrote after the 1987
+Academic Press "black book". It is handy to know both.
+
+```{admonition} Section numbering
 :class: note
 
-The long central part of this book is labelled
-{doc}`Linear Time Series (in the spirit of Chapter XI) <chapters/01_introduction>`, and the label is
-meant literally. Its sections 1–38 follow the development, and in most places the text, of Chapter XI
-of *Macroeconomic Theory* — corrected, re-typeset, and re-illustrated with modern data and code. But
-around that nucleus have grown a dozen new sections, which now make up roughly a third of the part;
-counted against the whole book, with its two preparatory chapters and its capstone, the 1987 chapter
-supplies well under half of what follows. What holds the part together is therefore not a table of
-contents inherited from 1987 but a *method*: covariance stationarity, the spectrum, Wold's theorem,
-Wiener–Kolmogorov prediction, and the one-sided projection, applied to a wider range of problems than
-the original chapter could take up. Readers of *Macroeconomic Theory* can still navigate by section
-number — the original numbering is preserved, and added sections carry letter suffixes (5a, 7a, 18a,
-33a, 34a, 36a–36e) placed just after the section whose argument they extend.
+Sections 1–38 of the time series part follow the development, and in most places the text, of
+Chapter XI of *Macroeconomic Theory*. Added sections carry letter suffixes — 5a, 7a, 18a, 33a, 34a,
+36a–36e — and sit just after the section whose argument they extend. Sections 39–41 are postscripts
+that leave the linear, stationary theory behind. Readers of *Macroeconomic Theory* can navigate by
+the original section numbers.
 ```
-
-## A book in three movements, and a capstone
-
-The theoretical material is a single arc that runs from elementary algebra and geometry to a full
-theory of linear prediction and its uses in economics. Its logic is a synthesis: **the time series
-theory is what one gets by combining Chapter IX with Chapter X.**
+## What each chapter does
 
 - {doc}`Chapter IX — Difference Equations and Lag Operators <chapters/ch09_difference_equations>`
-  is the **algebra**. It introduces the lag operator $L$, the calculus of polynomials in $L$, and
-  the use of that calculus to solve linear difference equations — to factor a characteristic
-  polynomial into stable and unstable roots, to invert an operator by partial fractions, and to
-  solve the linear-quadratic (Euler-equation) optimization problems of dynamic economics by the
-  rule *solve stable roots backward and unstable roots forward*.
+  develops the lag operator $L$ and the calculus of polynomials in $L$, and uses that calculus to
+  solve linear difference equations: to factor a characteristic polynomial into stable and unstable
+  roots, to invert an operator by partial fractions, and to solve the linear-quadratic (Euler
+  equation) optimization problems of dynamic economics by the rule *solve stable roots backward and
+  unstable roots forward*.
 
 - {doc}`Chapter X — Linear Least Squares Projections (Regressions) <chapters/ch10_regressions>`
-  is the **geometry**. It introduces the linear least squares projection — the regression viewed
-  through the orthogonality principle — together with recursive projection (the Kalman filter),
-  the law of iterated projections, and the static signal-extraction problem.
+  develops the linear least squares projection — the regression viewed through the orthogonality
+  principle — together with recursive projection (the Kalman filter), the law of iterated
+  projections, and the static signal extraction problem.
 
-- **{doc}`Linear Time Series <chapters/01_introduction>`** (the bulk of the book) puts the algebra
-  and the geometry together. It studies covariance stationary stochastic processes built from white noise by linear
-  difference equations, and it answers, for such processes, the two questions the first two
-  chapters were sharpened to ask: *what is the process's structure* (its
+- **{doc}`Linear Time Series <chapters/01_introduction>`**, the bulk of the book, combines the two.
+  It studies covariance stationary stochastic processes built from white noise by linear difference
+  equations, and it asks two questions about them: what is a process's structure — its
   {doc}`spectrum <chapters/06_spectrum>`, its
-  {doc}`Wold representation <chapters/13_representation_theory>`), and *how does one predict it*
-  (the {doc}`Wiener–Kolmogorov theory <chapters/14_linear_prediction>` of linear prediction,
+  {doc}`Wold representation <chapters/13_representation_theory>` — and how does one predict it, by
+  the {doc}`Wiener–Kolmogorov theory <chapters/14_linear_prediction>` of linear prediction,
   {doc}`filtering <chapters/26_optimal_filtering>`, and
-  {doc}`signal extraction <chapters/19_signal_extraction>`)?
+  {doc}`signal extraction <chapters/19_signal_extraction>`?
 
-A fourth element then closes the book: {doc}`Chapter XIV — Investment Under Uncertainty
-<chapters/ch14_investment_uncertainty>` is the **capstone**, where the algebra, the geometry, and the
-prediction theory are deployed together to construct, compute, and interpret a rational expectations
-equilibrium.
+- {doc}`Chapter XIV — Investment Under Uncertainty <chapters/ch14_investment_uncertainty>` deploys
+  all three to construct, compute, and interpret a rational expectations equilibrium.
 
 ## How the time series theory builds on Chapters IX and X
 
-The two elementary chapters are not prerequisites to be gotten out of the way; their ideas are the
-working parts of the middle part, reused at every turn. Five threads make the dependence concrete.
+Chapters IX and X are not prerequisites to be gotten out of the way. Their ideas are the working
+parts of the time series theory, reused at every turn.
 
 **1. Slutsky's reinterpretation: a difference equation driven by chance.** Chapter IX solved
 $(1 - a_1 L - \cdots - a_n L^n)\,y_t = x_t$ for a *known* forcing sequence $\{x_t\}$. The time series
@@ -250,7 +243,7 @@ connect it to recent work:
   estimates the *sum of coefficients* in a two-sided distributed lag — the ratio of cross spectrum to
   spectrum at frequency zero — and that inside Lucas's own (1975) model the statistic is *not* a test of
   the Mundell–Tobin effect. Sargent and Surico (2011) make the point quantitative: the slope is not
-  policy invariant. A third and final application of the approximation formula, alongside
+  policy invariant. This is the third application of the approximation formula in the book, after
   {doc}`§33a <chapters/33a_seasonality_approximation>` and
   {doc}`§36c <chapters/36c_cagan_hyperinflation>`.
 - Two postscripts that move beyond the linear, stationary theory:

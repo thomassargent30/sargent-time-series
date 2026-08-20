@@ -7,7 +7,7 @@ Worked solutions are collected in the next chapter,
 
 (ex-1)=
 
-**1.** (Sims's approximation error formula.) Let $(y_t,x_t)$ be jointly covariance stationary with means of zero. Let the projection of $y_t$ on the $x$ process be
+**1.** (Sims's approximation error formula.) Let $(y_t,x_t)$ be jointly covariance stationary with means of zero. The formula is stated and used in {doc}`33a_seasonality_approximation`, {doc}`36c_cagan_hyperinflation`, and {doc}`36e_lucas_whiteman_quantity_theory`. Let the projection of $y_t$ on the $x$ process be
 
 $$
 \sum_{j=-\infty}^\infty b_j^0x_{t-j}.
@@ -110,6 +110,8 @@ y_t = \lambda^t\eta_0 + \frac{1}{1-\lambda^{-1}L}u_t
 $$
 
 where $u_t$ is a white noise. Find formulas for $\eta_0$ and $u_t$ in terms of the $\epsilon$ process, $\lambda$, and $y_0$. (*Hint*: solve the difference equation forward and impose the initial condition.)
+
+{doc}`36d_explosive_decomposition` works this decomposition out and interprets its two terms.
 
 B. Is the $u_t$ process "fundamental" for $y_t$?
 

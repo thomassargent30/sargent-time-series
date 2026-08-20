@@ -1,5 +1,12 @@
 # Decomposing an Explosive Autoregression
 
+```{note}
+This section is an addition to the book, with no source outside it. It applies the root-sorting
+device of {doc}`Chapter IX <ch09_difference_equations>` to the simplest unstable process. It
+connects to the martingale and bubble representations of {doc}`36_bubbles` and to Exercise 4 of
+{doc}`37_exercises`.
+```
+
 Throughout this chapter the device of *solving stable roots backward and unstable roots forward*
 (introduced in {doc}`Chapter IX <ch09_difference_equations>` and used in
 {doc}`36a_interpreting_vars`, {doc}`36b_exact_linear_re`, and

@@ -136,6 +136,30 @@ The three seasonality mechanisms correspond to which piece of the model is switc
 All three deliver spectral peaks at the seasonal frequencies in the observables; they differ in
 whether the peaks come from the shocks, from tastes/technology, or from hidden periodicity.
 
+## Sims's approximation error formula
+
+Sims's formula is the scalar ancestor of the criterion developed below. Let $(y_t, x_t)$ be jointly
+covariance stationary with means of zero, let $b^0(L)$ be the two-sided linear least squares
+projection of $y_t$ on the whole $x$ process, and let a researcher fit
+$y_t = b^1(L) x_t + u_t$ by least squares under a constrained parameterization that rules out
+$b^1 = b^0$. In population, least squares picks $b^1$ to minimize
+
+```{math}
+:label: eq-hs93-sims
+\int_{-\pi}^{\pi} \big| b^{0}(e^{-i\omega}) - b^{1}(e^{-i\omega}) \big|^{2}\, g_x(e^{-i\omega})\, d\omega ,
+```
+
+where $g_x$ is the spectral density of $x$. The spectral density of the regressor weights the
+approximation error. A constrained $b^1$ tracks $b^0$ closely at frequencies where $x$ has most of
+its power and departs from $b^0$ where $x$ has little.
+{doc}`Exercise 1 of Section 37 <37_exercises>` asks for a derivation.
+
+Three sections of this book turn on {eq}`eq-hs93-sims`. The present section extends it to the
+multivariate, mean-augmented case and uses it to adjudicate Sims's claim about seasonal adjustment.
+{doc}`36c_cagan_hyperinflation` uses it to explain what a misspecified regression of money on
+inflation estimates in a hyperinflation. {doc}`36e_lucas_whiteman_quantity_theory` uses it to
+explain what Lucas's filtered scatterplots of money and prices estimate.
+
 ## The approximation criterion
 
 Now suppose the econometrician fits an approximating model indexed by a parameter vector $\delta$,
@@ -144,7 +168,7 @@ while the *truth* has mean $\nu$ and spectral density $F(\omega) = S_Y[\exp(-i\o
 $\delta$ by Gaussian maximum likelihood is, as {cite:t}`akaike1973information` and {cite:t}`white1982maximum` stressed, a way of
 minimizing a Kullback–Leibler discrepancy. For stationary linear time series the population limit
 of the (misspecified) log-likelihood has a clean **frequency-domain representation** — an
-extension to the multivariate, mean-augmented case of an approximation formula of {cite:t}`sims1972approx`.
+extension of {eq}`eq-hs93-sims` to the multivariate, mean-augmented case {cite:p}`sims1972approx`.
 The maximum-likelihood estimator converges almost surely to the minimizer of
 
 ```{math}

@@ -8,6 +8,11 @@ Examples 1, 2, and 5, and have shortened and reorganized the exposition. The tec
 identification arguments of Section 3 are summarized rather than reproduced in full.
 ```
 
+This section follows {doc}`36a_interpreting_vars`, reversing the order of the two chapters in the
+source. {doc}`22_rational_expectations` and {doc}`28_sims_money_income` raise the difficulty that
+Chapter 4 diagnoses, so that chapter comes first here; the constructive apparatus of Chapter 3 then
+answers it.
+
 A distinguishing feature of econometric models that build in rational expectations is a set of
 **cross-equation restrictions**: the parameters of the equations describing variables that
 people *choose* are inherited from the equations describing the stochastic environment people
@@ -290,7 +295,7 @@ that appears in {doc}`19_signal_extraction` and {doc}`36a_interpreting_vars`. A 
 such $U$'s can be manufactured, and finite-order rational parameterizations of $D_2(z)$ do not by
 themselves restore identification.
 
-The upshot: **$D_2(z)$ is generally not identified**, even under prespecified polynomial orders.
+**$D_2(z)$ is generally not identified**, even under prespecified polynomial orders.
 The standard remedy is to restrict attention to fundamental representations,
 
 ```{math}

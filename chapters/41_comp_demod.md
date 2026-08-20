@@ -6,9 +6,9 @@ $c_x(k)=Ex_t x_{t-k}$ that generate them do not depend on calendar time $t$. Yet
 economic series carry seasonal or cyclical components whose strength and timing visibly
 drift across a sample. The seasonal in a short-term interest rate, for example, may be
 large in one decade and small in another, and its peak may slide from one month to
-another as institutions change. For such series we would like a *moving* spectrum and a
-*moving* cross spectrum — an estimate, local in time, of how much variance sits in a
-narrow band of frequencies and of how two series are related there.
+another as institutions change. Such series call for a *moving* spectrum and a *moving*
+cross spectrum — an estimate, local in time, of how much variance sits in a narrow band
+of frequencies and of how two series are related there.
 
 **Complex demodulation** is a tool for exactly this. It isolates a narrow band around a
 chosen frequency $\omega_0$ and returns a slowly varying *amplitude* and *phase* for that

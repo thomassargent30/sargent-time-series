@@ -42,3 +42,10 @@ $$
 The process $c_{t+1}$ is readily verified to be a martingale. A third example is generated from the $x_t$ process itself. Simply set $c_t = \rho^{-t}x_t$, which is a martingale in light of {eq}`eq-204`: $P_t c_{t+1} = \rho^{-(t+1)}P_t x_{t+1} = \rho^{-(t+1)}\rho x_t = c_t$.
 
 In Chapter XIV, we study a model in which a transversality condition serves to make setting $c_t= 0$ the only admissible solution for a version of equation {eq}`eq-203`. There has recently been work designed to estimate and test models in which there are insufficient boundary conditions to justify setting $c_t = 0$. (See {cite:t}`blanchardwatson1982bubbles`, {cite:t}`meese1986testing`, Sargent and Wallace (1985), and {cite:t}`hamiltonwhiteman1985observable`.) Such models have been proposed as candidates for understanding the stock market, foreign exchange rates, and hyperinflations.
+
+
+```{seealso}
+{doc}`36d_explosive_decomposition` applies the same forward solution to a scalar explosive
+autoregression and reads the two resulting solutions as two ways of representing a nonstationary
+process.
+```

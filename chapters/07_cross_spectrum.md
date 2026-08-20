@@ -218,6 +218,19 @@ We invite the reader to verify this formula by using {eq}`eq-46` to calculate
 $Ey_{1t}y_{2t-k}$, multiplying by $e^{-i\omega k}$, and summing over $k$. The
 derivation mimics the derivation of Equation {eq}`eq-16` above.[^fn-cs-1]
 
+
+
+```{seealso}
+{doc}`07a_fft_estimation` estimates the cross spectrum, the coherence, and the phase from data.
+{doc}`08_leading_indicators` reads phase as a lead or a lag between two series.
+{doc}`36c_cagan_hyperinflation` uses phase to state Cagan's paradox: money creation leads inflation
+at low frequencies and lags it at high ones.
+{doc}`36e_lucas_whiteman_quantity_theory` reads Lucas's filtered scatterplots as estimates of a
+transfer function at low frequencies. {doc}`41_comp_demod` extends the cross spectrum to a moving
+cross spectrum, and {doc}`39_nonlinear_representation` asks what it misses when a process is not
+linear.
+```
+
 [^fn-cs-1]: Alternatively, write $x_t$ in terms of its moving average representation
 $x_t = c(L)\eta_t$, where $g_x(z) = \sigma_\eta^2 c(z)c(z^{-1})$. Then apply
 {eq}`eq-16` to the system $y_{1t} = B_1(L)c(L)\eta_t$, $y_{2t} = B_2(L)c(L)\eta_t$.

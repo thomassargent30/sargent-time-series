@@ -2,19 +2,20 @@
 
 ```{note}
 This section is based on Thomas J. Sargent, "The Demand for Money During Hyperinflations under
-Rational Expectations: I," *International Economic Review* 18(1), 59–82 (1977). It is a capstone
-application that ties together several threads of this chapter: the
-{doc}`rational-expectations Cagan model <22_rational_expectations>`, the
-{doc}`Granger-causality / econometric-exogeneity theorem <27_granger_causality>` and its
-{doc}`money–income application <28_sims_money_income>`, the cross-spectral notions of *phase* and
-*leading* of {doc}`07_cross_spectrum` and {doc}`08_leading_indicators`, and — the organizing idea —
-**Sims's frequency-domain approximation-error formula**, stated as
-[Exercise 1](37_exercises.md) of this chapter and deployed in {doc}`33a_seasonality_approximation`.
-The full computational treatment, with Python code for the simulations, the maximum-likelihood
-estimator, and the empirical tables, is the QuantEcon lecture
-[*Demand for Money during Hyperinflations under Rational Expectations*](https://python-advanced.quantecon.org/cagan_rational_expectations.html);
-here we summarize the quantitative findings and dwell on the projection theory.
+Rational Expectations: I," *International Economic Review* 18(1), 59–82 (1977). We follow the
+paper's projection theory and summarize its quantitative findings; we omit the details of the
+maximum likelihood estimation. The full computational treatment, with Python code for the
+simulations, the estimator, and the empirical tables, is the QuantEcon lecture
+[*Demand for Money during Hyperinflations under Rational Expectations*](https://python-advanced.quantecon.org/cagan_rational_expectations.html).
 ```
+
+This section draws on four earlier ones. The
+{doc}`rational expectations Cagan model <22_rational_expectations>` supplies the equilibrium. The
+{doc}`Granger causality and econometric exogeneity theorem <27_granger_causality>` and its
+{doc}`money–income application <28_sims_money_income>` supply the exogeneity argument. The *phase*
+and *leading* of {doc}`07_cross_spectrum` and {doc}`08_leading_indicators` supply the reading of
+Cagan's paradox. Sims's approximation error formula {eq}`eq-hs93-sims`, stated in
+{doc}`33a_seasonality_approximation`, organizes the whole.
 
 ## Cagan's paradox
 
@@ -171,8 +172,8 @@ reported highly serially correlated residuals and very low Durbin–Watson stati
 ## Sims's approximation-error formula
 
 Equation {eq}`eq-cg-plim` is an instance of **Sims's frequency-domain approximation-error formula**.
-Recall ([Exercise 1](37_exercises.md) of this chapter, and the seasonal-adjustment application of
-{doc}`33a_seasonality_approximation`): if the true projection of $y_t$ on a covariance-stationary
+Recall {eq}`eq-hs93-sims` from {doc}`33a_seasonality_approximation`, derived in
+{doc}`Exercise 1 <37_exercises>`: if the true projection of $y_t$ on a covariance-stationary
 process $x_t$ has transfer function $b^0(L)$, and an econometrician fits, by least squares, a
 *constrained* distributed lag $b^1(L)$ drawn from a restricted class, then in population least squares
 chooses $b^1$ to minimize the **spectral-density-weighted mean-squared error**
@@ -236,7 +237,7 @@ reading of the paradox:
   parameterizations, Russia by one. That a representation with one systematic free parameter survives at
   all is striking.
 
-The upshot: the demand for money during hyperinflations may not have been as sharply isolated as
+The demand for money during hyperinflations may not have been as sharply isolated as
 Cagan's tight estimates suggested, and the slope of the portfolio-balance schedule is difficult or
 impossible to estimate precisely under the money-supply regimes that actually prevailed. The apparent
 paradox is largely what Sims's approximation-error formula predicts a misspecified least-squares

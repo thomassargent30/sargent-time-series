@@ -370,6 +370,18 @@ $$
 
 The lower triangularity of the matrices on the left and the orthogonality properties of $\epsilon$ and $u$ establish that in this system $y$ does not Granger cause $x$, i.e., $y$ does not help predict $x$ given lagged $x$'s. This proves the other half of Sims's theorem 2.
 
+
+
+```{seealso}
+Sims's theorem is put to work in {doc}`28_sims_money_income`, which tests whether money Granger
+causes income; in {doc}`30_filtering_projections`, where Granger non-causality is what makes a
+common filter leave the one-sided projection alone; in {doc}`35_errors_variables`, where errors in
+variables destroy exogeneity; and in {doc}`36c_cagan_hyperinflation` and
+{doc}`36e_lucas_whiteman_quantity_theory`, where the direction of causation between money and
+prices is the substantive question. {doc}`08_leading_indicators` and {doc}`23_vector_sde` supply
+the vector machinery the theorem is stated in.
+```
+
 [^fn-gc-1]: The statement "$\{\epsilon_t\}$ and $\{u_t\}$ are jointly fundamental for $\{x_t\}$ and $\{y_t\}$" means that the one-step-ahead errors in forecasting $(y_t, x_t)$ from past $x$'s and $y$'s are linear combinations of $\epsilon_t$ and $u_t$.
 
 [^fn-gc-2]: We have remarked earlier that the vector moving average representation of a vector process $z_t$ in terms of the vector noise $\eta_t$, $z_t = C(L)\eta_t$, where the components of $\eta_t$ are white noises that are mutually orthogonal at all lags, is a very general representation. An autoregressive representation for $z_t$ can be obtained by inverting the preceding equation to get $A(L)z_t = \eta_t$, where $A(L) = C(L)^{-1}$ which is to say $A(e^{-i\omega}) = C(e^{-i\omega})^{-1}$ for each $\omega$ between $-\pi$ and $\pi$. The autoregressive representation exists provided that $C(e^{-i\omega})$ is invertible at each frequency between $-\pi$ and $\pi$. This condition is a restriction but is one that can usually be assumed in applied work. (For an example of a $C(e^{-i\omega})$ that violates the condition, consider the univariate example $C(e^{-i\omega}) = 1 - e^{-i\omega}$ — the transform of the first difference operator $I - L$ — which equals zero at $\omega = 0$ and so is not invertible there.)
