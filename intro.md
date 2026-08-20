@@ -1,5 +1,7 @@
 # Linear Time Series Analysis
 
+**Thomas J. Sargent**
+
 This book is an updated and extended version of Chapters IX, X, XI, and XIV of
 
 > Thomas J. Sargent, *Macroeconomic Theory*, 2nd edition (1987), Academic Press.
